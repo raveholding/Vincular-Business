@@ -1,0 +1,1531 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vincular Business · Digitalización, fidelización y software para comercios</title>
+<meta name="description" content="Digitalizamos tu comercio o servicio: web, menú QR con pedidos por WhatsApp, fidelización de clientes, software de gestión con facturación ARCA, CRM, fichaje NFC y app propia. Combos a medida para gastronomía, talleres y servicios en Argentina.">
+<meta name="theme-color" content="#000000">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_AR">
+<meta property="og:site_name" content="Vincular Business">
+<meta property="og:title" content="Vincular Business · Resolvemos el problema de tu negocio">
+<meta property="og:description" content="Digitalización + fidelización + software (CRM) + app, en combos a medida para tu comercio.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 96 96'%3E%3Crect width='96' height='96' rx='24' fill='%23FF7A1A'/%3E%3Cpath d='M26 30 L48 72 L70 30' fill='none' stroke='%23000' stroke-width='13' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"ProfessionalService","name":"Vincular Business","description":"Digitalización de comercios y servicios, fidelización de clientes, software de gestión con facturación ARCA, CRM y apps para comercios de Argentina.","areaServed":"AR","foundingDate":"2022","serviceType":["Digitalización de comercios","Software de gestión","Fidelización de clientes","Diseño web","SEO local"]}
+</script>
+<style>
+:root{
+  --bg:#000;--s1:#0B0B0C;--s2:#141416;--s3:#1C1C1F;
+  --line:rgba(255,255,255,.11);--line2:rgba(255,255,255,.2);
+  --tx:#F3F5F8;--mut:#9BA4B3;--dim:#6C7584;
+  --blue:#2FA8F0;--blue-d:#123D8F;--or:#FF7A1A;--or-l:#FF9442;--green:#3DDC84;--wa:#25D366;
+  --f:'Manrope',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:128px;-webkit-text-size-adjust:100%;background:#000}
+body{margin:0;font-family:var(--f);color:var(--tx);background:var(--bg);line-height:1.65;font-size:17px;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+svg{display:block;max-width:100%}
+a{color:inherit}
+p{margin:0}
+h1,h2,h3,h4{font-family:var(--f);color:#fff;margin:0;font-weight:500;letter-spacing:-.03em;line-height:1.06}
+h1{font-size:clamp(2.6rem,6vw,5rem);line-height:1.01;letter-spacing:-.04em}
+h2{font-size:clamp(2rem,4.2vw,3.4rem)}
+h3{font-size:1.3rem;font-weight:600;letter-spacing:-.02em;line-height:1.2}
+.wrap{width:min(1240px,100% - 56px);margin-inline:auto}
+.ic{width:1.25em;height:1.25em;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip{position:absolute;left:12px;top:-60px;background:var(--or);color:#000;padding:10px 16px;border-radius:8px;font-weight:700;z-index:200}
+.skip:focus{top:12px}
+:focus-visible{outline:2px solid var(--blue);outline-offset:3px;border-radius:6px}
+
+/* ---------- Botones ---------- */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.6em;padding:1em 1.6em;border-radius:10px;font:600 1rem/1.1 var(--f);text-decoration:none;border:1px solid transparent;cursor:pointer;transition:transform .2s,background .2s,border-color .2s,color .2s}
+.btn .ic{width:1.15em;height:1.15em}
+.btn-primary{background:var(--or);color:#000;font-weight:700}
+.btn-primary:hover{background:var(--or-l);transform:translateY(-1px)}
+.btn-ghost{border-color:var(--line2);color:#fff;background:transparent}
+.btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,.06)}
+.btn-block{width:100%}
+
+/* ---------- Progreso y navegación ---------- */
+.progress{position:fixed;top:0;left:0;height:2px;width:0;background:var(--or);z-index:120}
+.nav{position:sticky;top:0;z-index:100;background:rgba(0,0,0,.82);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;height:76px;gap:16px}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none;font:700 1.18rem/1 var(--f);color:#fff;letter-spacing:-.02em}
+.logo small{display:block;font:500 .72rem var(--f);letter-spacing:.04em;color:var(--dim);margin-top:5px}
+.logo .stars{color:var(--or);letter-spacing:.1em}
+.nav-links{display:flex;gap:30px;list-style:none;margin:0;padding:0;align-items:center}
+.nav-links a{text-decoration:none;font-weight:500;font-size:.95rem;color:var(--mut);transition:color .2s}
+.nav-links a:hover{color:#fff}
+.nav-cta{display:flex;align-items:center;gap:10px}
+.nav-cta .btn{padding:.8em 1.25em;font-size:.92rem}
+.burger{display:none;width:46px;height:46px;border-radius:10px;border:1px solid var(--line2);background:transparent;color:#fff;cursor:pointer;place-items:center}
+.burger .ic{width:22px;height:22px}
+
+/* ---------- Secciones ---------- */
+section{padding:116px 0;border-top:1px solid var(--line)}
+section.hero{border-top:0}
+.alt{background:var(--s1)}
+.sec-head{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:56px;align-items:end;margin-bottom:64px}
+.sec-head p{color:var(--mut);font-size:1.08rem;max-width:32em}
+.sec-head.solo{grid-template-columns:1fr;max-width:820px}
+.frame{border:1px solid var(--line);border-radius:20px;overflow:hidden;background:var(--s1)}
+.alt .frame{background:#000}
+
+/* ---------- Hero ---------- */
+.hero{position:relative;overflow:hidden;padding:72px 0 0;background:radial-gradient(55% 60% at 82% 20%,rgba(47,168,240,.2),transparent 70%),#000}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center;padding-bottom:84px}
+.pill{display:inline-flex;align-items:center;gap:9px;padding:8px 16px;border-radius:999px;border:1px solid var(--line2);background:rgba(255,255,255,.04);font:500 .88rem var(--f);color:var(--mut)}
+.pill .stars{color:var(--or);letter-spacing:.08em}
+.hero h1{margin:26px 0 24px;max-width:11.5em}
+.lead{font-size:1.2rem;color:var(--mut);max-width:31em}
+.cta-row{display:flex;flex-wrap:wrap;gap:14px;margin:36px 0 14px}
+.micro{font-size:.9rem;color:var(--dim)}
+.quick{margin-top:40px;padding-top:28px;border-top:1px solid var(--line)}
+.quick p{font-weight:600;color:#fff;margin-bottom:14px;font-size:.98rem}
+.quick div{display:flex;flex-wrap:wrap;gap:10px}
+.qbtn{display:inline-flex;align-items:center;gap:10px;padding:.8em 1.2em;border-radius:10px;border:1px solid var(--line2);background:transparent;color:#fff;font:500 .95rem var(--f);cursor:pointer;transition:.2s}
+.qbtn .ic{color:var(--blue);width:1.15em;height:1.15em}
+.qbtn:hover{border-color:var(--or);background:rgba(255,122,26,.07)}
+.cap{text-align:center;margin-top:12px;font-size:.8rem;color:var(--dim)}
+.enter{opacity:1}
+.js .enter{animation:enter .9s cubic-bezier(.2,.7,.2,1) both;animation-delay:var(--d,0s)}
+@keyframes enter{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+
+/* Mockup del hero (todo en em, escala con el contenedor) */
+.stage-wrap{container-type:inline-size}
+.stage{position:relative;width:100%;aspect-ratio:56/48;font-size:8px;font-size:calc(100cqw/56);--rx:0deg;--ry:0deg}
+.glow{position:absolute;inset:8% 4% 6% 10%;border-radius:50%;background:radial-gradient(closest-side,rgba(47,168,240,.34),rgba(18,61,143,.18) 55%,transparent 75%);filter:blur(6px)}
+.tablet{position:absolute;left:1em;top:5.5em;width:40em;height:29em;padding:1em;border-radius:2.4em;background:#18181b;box-shadow:0 3em 5em -2em rgba(0,0,0,.9),0 0 0 .1em rgba(255,255,255,.14);transform:perspective(110em) rotateY(calc(-13deg + var(--ry))) rotateX(calc(5deg + var(--rx))) rotateZ(1.2deg);transition:transform .25s ease-out}
+.scr{height:100%;border-radius:1.6em;background:#07070A;overflow:hidden;display:grid;grid-template-columns:5.2em 1fr}
+.side{background:#000;border-right:.1em solid rgba(255,255,255,.09);padding:1.3em .8em;display:flex;flex-direction:column;gap:.9em;align-items:center}
+.side i{display:block;width:2.6em;height:2.6em;border-radius:.8em;background:rgba(255,255,255,.1)}
+.side i.on{background:var(--or)}
+.main{padding:1.2em 1.3em;display:flex;flex-direction:column;gap:.9em;min-width:0}
+.top{display:flex;justify-content:space-between;align-items:center;font:700 1.3em var(--f);color:#fff}
+.top span{font:500 .75em var(--f);color:var(--dim)}
+.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:.8em}
+.kpi{background:#131316;border:.1em solid rgba(255,255,255,.08);border-radius:1em;padding:.8em .9em}
+.kpi small{display:block;font-size:.9em;color:var(--dim)}
+.kpi b{display:block;font:700 1.6em var(--f);color:#fff;letter-spacing:-.02em;white-space:nowrap}
+.chartbox{background:#131316;border:.1em solid rgba(255,255,255,.08);border-radius:1em;padding:.8em .9em .6em}
+.chartbox svg{width:100%;height:5.6em}
+.rows{display:grid;gap:.5em;font-size:.95em;color:#d6dbe3}
+.row{display:flex;align-items:center;gap:.7em;background:#131316;border-radius:.8em;padding:.5em .8em}
+.row i{width:.9em;height:.9em;border-radius:50%;flex:none}
+.row b{margin-left:auto;font-family:var(--f);color:#fff}
+.phone{position:absolute;right:.5em;bottom:0;width:17.5em;height:35em;padding:.8em;border-radius:3em;background:#18181b;box-shadow:0 3em 5em -2em rgba(0,0,0,.95),0 0 0 .1em rgba(255,255,255,.16);transform:perspective(110em) rotateY(calc(-10deg + var(--ry))) rotateX(calc(4deg + var(--rx))) rotateZ(-1.5deg);transition:transform .25s ease-out}
+.pscr{height:100%;background:#fff;border-radius:2.3em;overflow:hidden;display:flex;flex-direction:column;color:#0F172A}
+.p-head{background:#0A2E6E;color:#fff;padding:2em 1.2em 1.1em;font:800 1.4em var(--f)}
+.p-head small{display:block;font:500 .62em var(--f);opacity:.8;margin-top:.2em}
+.p-item{display:flex;justify-content:space-between;align-items:center;gap:.6em;padding:.95em 1.1em;border-bottom:1px solid #E3E8F0}
+.p-item b{display:block;font:700 1em var(--f);color:#0F172A}
+.p-item span{color:#5B6B84;font-size:.85em}
+.p-add{width:2.3em;height:2.3em;border-radius:50%;background:var(--or);color:#000;display:grid;place-items:center;font:800 1.1em var(--f);flex:none}
+.p-cart{margin:auto 1em 1.3em;background:var(--wa);color:#053B1B;border-radius:1.2em;padding:1em;font:800 1em var(--f);text-align:center}
+.chip{position:absolute;display:flex;align-items:center;gap:.8em;background:#18181b;border:.1em solid rgba(255,255,255,.16);border-radius:1.4em;padding:.85em 1.2em;box-shadow:0 1.2em 2.4em -1em rgba(0,0,0,.8);font:700 1.1em var(--f);color:#fff;animation:float 7s ease-in-out infinite;white-space:nowrap}
+.chip .dot{width:2.5em;height:2.5em;border-radius:.9em;display:grid;place-items:center;color:#fff;flex:none}
+.chip .dot .ic{width:1.3em;height:1.3em}
+.chip small{display:block;font:500 .72em var(--f);color:var(--mut)}
+.c1{right:0;top:.5em}
+.c2{left:-.5em;bottom:3em;animation-delay:-2.5s}
+.c3{left:19em;top:0;animation-delay:-5s}
+@keyframes float{50%{transform:translateY(-.8em)}}
+
+/* ---------- Cinta de actividad ---------- */
+.ticker{border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden;background:#000;position:relative}
+.ticker::before,.ticker::after{content:"";position:absolute;top:0;bottom:0;width:90px;z-index:2;pointer-events:none}
+.ticker::before{left:0;background:linear-gradient(90deg,#000,transparent)}
+.ticker::after{right:0;background:linear-gradient(-90deg,#000,transparent)}
+.track{display:flex;gap:56px;width:max-content;padding:20px 0;animation:marq 48s linear infinite}
+.ticker:hover .track{animation-play-state:paused}
+.titem{display:flex;align-items:center;gap:12px;white-space:nowrap;font-size:.95rem;color:var(--mut)}
+.titem i{width:8px;height:8px;border-radius:50%;flex:none}
+.titem b{color:#fff;font-weight:600}
+@keyframes marq{to{transform:translateX(-50%)}}
+
+/* ---------- Sin / Con ---------- */
+.vs{display:grid;grid-template-columns:1fr 1fr}
+.vs-h{padding:22px 36px;font:600 .98rem var(--f);color:var(--mut);border-bottom:1px solid var(--line)}
+.vs-h.on{color:#fff;border-left:1px solid var(--line);background:var(--s2)}
+.vs-c{padding:26px 36px;border-bottom:1px solid var(--line);display:flex;gap:16px;align-items:flex-start;font-size:1.02rem}
+.vs-c.no{color:var(--dim)}
+.vs-c.no .ic{color:#E5484D}
+.vs-c.yes{color:#fff;background:var(--s2);border-left:1px solid var(--line)}
+.vs-c.yes .ic{color:var(--green)}
+.vs-c .ic{margin-top:4px}
+.vs>*:nth-last-child(-n+2){border-bottom:0}
+
+/* ---------- Caminos y modalidades ---------- */
+.cols3{display:grid;grid-template-columns:repeat(3,1fr)}
+.cols2{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--line)}
+.cell{padding:44px 38px;display:flex;flex-direction:column;gap:16px;border-right:1px solid var(--line)}
+.cell:last-child{border-right:0}
+.cell .ico{color:var(--blue)}
+.cell .ico .ic{width:30px;height:30px}
+.cell p{color:var(--mut)}
+.cell ul{list-style:none;margin:6px 0 10px;padding:0;display:grid;gap:11px;font-size:.97rem;color:#D6DBE3}
+.cell li{display:flex;gap:11px;align-items:flex-start}
+.cell li .ic{color:var(--green);margin-top:5px;width:1.05em;height:1.05em}
+.cell a.more{margin-top:auto;font-weight:600;font-size:.95rem;color:#fff;text-decoration:underline;text-decoration-color:var(--line2);text-underline-offset:6px}
+.cell a.more:hover{text-decoration-color:var(--or)}
+.mode{padding:36px 38px;display:flex;gap:22px;align-items:flex-start;border-right:1px solid var(--line)}
+.mode:last-child{border-right:0}
+.mode .ico{color:var(--blue);flex:none}
+.mode .ico .ic{width:30px;height:30px}
+.mode h3{margin-bottom:8px}
+.mode p{color:var(--mut);font-size:.98rem}
+
+/* ---------- Pestañas (módulos y rubros) ---------- */
+.tabs{display:grid;grid-template-columns:300px 1fr;gap:32px;align-items:start}
+.tablist{display:flex;flex-direction:column;gap:6px}
+.tab{display:flex;align-items:center;gap:14px;text-align:left;padding:16px 18px;border-radius:12px;border:1px solid transparent;background:transparent;font:600 1rem var(--f);color:var(--mut);cursor:pointer;transition:.2s}
+.tab:hover{color:#fff;background:rgba(255,255,255,.04)}
+.tab .ic{color:var(--dim);width:1.3em;height:1.3em}
+.tab[aria-selected=true]{background:var(--s2);color:#fff;border-color:var(--line2)}
+.tab[aria-selected=true] .ic{color:var(--or)}
+.tabpanel{background:var(--s1);border:1px solid var(--line);border-radius:20px;padding:44px;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;animation:fadeup .4s ease}
+.alt .tabpanel{background:#000}
+.tabpanel[hidden]{display:none}
+@keyframes fadeup{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.tabpanel h3{font-size:1.7rem;font-weight:500;margin-bottom:14px;letter-spacing:-.03em}
+.tabpanel p{color:var(--mut);margin-bottom:18px}
+.tabpanel ul{list-style:none;margin:0;padding:0;display:grid;gap:11px;font-size:.98rem;color:#D6DBE3}
+.tabpanel li{display:flex;gap:11px;align-items:flex-start}
+.tabpanel li .ic{color:var(--green);margin-top:5px;width:1.05em;height:1.05em}
+.rubros .tabs{grid-template-columns:1fr}
+.rubros .tablist{flex-direction:row;flex-wrap:wrap;margin-bottom:6px}
+.rubros .tab{padding:14px 22px;border-color:var(--line)}
+.rubros .tab[aria-selected=true]{border-color:var(--or)}
+
+/* Mini-pantallas */
+.mock{background:#000;border-radius:16px;padding:22px;border:1px solid var(--line);display:grid;gap:12px;align-content:center;min-height:300px}
+.alt .mock{background:var(--s1)}
+.mcard{background:var(--s2);border:1px solid var(--line);border-radius:12px;padding:14px 16px;display:flex;justify-content:space-between;align-items:center;gap:12px;font-size:.92rem;color:#D6DBE3}
+.mcard b{font-family:var(--f);color:#fff;font-weight:600}
+.mcard small{display:block;color:var(--dim);font-size:.8rem}
+.mcard.col{flex-direction:column;align-items:stretch}
+.mcard.hi{background:#fff;color:#000;border-color:#fff}
+.mcard.hi b,.mcard.hi span{color:#000}
+.mhead{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.mhead .tag{flex:none}
+.tag{display:inline-block;padding:3px 10px;border-radius:999px;font:600 .74rem var(--f);white-space:nowrap}
+.tag.ok{background:rgba(61,220,132,.14);color:#6EE7A8}.tag.warn{background:rgba(255,122,26,.16);color:#FFA566}.tag.info{background:rgba(47,168,240,.16);color:#7CC8F5}.tag.bad{background:rgba(229,72,77,.16);color:#FF8A8D}
+.stamps{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.stamp{aspect-ratio:1;border-radius:50%;border:1.5px dashed #3A404B;display:grid;place-items:center;color:#3A404B}
+.stamp .ic{width:55%;height:55%}
+.stamp.on{border:none;background:var(--blue);color:#000}
+.stamp.gift{border:none;background:var(--or);color:#000}
+.bar{height:6px;border-radius:99px;background:#26262A;overflow:hidden;margin-top:6px;width:130px}
+.bar i{display:block;height:100%;border-radius:99px;background:var(--blue)}
+.bar.low i{background:var(--or)}
+.nfc{width:96px;height:96px;margin:6px auto 12px;border-radius:50%;background:var(--s3);border:1px solid var(--line2);color:#fff;display:grid;place-items:center;position:relative}
+.nfc .ic{width:40px;height:40px;color:var(--blue)}
+.nfc::before,.nfc::after{content:"";position:absolute;inset:0;border-radius:50%;border:1.5px solid var(--blue);animation:ring 2.6s ease-out infinite}
+.nfc::after{animation-delay:1.3s}
+@keyframes ring{from{transform:scale(1);opacity:.8}to{transform:scale(1.9);opacity:0}}
+.qrbox{background:#fff;border-radius:14px;padding:16px;display:grid;place-items:center;gap:8px;text-align:center;font:700 .9rem var(--f);color:#0A2E6E}
+.qrbox svg{width:150px;height:150px}
+.wa-mini{display:inline-flex;gap:6px;align-items:center;background:var(--wa);color:#053B1B;border-radius:8px;padding:7px 11px;font:700 .78rem var(--f);white-space:nowrap}
+.wa-mini .ic{width:1em;height:1em}
+.tables{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.tbl{border-radius:12px;padding:16px 10px;text-align:center;font:700 .95rem var(--f);border:1px solid var(--line)}
+.tbl small{display:block;font:500 .75rem var(--f);margin-top:2px}
+.tbl.free{background:rgba(61,220,132,.1);color:#6EE7A8;border-color:rgba(61,220,132,.3)}.tbl.busy{background:rgba(255,122,26,.1);color:#FFA566;border-color:rgba(255,122,26,.3)}.tbl.bill{background:rgba(47,168,240,.12);color:#7CC8F5;border-color:rgba(47,168,240,.3)}
+.kan{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.kcol{background:var(--s1);border:1px solid var(--line);border-radius:12px;padding:10px;display:grid;gap:8px;align-content:start}
+.kcol h4{margin:0 0 2px;font:600 .74rem var(--f);color:var(--mut);letter-spacing:0}
+.kcard{background:var(--s3);border-radius:8px;padding:9px 10px;font-size:.78rem;line-height:1.35;color:#C3CAD5}
+.kcard b{display:block;font-family:var(--f);color:#fff}
+
+/* ---------- Combos ---------- */
+.combos{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--line);border-radius:20px;overflow:hidden;background:var(--s1)}
+.combo{position:relative;padding:48px 38px 40px;display:flex;flex-direction:column;border-right:1px solid var(--line)}
+.combo:last-child{border-right:0}
+.combo.feat{background:var(--s2);box-shadow:inset 0 3px 0 var(--or)}
+.badge{position:absolute;top:22px;right:22px;background:var(--or);color:#000;padding:5px 12px;border-radius:6px;font:700 .8rem var(--f)}
+.combo .num{font:500 .92rem var(--f);color:var(--dim);margin-bottom:10px;display:block}
+.combo h3{font-size:1.45rem;font-weight:600;line-height:1.18}
+@media(min-width:961px){.combo h3{min-height:1.3em}}
+.combo .sub{color:var(--mut);font-size:.98rem;margin:6px 0 0;min-height:3.2em}
+.combo .price{margin:24px 0;padding:18px 0;border-block:1px solid var(--line);font:600 1.15rem var(--f);color:#fff}
+.combo .price small{display:block;font:400 .86rem var(--f);color:var(--dim);margin-top:2px}
+.combo ul{list-style:none;padding:0;margin:0 0 32px;display:grid;gap:12px;font-size:.96rem;color:#D6DBE3}
+.combo li{display:flex;gap:11px;align-items:flex-start}
+.combo li .ic{color:var(--green);flex:none;margin-top:5px;width:1.05em;height:1.05em}
+.combo li.inc{font-weight:600;color:#fff;padding-bottom:12px;border-bottom:1px dashed var(--line2)}
+.combo li.inc .ic{color:var(--or)}
+.combo .btn{margin-top:auto}
+details.compare{margin-top:32px;border:1px solid var(--line);border-radius:16px;overflow:hidden;background:var(--s1)}
+details.compare summary{cursor:pointer;list-style:none;padding:22px 30px;font:600 1.02rem var(--f);color:#fff;display:flex;justify-content:space-between;align-items:center}
+details.compare summary::-webkit-details-marker{display:none}
+details[open]>summary .ic{transform:rotate(180deg)}
+summary .ic{transition:transform .25s;color:var(--mut)}
+.tablewrap{overflow-x:auto;border-top:1px solid var(--line)}
+table.cmp{width:100%;border-collapse:collapse;min-width:640px;font-size:.96rem}
+.cmp th,.cmp td{padding:15px 22px;text-align:center;border-bottom:1px solid var(--line)}
+.cmp tr:last-child th,.cmp tr:last-child td{border-bottom:0}
+.cmp th:first-child,.cmp td:first-child{text-align:left;font-weight:500;color:#D6DBE3}
+.cmp thead th{font:600 .92rem var(--f);color:#fff;background:var(--s2)}
+.cmp .y{color:var(--green)}.cmp .n{color:#3A404B}
+.cmp .ic{margin-inline:auto}
+.notice{display:flex;gap:14px;align-items:center;border:1px solid var(--line2);border-radius:12px;padding:16px 22px;margin:0 0 28px;color:#D6DBE3;font-size:.98rem}
+.notice .ic{color:var(--or)}
+
+/* ---------- Piloto ---------- */
+.pilot{padding:64px 0;border-top:1px solid var(--line);background:#000}
+.pilot-in{display:grid;grid-template-columns:1fr auto;gap:40px;align-items:center;border:1px solid rgba(255,122,26,.45);border-radius:20px;padding:44px 48px;background:linear-gradient(90deg,rgba(255,122,26,.08),transparent 70%)}
+.pilot h2{font-size:clamp(1.6rem,3vw,2.4rem);margin-bottom:10px}
+.pilot p{color:var(--mut);max-width:40em}
+
+/* ---------- Extras ---------- */
+.xgrid{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line)}
+.xcell{padding:34px 30px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);transition:background .25s}
+.xcell:hover{background:var(--s1)}
+.xcell .ic{color:var(--blue);width:26px;height:26px;margin-bottom:18px}
+.xcell h3{font-size:1.08rem;margin-bottom:8px}
+.xcell p{font-size:.92rem;color:var(--mut);line-height:1.55}
+
+/* ---------- Calculadora ---------- */
+.calc{display:grid;grid-template-columns:1.1fr .9fr;gap:64px;align-items:center}
+.calc h2{margin-bottom:16px}
+.calc .intro{color:var(--mut);margin-bottom:36px;font-size:1.08rem;max-width:30em}
+.field{margin-bottom:26px}
+.field label{display:flex;justify-content:space-between;gap:12px;font-weight:500;color:#D6DBE3;margin-bottom:12px;font-size:.98rem}
+.field output{color:#fff;font-weight:700;white-space:nowrap}
+input[type=range]{width:100%;accent-color:var(--or);height:4px;cursor:pointer}
+.res{background:var(--s2);border:1px solid var(--line2);border-radius:20px;padding:42px}
+.res .lbl{font-weight:500;color:var(--mut);font-size:.95rem}
+.res .big{font:500 clamp(2.1rem,4vw,3rem)/1.1 var(--f);color:#fff;letter-spacing:-.04em;margin:6px 0 24px}
+.res .big.good{color:var(--green)}
+.res hr{border:0;border-top:1px solid var(--line);margin:4px 0 24px}
+.res .note{font-size:.84rem;color:var(--dim);margin-top:12px}
+
+/* ---------- Proceso ---------- */
+.steps{display:grid;grid-template-columns:repeat(5,1fr);border-top:1px solid var(--line)}
+.step{padding:34px 28px 10px 0;margin-right:28px;border-top:2px solid transparent;margin-top:-1px}
+.step:first-child{border-top-color:var(--or)}
+.step .n{font:300 3.4rem/1 var(--f);color:var(--dim);letter-spacing:-.05em;margin-bottom:22px}
+.step:first-child .n{color:#fff}
+.step h3{font-size:1.15rem;margin-bottom:8px}
+.step p{font-size:.94rem;color:var(--mut)}
+
+/* ---------- Equipo ---------- */
+.team{display:grid;grid-template-columns:repeat(5,1fr);border:1px solid var(--line);border-radius:20px;overflow:hidden}
+.member{padding:36px 28px 34px;border-right:1px solid var(--line);display:flex;flex-direction:column;gap:10px;min-height:260px}
+.member:last-child{border-right:0}
+.member .tg{font:500 .88rem var(--f);color:var(--dim)}
+.member h3{font-size:1.5rem;font-weight:500;letter-spacing:-.03em}
+.member p{font-size:.94rem;color:var(--mut);margin-top:auto}
+.member.next{background:repeating-linear-gradient(135deg,transparent 0 10px,rgba(255,255,255,.025) 10px 20px)}
+.member.next h3,.member.next p{color:var(--dim)}
+.member.me{background:var(--s2);box-shadow:inset 0 3px 0 var(--or)}
+.manifesto{margin:72px 0 0;font-size:clamp(1.8rem,4vw,3.2rem);font-weight:500;letter-spacing:-.035em;line-height:1.12;max-width:20em;color:#fff}
+.legal{margin-top:28px;font-size:.84rem;color:var(--dim);max-width:60em}
+
+/* ---------- FAQ ---------- */
+.faq{max-width:900px;border-top:1px solid var(--line)}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{cursor:pointer;list-style:none;padding:26px 0;font:500 1.15rem var(--f);color:#fff;display:flex;justify-content:space-between;gap:16px;align-items:center;letter-spacing:-.01em}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary .ic{color:var(--mut)}
+.faq details[open] summary .ic{transform:rotate(180deg);color:var(--or)}
+.faq details p{padding:0 0 28px;color:var(--mut);max-width:44em}
+
+/* ---------- Presupuesto ---------- */
+.quote{display:grid;grid-template-columns:.85fr 1.15fr;gap:72px;align-items:start}
+.quote h2{margin-bottom:20px}
+.quote .intro{color:var(--mut);font-size:1.08rem;margin-bottom:30px;max-width:26em}
+.perks{list-style:none;padding:0;margin:0 0 34px;display:grid;gap:14px}
+.perks li{display:flex;gap:12px;align-items:flex-start;color:#D6DBE3}
+.perks .ic{color:var(--green);margin-top:5px}
+.contact-lines{display:grid;gap:12px}
+.contact-lines a{display:flex;gap:12px;align-items:center;text-decoration:none;color:#fff;font-weight:500}
+.contact-lines a .ic{color:var(--blue)}
+.contact-lines a:hover{color:var(--or-l)}
+.formcard{background:var(--s1);border:1px solid var(--line);border-radius:20px;padding:42px}
+.f-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+label.f{display:grid;gap:8px;font:500 .9rem var(--f);color:var(--mut);margin-bottom:18px}
+.f input[type=text],.f select,.f textarea{padding:14px 15px;border:1px solid var(--line2);border-radius:10px;font:400 1rem var(--f);color:#fff;background:#000;width:100%}
+.f select option{background:#000;color:#fff}
+.f textarea{resize:vertical;min-height:84px}
+.f input::placeholder,.f textarea::placeholder{color:var(--dim)}
+.f input:focus,.f select:focus,.f textarea:focus{outline:0;border-color:var(--blue);box-shadow:0 0 0 3px rgba(47,168,240,.2)}
+fieldset{border:0;padding:0;margin:0 0 22px;min-width:0}
+legend{font:500 .9rem var(--f);color:var(--mut);margin-bottom:12px;padding:0}
+.opts{display:grid;gap:10px}
+.opt{position:relative;display:block}
+.opt input{position:absolute;opacity:0;inset:0;width:100%;height:100%;margin:0;cursor:pointer}
+.opt span{display:block;padding:13px 16px;border:1px solid var(--line2);border-radius:10px;font-weight:500;font-size:.94rem;color:#D6DBE3;transition:.15s}
+.opt:hover span{border-color:#fff}
+.opt input:checked + span{border-color:var(--or);background:rgba(255,122,26,.1);color:#fff}
+.opt input:focus-visible + span{outline:2px solid var(--blue)}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips .opt span{padding:8px 15px;border-radius:999px;font-size:.88rem}
+.preview{background:#000;border:1px solid var(--line);border-radius:10px;padding:16px;font:.82rem/1.55 ui-monospace,Menlo,Consolas,monospace;white-space:pre-wrap;color:var(--mut);margin:0 0 20px;max-height:260px;overflow:auto}
+.err{color:#FF8A8D;font-size:.88rem;min-height:1.3em;margin:0 0 8px}
+.alt-link{display:block;text-align:center;margin-top:16px;font-size:.92rem;color:var(--dim)}
+.alt-link a{color:#fff;font-weight:600}
+@media(min-width:961px){.quote>div:first-child{position:sticky;top:110px}}
+
+/* ---------- Footer, flotante y barra ---------- */
+footer{background:#000;border-top:1px solid var(--line);color:var(--mut);padding:84px 0 32px;font-size:.96rem}
+.f-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:48px;padding-bottom:56px;border-bottom:1px solid var(--line)}
+footer h4{color:#fff;font-size:.98rem;font-weight:600;margin-bottom:18px;letter-spacing:0}
+footer ul{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+footer a{text-decoration:none}
+footer a:hover{color:#fff}
+footer .logo{margin-bottom:18px}
+footer .about{max-width:28em}
+.f-contact li{display:flex;gap:10px;align-items:center}
+.f-contact .ic{color:var(--blue)}
+.f-bottom{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;padding-top:28px;font-size:.88rem;color:var(--dim)}
+.f-bottom .stars{color:var(--or);letter-spacing:.08em}
+.fab{position:fixed;right:22px;bottom:22px;z-index:90;height:56px;padding:0 24px 0 20px;border-radius:999px;background:var(--or);color:#000;display:flex;align-items:center;gap:10px;font:700 1rem var(--f);box-shadow:0 14px 30px -8px rgba(0,0,0,.8),0 0 0 1px rgba(255,255,255,.12);transition:transform .2s}
+.fab:hover{transform:scale(1.07)}
+.fab .ic{width:22px;height:22px}
+.bar-cta{display:none}
+
+/* ---------- Responsive ---------- */
+@media(max-width:1100px){
+  .tabs{grid-template-columns:250px 1fr}
+  .tabpanel{grid-template-columns:1fr;padding:34px}
+  .xgrid{grid-template-columns:repeat(2,1fr)}
+  .f-grid{grid-template-columns:1fr 1fr}
+  .team{grid-template-columns:repeat(2,1fr)}
+  .member{border-bottom:1px solid var(--line);min-height:0}
+  .member:last-child{grid-column:1/-1}
+  .steps{grid-template-columns:repeat(3,1fr);row-gap:24px}
+}
+@media(max-width:960px){
+  section{padding:76px 0}
+  .hero{padding-top:44px}
+  .hero-grid{grid-template-columns:1fr;gap:40px;padding-bottom:60px}
+  .stage-wrap{max-width:560px;margin-inline:auto;width:100%}
+  .sec-head{grid-template-columns:1fr;gap:16px;margin-bottom:44px}
+  .cols3,.combos,.cols2,.calc,.quote,.pilot-in{grid-template-columns:1fr}
+  .cell,.combo,.mode{border-right:0;border-bottom:1px solid var(--line)}
+  .cell:last-child,.combo:last-child,.mode:last-child{border-bottom:0}
+  .combo h3{min-height:0}
+  .combo .sub{min-height:0}
+  .calc,.quote{gap:44px}
+  .pilot-in{padding:32px 26px;gap:24px}
+  .tabs{grid-template-columns:1fr}
+  .tablist{flex-direction:row;overflow-x:auto;padding-bottom:6px;scroll-snap-type:x mandatory}
+  .tab{flex:none;scroll-snap-align:start;white-space:nowrap;border-color:var(--line)}
+  .vs{grid-template-columns:1fr}
+  .vs-h.on{border-left:0;border-top:1px solid var(--line)}
+  .vs-c.yes{border-left:0}
+  .nav-links{display:none}
+  .burger{display:grid}
+  .nav-links.open{display:flex;position:absolute;left:0;right:0;top:114px;background:#000;flex-direction:column;align-items:flex-start;padding:22px 28px 28px;border-bottom:1px solid var(--line);gap:20px}
+  .nav-cta .btn{display:none}
+  .fab{right:14px;bottom:calc(14px + env(safe-area-inset-bottom));height:52px;padding:0 20px 0 16px}
+  .bar-cta{display:flex;gap:10px;position:fixed;left:0;right:0;bottom:0;z-index:95;padding:12px 16px calc(12px + env(safe-area-inset-bottom));background:rgba(0,0,0,.92);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border-top:1px solid var(--line);transform:translateY(110%);transition:transform .3s}
+  .bar-cta.show{transform:none}
+  .bar-cta .btn{flex:1;padding:.9em 1em}
+  .bar-cta .btn-wa{flex:none;width:52px;padding:0;background:var(--wa);color:#053B1B}
+  footer{padding-bottom:110px}
+}
+@media(max-width:600px){
+  body{font-size:16px}
+  .wrap{width:min(1240px,100% - 36px)}
+  .xgrid{grid-template-columns:1fr}
+  .f-row{grid-template-columns:1fr}
+  .f-grid{grid-template-columns:1fr;gap:34px}
+  .tabpanel{padding:24px}
+  .formcard,.res{padding:26px}
+  .cell,.combo,.mode{padding:34px 26px}
+  .cta-row .btn{width:100%}
+  .mode{flex-direction:column;gap:14px}
+  .chip{font-size:.95em}
+  .kan{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr}
+  .step{margin-right:0;display:grid;grid-template-columns:70px 1fr;gap:6px 14px;padding-right:0}
+  .step .n{grid-row:span 2;font-size:2.6rem;margin:0}
+  .team{grid-template-columns:1fr}
+  .member{border-right:0}
+  .vs-h,.vs-c{padding-inline:24px}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .track{flex-wrap:wrap;width:auto;padding:20px 28px;gap:14px 36px}
+  .track [data-dup]{display:none}
+}
+
+.nfcpacks{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line);border-radius:20px;overflow:hidden;background:var(--s1)}
+.nfcpack{padding:34px 28px;display:flex;flex-direction:column;border-right:1px solid var(--line)}
+.nfcpack:last-child{border-right:0}
+.nfcpack .num{font:500 .92rem var(--f);color:var(--dim);margin-bottom:10px}
+.nfcpack h3{font-size:1.3rem;font-weight:600;line-height:1.2}
+.nfcpack p{color:var(--mut);margin:10px 0 0}
+.nfcpack .price{margin:22px 0;padding:16px 0;border-block:1px solid var(--line);font:600 1.1rem var(--f);color:#fff}
+.nfcpack .price small{display:block;font:400 .86rem var(--f);color:var(--dim)}
+.nfcpack .btn{margin-top:auto}
+.nfc-note{color:var(--dim);font-size:.92rem;margin-top:18px}
+.paygrid{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line)}
+.pay{padding:32px 28px;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+.pay .ic{color:var(--blue);width:26px;height:26px;margin-bottom:16px}
+.pay h3{font-size:1.08rem;margin-bottom:6px}
+.pay p{font-size:.92rem;color:var(--mut)}
+.pay.hi{background:var(--s2);box-shadow:inset 0 3px 0 var(--or)}
+.pay.hi .ic{color:var(--or)}
+@media(max-width:960px){.nfcpacks{grid-template-columns:1fr}.nfcpack{border-right:0;border-bottom:1px solid var(--line)}.nfcpack:last-child{border-bottom:0}.paygrid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.paygrid{grid-template-columns:1fr}.nfcpack{padding:32px 26px}}
+.nfcpack p{flex:1}
+
+.topbar{background:var(--or);color:#000;font:600 .88rem var(--f)}
+.topbar-in{display:flex;justify-content:space-between;align-items:center;gap:16px;height:38px}
+.tb-r{display:flex;align-items:center;gap:9px;color:#000;text-decoration:none;font-weight:700;white-space:nowrap}
+.tb-r:hover{text-decoration:underline}
+.tb-r .dot{width:8px;height:8px;border-radius:50%;background:#000;animation:pulse 1.8s infinite}
+@keyframes pulse{50%{opacity:.25}}
+@media(prefers-reduced-motion:reduce){.tb-r .dot{animation:none}}
+.combo .addon{display:flex;align-items:center;gap:9px;margin:0 0 14px;color:var(--blue);font-size:.92rem;font-weight:600;text-decoration:none}
+.combo .addon .ic{width:1.1em;height:1.1em}
+.combo .addon:hover{text-decoration:underline}
+.xcta{display:block;text-decoration:none;color:inherit;background:var(--s2);box-shadow:inset 0 3px 0 var(--or)}
+.xcta .ic{color:var(--or)}
+@media(max-width:1100px){.nfcpacks{grid-template-columns:repeat(2,1fr)}.nfcpack:nth-child(2){border-right:0}.nfcpack:nth-child(-n+2){border-bottom:1px solid var(--line)}}
+@media(max-width:960px){.tb-l{display:none}.topbar-in{justify-content:center}}
+@media(max-width:600px){.nfcpacks{grid-template-columns:1fr}.nfcpack{border-right:0!important;border-bottom:1px solid var(--line)}.nfcpack:last-child{border-bottom:0}}
+.fab{text-decoration:none}
+
+.diff{grid-template-columns:repeat(2,1fr)}
+.manifesto{max-width:30em}
+#vision{padding:72px 0}
+.cattabs{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:28px}
+.cattabs .tab{padding:11px 20px;border:1px solid var(--line);border-radius:999px;background:transparent;color:var(--mut);font:600 .95rem var(--f);cursor:pointer}
+.cattabs .tab[aria-selected=true]{border-color:var(--or);color:#fff}
+.ncat{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line)}
+.nprod{padding:28px 28px 24px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);display:flex;flex-direction:column}
+.nprod[hidden]{display:none}
+.nprod h3{font-size:1.1rem;margin-bottom:6px}
+.nprod p{color:var(--mut);font-size:.93rem;line-height:1.5;flex:1}
+.nprod .pr{display:flex;justify-content:space-between;align-items:center;margin-top:20px;gap:12px}
+.nprod .pr b{font:700 1.2rem var(--f);color:#fff}
+.mini{background:transparent;border:1px solid var(--line2);color:#fff;border-radius:8px;padding:.55em 1em;font:600 .88rem var(--f);cursor:pointer}
+.mini:hover{border-color:var(--or);color:var(--or)}
+.nfc-note a{color:var(--blue)}
+@media(max-width:960px){.ncat{grid-template-columns:repeat(2,1fr)}.diff{grid-template-columns:1fr}}
+@media(max-width:600px){.ncat{grid-template-columns:1fr}}
+a.qbtn{text-decoration:none}
+
+.combo .goal{margin:14px 0 0;font-size:.92rem;color:var(--mut);line-height:1.45}
+.combo .goal b{color:#fff;font-weight:600}
+.combo .price{display:flex;flex-direction:column;gap:4px}
+.combo .price .big{font:700 1.7rem var(--f);color:#fff;line-height:1.1}
+.combo .price .big em{font:500 .95rem var(--f);font-style:normal;color:var(--mut)}
+.combo .price .alta{font:500 .9rem var(--f);color:#D6DBE3}
+.combo .price .usd{font:400 .82rem var(--f);color:var(--dim)}
+.nfcpack .price .big{font:700 1.5rem var(--f);color:#fff}
+.nfcpack .price .usd{display:block;font:400 .82rem var(--f);color:var(--dim);margin-top:2px}
+.mods{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--line);border-radius:20px;overflow:hidden;background:var(--s1)}
+.mod{padding:36px 30px;border-right:1px solid var(--line);display:flex;flex-direction:column}
+.mod:last-child{border-right:0}
+.mod.feat{background:var(--s2);box-shadow:inset 0 3px 0 var(--or)}
+.tagm{font:600 .85rem var(--f);color:var(--or);margin-bottom:10px}
+.mod h3{font-size:1.35rem;margin-bottom:6px}
+.mod>p{color:var(--mut);font-size:.95rem;margin-bottom:20px}
+.mod ul{list-style:none;padding:0;margin:0;display:grid;gap:0;font-size:.95rem;color:#D6DBE3}
+.mod li{padding:11px 0;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:14px}
+.mod li small{display:block;color:var(--dim);font-size:.82rem;margin-top:2px}
+.mod li .pm{white-space:nowrap;font-weight:700;color:#fff}
+.mod .hora{margin:16px 0;color:var(--mut);font-size:.9rem}
+.mod .btn{margin-top:auto}
+@media(max-width:960px){.mods{grid-template-columns:1fr}.mod{border-right:0;border-bottom:1px solid var(--line)}.mod:last-child{border-bottom:0}}
+
+.diff{grid-template-columns:repeat(3,1fr)}
+@media(max-width:960px){.diff{grid-template-columns:1fr}}
+.combo.feat{box-shadow:inset 0 4px 0 var(--or),0 0 0 1px rgba(255,122,26,.55);background:var(--s2);z-index:1}
+@media(min-width:961px){.combo.feat{padding-top:60px}.combos{align-items:stretch}}
+.combo .price .big{font-size:2rem}
+.combo .price .alta{color:var(--green);font-weight:600}
+.payline{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:22px;color:var(--mut);font-size:.95rem}
+.payline b{font-weight:600;color:#fff;border:1px solid var(--line);padding:7px 14px;border-radius:999px;font-size:.9rem}
+.payline b.hi{border-color:var(--or);color:var(--or)}
+.after-h{font-size:1.15rem;margin:44px 0 16px}
+.after{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line)}
+.after>div{padding:24px 24px;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+.after b{display:block;font-size:1.02rem}
+.after small{display:block;color:var(--mut);margin-top:4px;line-height:1.45}
+.after .pm{display:block;margin-top:12px;font:700 1.15rem var(--f);color:#fff}
+.after .pm em{font:500 .85rem var(--f);font-style:normal;color:var(--dim)}
+@media(max-width:960px){.after{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.after{grid-template-columns:1fr}}
+
+.lines{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.line{display:block;padding:28px;border:1px solid var(--line);background:var(--bg);text-decoration:none;color:inherit;transition:border-color .2s}
+.line:hover{border-color:var(--or)}
+.line .ic{width:28px;height:28px;color:var(--or);margin-bottom:14px}
+.line h3{font-size:22px;margin:0 0 8px}
+.line p{margin:0 0 16px;color:var(--mut,#a3a3a3)}
+.line .from{font-size:14px;color:#a3a3a3}
+.line .from b{color:var(--or);font-weight:700}
+@media(max-width:720px){.lines{grid-template-columns:1fr}}
+
+.pimgw{margin:-8px -8px 18px;background:var(--s1);border:1px solid var(--line);border-radius:12px;color:var(--or)}
+.pimg{display:block;width:100%;height:auto;max-height:150px}
+.pimg .o{fill:var(--s2)}.pimg .m{fill:var(--line)}
+.nprod .pr{justify-content:flex-start}
+.nfcmed{display:flex;align-items:center;justify-content:space-between;gap:24px;margin-top:16px;padding:24px 28px;border:1px solid rgba(255,122,26,.45);border-radius:16px;background:var(--s1)}
+.nfcmed h3{margin:0 0 4px;font-size:1.2rem}.nfcmed p{margin:0;color:var(--mut)}
+@media(max-width:720px){.nfcmed{flex-direction:column;align-items:stretch}}
+.pimg use{fill:none;stroke:#fff;stroke-width:1.8}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Saltar al contenido</a>
+<div class="progress" id="progress" aria-hidden="true"></div>
+
+<!-- Íconos -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
+<symbol id="i-check" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></symbol>
+<symbol id="i-down" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></symbol>
+<symbol id="i-arrow" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></symbol>
+<symbol id="i-users" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+<symbol id="i-file" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></symbol>
+<symbol id="i-box" viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></symbol>
+<symbol id="i-wifi" viewBox="0 0 24 24"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><line x1="12" y1="20" x2="12.01" y2="20"/></symbol>
+<symbol id="i-star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></symbol>
+<symbol id="i-gift" viewBox="0 0 24 24"><polyline points="20 12 20 22 4 22 4 12"/><rect x="2" y="7" width="20" height="5"/><line x1="12" y1="22" x2="12" y2="7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></symbol>
+<symbol id="i-phone" viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></symbol>
+<symbol id="i-monitor" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></symbol>
+<symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></symbol>
+<symbol id="i-chart" viewBox="0 0 24 24"><line x1="12" y1="20" x2="12" y2="10"/><line x1="18" y1="20" x2="18" y2="4"/><line x1="6" y1="20" x2="6" y2="16"/></symbol>
+<symbol id="i-msg" viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></symbol>
+<symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></symbol>
+<symbol id="i-pin" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></symbol>
+<symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></symbol>
+<symbol id="i-mail" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></symbol>
+<symbol id="i-tool" viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></symbol>
+<symbol id="i-cup" viewBox="0 0 24 24"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></symbol>
+<symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></symbol>
+<symbol id="i-card" viewBox="0 0 24 24"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></symbol>
+<symbol id="i-trend" viewBox="0 0 24 24"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></symbol>
+<symbol id="i-zap" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></symbol>
+<symbol id="i-layers" viewBox="0 0 24 24"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></symbol>
+<symbol id="i-menu" viewBox="0 0 24 24"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></symbol>
+<symbol id="i-x" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></symbol>
+<symbol id="i-cloud" viewBox="0 0 24 24"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></symbol>
+<symbol id="i-db" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></symbol>
+<symbol id="i-scissors" viewBox="0 0 24 24"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><line x1="20" y1="4" x2="8.12" y2="15.88"/><line x1="14.47" y1="14.48" x2="20" y2="20"/><line x1="8.12" y1="8.12" x2="12" y2="12"/></symbol>
+<symbol id="i-lightbulb" viewBox="0 0 24 24"><line x1="9" y1="18" x2="15" y2="18"/><line x1="10" y1="22" x2="14" y2="22"/><path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1 .23 2.23 1.5 3.5A4.61 4.61 0 0 1 8.91 14"/></symbol>
+</defs></svg>
+
+<!-- Navegación -->
+<header class="nav">
+  <div class="topbar"><div class="wrap topbar-in"><span class="tb-l">Personalizamos sistemas y resolvemos problemas de tu día a día</span><a class="tb-r" href="#lineas"><i class="dot" aria-hidden="true"></i>Comprá tu sistema o tu NFC desde hoy</a></div></div>
+  <div class="wrap nav-in">
+    <a class="logo" href="#inicio" aria-label="Vincular Business, inicio">
+      <svg width="46" height="38" viewBox="0 0 108 88" aria-hidden="true"><path d="M8 20 L38 80 L68 20" fill="none" stroke="#FFFFFF" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/><g fill="none" stroke="#FF7A1A" stroke-width="8" stroke-linecap="round"><path d="M82 18a22 22 0 0 1 0 26"/><path d="M97 7a40 40 0 0 1 0 48"/></g></svg>
+      <span>Vincular Business<small>Desde 2022 <span class="stars">★★★</span></small></span>
+    </a>
+    <nav aria-label="Principal">
+      <ul class="nav-links" id="navlinks">
+        <li><a href="#diferencial">Diferencial</a></li>
+        <li><a href="#combos">Sistemas</a></li>
+        <li><a href="#todos-rubros">Rubros</a></li>
+        <li><a href="#modulos-crm">Módulos CRM</a></li>
+        <li><a href="#nfc">NFC</a></li>
+        <li><a href="#proceso">Cómo trabajamos</a></li>
+        <li><a href="#faq">Preguntas</a></li>
+      </ul>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-primary" href="#presupuesto">Pedir presupuesto</a>
+      <button class="burger" id="burger" aria-label="Abrir menú" aria-expanded="false" aria-controls="navlinks"><svg class="ic"><use href="#i-menu"/></svg></button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+<!-- Hero -->
+<section class="hero" id="inicio">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="pill enter"><span class="stars">★★★</span> Para todos los rubros</span>
+      <h1 class="enter" style="--d:.08s">Resolvemos el problema de tu negocio.</h1>
+      <p class="lead enter" style="--d:.16s">Contanos qué te complica del día a día y lo resolvemos a tu medida: menú digital, CRM y app con tu marca. Los productos NFC se compran aparte. Todo con pago único.</p>
+      <div class="cta-row enter" style="--d:.24s">
+        <a class="btn btn-primary" href="#combos">Ver sistemas</a>
+        <a class="btn btn-ghost" href="#nfc">Ver productos NFC</a>
+      </div>
+      <p class="micro enter" style="--d:.28s">Pago único, sin abonos mensuales. Tarjeta, Mercado Pago, transferencia o efectivo con descuento.</p>
+      <div class="quick enter" style="--d:.34s">
+        <p>¿Qué tipo de negocio tenés?</p>
+        <div>
+          <button class="qbtn" type="button" data-rubro="Gastronomía"><svg class="ic"><use href="#i-cup"/></svg>Gastronomía</button>
+          <button class="qbtn" type="button" data-rubro="Talleres y servicios técnicos"><svg class="ic"><use href="#i-tool"/></svg>Taller o servicio técnico</button>
+          <button class="qbtn" type="button" data-rubro="Estética y barberías"><svg class="ic"><use href="#i-scissors"/></svg>Estética y barbería</button>
+          <button class="qbtn" type="button" data-rubro="Comercio, indumentaria o almacén"><svg class="ic"><use href="#i-box"/></svg>Comercio</button>
+          <button class="qbtn" type="button" data-rubro="Gimnasio o natatorio"><svg class="ic"><use href="#i-trend"/></svg>Gimnasio o natatorio</button>
+          <button class="qbtn" type="button" data-rubro="Club de barrio o club privado"><svg class="ic"><use href="#i-users"/></svg>Club</button>
+          <button class="qbtn" type="button" data-rubro="Playa de estacionamiento"><svg class="ic"><use href="#i-pin"/></svg>Playa de estacionamiento</button>
+          <button class="qbtn" type="button" data-rubro="Eventos sociales"><svg class="ic"><use href="#i-gift"/></svg>Eventos</button>
+          <a class="qbtn" href="#todos-rubros"><svg class="ic"><use href="#i-layers"/></svg>Ver todos los rubros</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="enter" style="--d:.2s">
+      <div class="stage-wrap" aria-hidden="true">
+        <div class="stage" id="stage">
+          <div class="glow"></div>
+          <div class="tablet"><div class="scr">
+            <div class="side"><i class="on"></i><i></i><i></i><i></i><i></i></div>
+            <div class="main">
+              <div class="top">Resumen de hoy <span>Vie 2 oct</span></div>
+              <div class="kpis">
+                <div class="kpi"><small>Ventas</small><b>$482.300</b></div>
+                <div class="kpi"><small>Facturas</small><b>37</b></div>
+                <div class="kpi"><small>Pedidos QR</small><b>14</b></div>
+              </div>
+              <div class="chartbox">
+                <svg viewBox="0 0 300 90" preserveAspectRatio="none">
+                  <g fill="#2FA8F0" fill-opacity=".38">
+                    <rect x="6" y="62" width="16" height="28" rx="4"/><rect x="30" y="50" width="16" height="40" rx="4"/><rect x="54" y="56" width="16" height="34" rx="4"/><rect x="78" y="38" width="16" height="52" rx="4"/><rect x="102" y="44" width="16" height="46" rx="4"/><rect x="126" y="30" width="16" height="60" rx="4"/><rect x="150" y="35" width="16" height="55" rx="4"/><rect x="174" y="20" width="16" height="70" rx="4"/><rect x="198" y="26" width="16" height="64" rx="4"/><rect x="222" y="12" width="16" height="78" rx="4"/><rect x="246" y="22" width="16" height="68" rx="4"/>
+                  </g>
+                  <rect x="270" y="6" width="16" height="84" rx="4" fill="#FF7A1A"/>
+                </svg>
+              </div>
+              <div class="rows">
+                <div class="row"><i style="background:#3DDC84"></i>Factura B · 00001234<b>$22.700</b></div>
+                <div class="row"><i style="background:#2FA8F0"></i>Pedido QR #148<b>$18.400</b></div>
+                <div class="row"><i style="background:#FF7A1A"></i>Stock bajo · Pan<b>6 u.</b></div>
+              </div>
+            </div>
+          </div></div>
+
+          <div class="phone"><div class="pscr">
+            <div class="p-head">Tu Comercio<small>Menú digital · Demo</small></div>
+            <div class="p-item"><div><b>Milanesa completa</b><span>$12.800</span></div><div class="p-add">+</div></div>
+            <div class="p-item"><div><b>Pizza muzzarella</b><span>$9.900</span></div><div class="p-add">+</div></div>
+            <div class="p-item"><div><b>Gaseosa 1,5 L</b><span>$3.200</span></div><div class="p-add">+</div></div>
+            <div class="p-item"><div><b>Flan casero</b><span>$4.500</span></div><div class="p-add">+</div></div>
+            <div class="p-cart">Pedir por WhatsApp · $22.700</div>
+          </div></div>
+
+          <div class="chip c1"><span class="dot" style="background:#16A34A"><svg class="ic"><use href="#i-check"/></svg></span><span>Factura emitida<small>CAE aprobado</small></span></div>
+          <div class="chip c2"><span class="dot" style="background:#25D366"><svg class="ic"><use href="#i-msg"/></svg></span><span>Nuevo pedido<small>por WhatsApp</small></span></div>
+          <div class="chip c3"><span class="dot" style="background:#FF7A1A"><svg class="ic"><use href="#i-box"/></svg></span><span>Stock bajo<small>3 productos</small></span></div>
+        </div>
+      </div>
+      <p class="cap">Interfaz ilustrativa con datos de ejemplo.</p>
+    </div>
+  </div>
+
+  <div class="ticker" aria-label="Ejemplos de actividad en un comercio con Vincular Business">
+    <div class="track" id="track">
+      <span class="titem"><i style="background:#3DDC84"></i><b>Factura emitida</b> CAE aprobado</span>
+      <span class="titem"><i style="background:#25D366"></i><b>Nuevo pedido</b> por WhatsApp</span>
+      <span class="titem"><i style="background:#2FA8F0"></i><b>Fichaje</b> Lucía entró a las 08:02</span>
+      <span class="titem"><i style="background:#FF7A1A"></i><b>Stock bajo</b> pan de hamburguesa</span>
+      <span class="titem"><i style="background:#2FA8F0"></i><b>Sello cargado</b> en tarjeta de fidelidad</span>
+      <span class="titem"><i style="background:#3DDC84"></i><b>Fiado cobrado</b> Carlos G.</span>
+      <span class="titem"><i style="background:#FF7A1A"></i><b>Precios actualizados</b> en todo el catálogo</span>
+      <span class="titem"><i style="background:#25D366"></i><b>Nuevo pedido</b> retiro en el local</span>
+    </div>
+  </div>
+</section>
+
+<!-- Diferenciales -->
+<section id="diferencial">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Personalizamos tu sistema: 100 % a medida</h2>
+      <p>No te damos un programa cerrado. Lo armamos con vos, para tu negocio y tu forma de trabajar.</p>
+    </div>
+    <div class="xgrid diff">
+      <article class="xcell"><svg class="ic"><use href="#i-msg"/></svg><h3>Hecho a tu medida</h3><p>Cada pantalla, cada módulo y cada reporte se adaptan a tu rubro. Si falta algo, lo desarrollamos.</p></article>
+      <article class="xcell"><svg class="ic"><use href="#i-tool"/></svg><h3>Resolvemos tu problema</h3><p>Fiados que no cobrás, turnos que se pisan, personal sin control, stock que no cierra. Contanos qué te frena y lo resolvemos.</p></article>
+      <article class="xcell"><svg class="ic"><use href="#i-card"/></svg><h3>Sin abono mensual</h3><p>Pagás tu combo una vez. Después, solo si querés un cambio o un módulo nuevo.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- Dos líneas -->
+<section class="alt" id="lineas">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Dos líneas, comprás una o las dos</h2>
+      <p>El NFC se contrata aparte: sirve con o sin sistema.</p>
+    </div>
+    <div class="lines">
+      <a class="line" href="#combos">
+        <svg class="ic"><use href="#i-layers"/></svg>
+        <h3>Sistemas y digitalización</h3>
+        <p>Menú digital, CRM y app con tu marca, adaptados a tu negocio.</p>
+        <span class="from">3 combos desde <b data-from="c1"></b></span>
+      </a>
+      <a class="line" href="#nfc">
+        <svg class="ic"><use href="#i-wifi"/></svg>
+        <h3>Productos y combos NFC</h3>
+        <p>Tarjetas, llaveros y 30 productos con un toque. Con chips e impresión nuestros.</p>
+        <span class="from">Combos NFC desde <b data-from="n1"></b></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Combos -->
+<section class="alt" id="combos">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Sistemas y digitalización</h2>
+      <p>Elegí hasta dónde llegar. Pagás una vez, sin abonos mensuales.</p>
+    </div>
+    <p class="notice"><svg class="ic"><use href="#i-lightbulb"/></svg>Pago único en pesos, con referencia en dólares. Hosting en la nube incluido. Valores sujetos a actualización.</p>
+
+    <div class="combos">
+      <article class="combo">
+        <span class="num">Combo 1</span>
+        <h3>Menú Digital</h3>
+        <p class="sub">Que te encuentren y te pidan por WhatsApp, sin comisiones.</p>
+        <div class="price" data-price="c1"><span>Presupuesto a medida</span></div>
+        <ul>
+          <li><svg class="ic"><use href="#i-check"/></svg>Menú o catálogo en HTML con tu marca</li>
+          <li><svg class="ic"><use href="#i-check"/></svg>QR y carrito con pedidos por WhatsApp</li>
+          <li><svg class="ic"><use href="#i-check"/></svg>Web con SEO local y Google Business</li>
+          <li><svg class="ic"><use href="#i-check"/></svg>Sellos digitales de fidelidad por QR</li>
+          <li><svg class="ic"><use href="#i-check"/></svg>Capacitación y soporte de arranque</li>
+        </ul>
+        <button class="btn btn-ghost btn-block" type="button" data-combo="1">Quiero el Combo 1</button>
+      </article>
+
+      <article class="combo feat" style="--d:.1s">
+        <span class="badge">Más conveniente</span>
+        <span class="num">Combo 2</span>
+        <h3>Menú Digital + CRM básico</h3>
+        <p class="sub">Todo ordenado: clientes, ventas, stock y facturación.</p>
+        <div class="price" data-price="c2"><span>Presupuesto a medida</span></div>
+        <ul>
+          <li class="inc"><svg class="ic"><use href="#i-layers"/></svg>Todo lo del Combo 1, más:</li>
+          <li><svg class="ic"><use href="#i-check"/></svg>CRM básico: clientes, fiados y cobranza por WhatsApp</li>
+          <li><svg class="ic"><use href="#i-check"/></svg>Ventas, caja, stock y facturación ARCA</li>
+          <li><svg class="ic"><use href="#i-check"/></svg>Reportes diarios, semanales y mensuales</li>
+          <li><svg class="ic"><use href="#i-check"/></svg>Versión Windows o nube, a elección</li>
+          <li><svg class="ic"><use href="#i-check"/></svg>Sumás módulos extras cuando quieras</li>
+        </ul>
+        <button class="btn btn-primary btn-block" type="button" data-combo="2">Quiero el Combo 2</button>
+      </article>
+
+      <article class="combo" style="--d:.2s">
+        <span class="num">Combo 3</span>
+        <h3>Menú Digital + CRM + App</h3>
+        <p class="sub">Tu marca en Play Store y App Store.</p>
+        <div class="price" data-price="c3"><span>Presupuesto a medida</span></div>
+        <ul>
+          <li class="inc"><svg class="ic"><use href="#i-layers"/></svg>Todo lo del Combo 2, más:</li>
+          <li><svg class="ic"><use href="#i-check"/></svg>App con tu marca para Android e iPhone</li>
+          <li><svg class="ic"><use href="#i-check"/></svg>Pedidos, reservas y fidelidad dentro de la app</li>
+          <li><svg class="ic"><use href="#i-check"/></svg>Promos directo al celular</li>
+          <li><svg class="ic"><use href="#i-check"/></svg>Publicación en ambas tiendas</li>
+        </ul>
+        <button class="btn btn-ghost btn-block" type="button" data-combo="3">Quiero el Combo 3</button>
+      </article>
+    </div>
+
+    <details class="compare">
+      <summary>Ver comparativa completa <svg class="ic"><use href="#i-down"/></svg></summary>
+      <div class="tablewrap">
+        <table class="cmp">
+          <thead><tr><th scope="col">Qué incluye</th><th scope="col">Combo 1</th><th scope="col">Combo 2</th><th scope="col">Combo 3</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Menú o catálogo HTML y pedidos por WhatsApp</th><td class="y"><svg class="ic"><use href="#i-check"/></svg></td><td class="y"><svg class="ic"><use href="#i-check"/></svg></td><td class="y"><svg class="ic"><use href="#i-check"/></svg></td></tr>
+            <tr><th scope="row">Web con SEO local y Google Business</th><td class="y"><svg class="ic"><use href="#i-check"/></svg></td><td class="y"><svg class="ic"><use href="#i-check"/></svg></td><td class="y"><svg class="ic"><use href="#i-check"/></svg></td></tr>
+            <tr><th scope="row">Sellos de fidelidad por QR</th><td class="y"><svg class="ic"><use href="#i-check"/></svg></td><td class="y"><svg class="ic"><use href="#i-check"/></svg></td><td class="y"><svg class="ic"><use href="#i-check"/></svg></td></tr>
+            <tr><th scope="row">CRM básico: clientes, fiados, cobranza</th><td class="n">—</td><td class="y"><svg class="ic"><use href="#i-check"/></svg></td><td class="y"><svg class="ic"><use href="#i-check"/></svg></td></tr>
+            <tr><th scope="row">Ventas, caja, stock y ARCA</th><td class="n">—</td><td class="y"><svg class="ic"><use href="#i-check"/></svg></td><td class="y"><svg class="ic"><use href="#i-check"/></svg></td></tr>
+            <tr><th scope="row">Reportes</th><td class="n">—</td><td class="y"><svg class="ic"><use href="#i-check"/></svg></td><td class="y"><svg class="ic"><use href="#i-check"/></svg></td></tr>
+            <tr><th scope="row">Módulos extras</th><td class="n">—</td><td class="y">Opcional</td><td class="y">Opcional</td></tr>
+            <tr><th scope="row">App en Play Store y App Store</th><td class="n">—</td><td class="n">—</td><td class="y"><svg class="ic"><use href="#i-check"/></svg></td></tr>
+            <tr><th scope="row">Combo NFC</th><td class="y">Opcional</td><td class="y">Opcional</td><td class="y">Opcional</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </details>
+    <div class="payline"><span>Pagás con</span><b>Tarjeta de crédito</b><b>Mercado Pago</b><b>Transferencia</b><b class="hi" data-cash>Efectivo con descuento</b></div>
+  </div>
+</section>
+
+
+
+<!-- Todos los rubros -->
+<section class="alt" id="todos-rubros">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Para todos los rubros que necesitan orden y control</h2>
+      <p>El mismo sistema, adaptado a cada actividad. También hacemos páginas web, SEO local y contenido para tu rubro.</p>
+    </div>
+    <div class="xgrid">
+      <article class="xcell"><svg class="ic"><use href="#i-star"/></svg><h3>Spa y centros de estética</h3><p>Turnos, packs de sesiones, profesionales y caja.</p></article>
+      <article class="xcell"><svg class="ic"><use href="#i-trend"/></svg><h3>Gimnasios y natatorios</h3><p>Abonos, vencimientos de cuotas e ingreso con tarjeta NFC.</p></article>
+      <article class="xcell"><svg class="ic"><use href="#i-users"/></svg><h3>Clubes de barrio</h3><p>Socios, cuotas, actividades y control de ingreso.</p></article>
+      <article class="xcell"><svg class="ic"><use href="#i-shield"/></svg><h3>Clubes privados</h3><p>Socios e invitados, reservas de canchas y salones, consumos.</p></article>
+      <article class="xcell"><svg class="ic"><use href="#i-pin"/></svg><h3>Playas de estacionamiento</h3><p>Abonados mensuales y vehículos por día, ingreso, egreso y caja.</p></article>
+      <article class="xcell"><svg class="ic"><use href="#i-gift"/></svg><h3>Eventos sociales</h3><p>Salones, reservas, señas, pagos en cuotas y lista de invitados.</p></article>
+      <article class="xcell"><svg class="ic"><use href="#i-clock"/></svg><h3>Ingreso y egreso de personal</h3><p>Fichaje con NFC, horas trabajadas y reportes para liquidar.</p></article>
+      <article class="xcell"><svg class="ic"><use href="#i-globe"/></svg><h3>Inmobiliarias y alquileres</h3><p>Propiedades, contratos, vencimientos y cobros a inquilinos.</p></article>
+      <article class="xcell"><svg class="ic"><use href="#i-file"/></svg><h3>Salud y odontología</h3><p>Turnos, fichas de pacientes y recordatorios por WhatsApp.</p></article>
+      <article class="xcell"><svg class="ic"><use href="#i-box"/></svg><h3>Comercios e indumentaria</h3><p>Stock por talle y color, ventas, facturación y fidelización.</p></article>
+      <article class="xcell"><svg class="ic"><use href="#i-card"/></svg><h3>Almacenes y kioscos</h3><p>Ventas rápidas, stock, fiados y precios al día.</p></article>
+      <a class="xcell xcta" href="#presupuesto"><svg class="ic"><use href="#i-lightbulb"/></svg><h3>¿Tu rubro no está?</h3><p>Contanos cómo trabajás y lo armamos a medida. Cualquier negocio de servicios puede usarlo.</p></a>
+    </div>
+  </div>
+</section>
+
+<!-- Módulos del CRM -->
+<section id="modulos-crm">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Módulos del CRM: sumás solo lo que usás</h2>
+      <p>Los básicos vienen en el Combo 2 y 3. Sumás lo que necesites y lo que no existe, lo desarrollamos para vos.</p>
+    </div>
+    <div class="mods">
+      <article class="mod">
+        <span class="tagm">Incluidos</span>
+        <h3>Módulos básicos</h3>
+        <p>El núcleo que necesita cualquier negocio.</p>
+        <ul id="mods-base"></ul>
+      </article>
+      <article class="mod feat">
+        <span class="tagm">Para sumar</span>
+        <h3>Módulos extras</h3>
+        <p>Los activamos cuando los necesitás, en el momento que quieras.</p>
+        <ul class="priced" id="mods-extra"></ul>
+      </article>
+      <article class="mod">
+        <span class="tagm">A tu medida</span>
+        <h3>Módulos personalizados</h3>
+        <p>Los desarrollamos para tu negocio, tal como los imaginás.</p>
+        <ul id="mods-custom"></ul>
+        <a class="btn btn-ghost btn-block" href="#presupuesto" data-custom>Contanos tu idea</a>
+      </article>
+    </div>
+    <h3 class="after-h">Después de la entrega, estamos para lo que necesites</h3>
+    <div class="after" id="after"></div>
+  </div>
+</section>
+
+<!-- Combos NFC -->
+<section id="nfc">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Combos NFC: los nuestros o a tu medida</h2>
+      <p>Se compran aparte: con tu sistema o solos, con tu marca y tu diseño. Elegí uno de nuestros combos o armalo con las cantidades y productos que necesites.</p>
+    </div>
+    <div class="nfcpacks">
+      <article class="nfcpack">
+        <span class="num">NFC Inicio</span>
+        <h3>1 tarjeta + 5 llaveros</h3>
+        <p>Para probar la fidelización con tus clientes habituales.</p>
+        <div class="price" data-price="n1"><span>Presupuesto a medida</span></div>
+        <button class="btn btn-ghost btn-block" type="button" data-nfc="NFC Inicio: 1 tarjeta + 5 llaveros">Sumar NFC Inicio</button>
+      </article>
+      <article class="nfcpack">
+        <span class="num">NFC Local</span>
+        <h3>10 tarjetas</h3>
+        <p>Para repartir en caja y sumar sellos o puntos en cada compra.</p>
+        <div class="price" data-price="n2"><span>Presupuesto a medida</span></div>
+        <button class="btn btn-ghost btn-block" type="button" data-nfc="NFC Local: 10 tarjetas">Sumar NFC Local</button>
+      </article>
+      <article class="nfcpack">
+        <span class="num">NFC Equipo</span>
+        <h3>10 llaveros de fichaje</h3>
+        <p>Para que tu personal registre ingreso y egreso con un toque.</p>
+        <div class="price" data-price="n3"><span>Presupuesto a medida</span></div>
+        <button class="btn btn-ghost btn-block" type="button" data-nfc="NFC Equipo: 10 llaveros de fichaje">Sumar NFC Equipo</button>
+      </article>
+      <article class="nfcpack">
+        <span class="num">NFC Socios</span>
+        <h3>50 tarjetas de acceso</h3>
+        <p>Para clubes, gimnasios y playas: abonados y socios con su propia tarjeta.</p>
+        <div class="price" data-price="n4"><span>Presupuesto a medida</span></div>
+        <button class="btn btn-ghost btn-block" type="button" data-nfc="NFC Socios: 50 tarjetas de acceso">Sumar NFC Socios</button>
+      </article>
+    </div>
+    <div class="nfcmed">
+      <div><h3>Armá tu combo NFC a medida</h3><p>Elegí los productos del catálogo, las cantidades y el diseño. Nosotros ponemos chips, impresión y configuración.</p></div>
+      <button class="btn btn-primary" type="button" data-prod="Combo NFC a medida">Armar mi combo</button>
+    </div>
+    <p class="nfc-note">Chips, impresión y personalización a cargo nuestro. <a href="#catalogo-nfc">Mirá el catálogo de productos NFC</a>.</p>
+  </div>
+</section>
+
+<!-- Catálogo NFC -->
+<section class="alt" id="catalogo-nfc">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Catálogo de productos NFC</h2>
+      <p>Un toque con el celular y se abre lo que vos quieras: tu menú, tu perfil, una invitación, un recuerdo. Cada producto se personaliza con tu diseño y te pasamos el valor según la cantidad.</p>
+    </div>
+    <div class="cattabs" role="tablist" aria-label="Categorías del catálogo NFC"><button class="tab" type="button" role="tab" data-cat="neg" aria-selected="true">Negocios y profesionales</button><button class="tab" type="button" role="tab" data-cat="id" aria-selected="false">Identificación y seguridad</button><button class="tab" type="button" role="tab" data-cat="reg" aria-selected="false">Regalos y recuerdos</button><button class="tab" type="button" role="tab" data-cat="eve" aria-selected="false">Eventos y vouchers</button><button class="tab" type="button" role="tab" data-cat="pro" aria-selected="false">Propiedades y productos</button><button class="tab" type="button" role="tab" data-cat="all" aria-selected="false">Todos</button></div>
+    <div class="ncat" id="ncat">
+      <article class="nprod" data-cat="id"><div class="pimgw"><svg class="pimg" viewBox="0 0 200 120" role="img" aria-label="NFC Mascota" xmlns="http://www.w3.org/2000/svg"><circle cx="100" cy="64" r="44" class="o"/><circle cx="100" cy="64" r="44" fill="none" stroke="var(--or)" stroke-width="2"/><circle cx="100" cy="28" r="5" fill="var(--bg)" stroke="var(--mut)" stroke-width="2"/><use href="#i-star" x="85" y="52" width="30" height="30"/><rect x="82" y="92" width="36" height="5" rx="2.5" class="m"/></svg></div><h3>NFC Mascota</h3><p>Sticker o chapita + perfil + WhatsApp</p><div class="pr"><button class="mini" type="button" data-prod="NFC Mascota">Lo quiero</button></div></article>
+      <article class="nprod" data-cat="id"><div class="pimgw"><svg class="pimg" viewBox="0 0 200 120" role="img" aria-label="NFC Gato" xmlns="http://www.w3.org/2000/svg"><circle cx="100" cy="64" r="44" class="o"/><circle cx="100" cy="64" r="44" fill="none" stroke="var(--or)" stroke-width="2"/><circle cx="100" cy="28" r="5" fill="var(--bg)" stroke="var(--mut)" stroke-width="2"/><use href="#i-star" x="85" y="52" width="30" height="30"/><rect x="82" y="92" width="36" height="5" rx="2.5" class="m"/></svg></div><h3>NFC Gato</h3><p>Identificación + perfil + contacto</p><div class="pr"><button class="mini" type="button" data-prod="NFC Gato">Lo quiero</button></div></article>
+      <article class="nprod" data-cat="id"><div class="pimgw"><svg class="pimg" viewBox="0 0 200 120" role="img" aria-label="NFC Niño Seguro" xmlns="http://www.w3.org/2000/svg"><path d="M30 40h140v40H30z" class="o"/><path d="M30 40h140v40H30z" fill="none" stroke="var(--or)" stroke-width="2"/><rect x="76" y="48" width="48" height="24" rx="8" fill="var(--bg)" stroke="var(--or)" stroke-width="1.5"/><use href="#i-shield" x="85" y="45" width="30" height="30"/></svg></div><h3>NFC Niño Seguro</h3><p>Tarjeta o pulsera + contacto de emergencia</p><div class="pr"><button class="mini" type="button" data-prod="NFC Niño Seguro">Lo quiero</button></div></article>
+      <article class="nprod" data-cat="id"><div class="pimgw"><svg class="pimg" viewBox="0 0 200 120" role="img" aria-label="NFC Mochila" xmlns="http://www.w3.org/2000/svg"><circle cx="100" cy="22" r="12" fill="none" stroke="var(--mut)" stroke-width="3"/><path d="M100 34v10" stroke="var(--mut)" stroke-width="3"/><rect x="62" y="44" width="76" height="62" rx="16" class="o"/><rect x="62" y="44" width="76" height="62" rx="16" fill="none" stroke="var(--or)" stroke-width="2"/><use href="#i-shield" x="85" y="60" width="30" height="30"/></svg></div><h3>NFC Mochila</h3><p>Identificación + contacto familiar</p><div class="pr"><button class="mini" type="button" data-prod="NFC Mochila">Lo quiero</button></div></article>
+      <article class="nprod" data-cat="id"><div class="pimgw"><svg class="pimg" viewBox="0 0 200 120" role="img" aria-label="NFC Auto" xmlns="http://www.w3.org/2000/svg"><circle cx="100" cy="22" r="12" fill="none" stroke="var(--mut)" stroke-width="3"/><path d="M100 34v10" stroke="var(--mut)" stroke-width="3"/><rect x="62" y="44" width="76" height="62" rx="16" class="o"/><rect x="62" y="44" width="76" height="62" rx="16" fill="none" stroke="var(--or)" stroke-width="2"/><use href="#i-pin" x="85" y="60" width="30" height="30"/></svg></div><h3>NFC Auto</h3><p>Identificación + contactos + información</p><div class="pr"><button class="mini" type="button" data-prod="NFC Auto">Lo quiero</button></div></article>
+      <article class="nprod" data-cat="id"><div class="pimgw"><svg class="pimg" viewBox="0 0 200 120" role="img" aria-label="NFC Documentos Privados" xmlns="http://www.w3.org/2000/svg"><rect x="34" y="18" width="132" height="84" rx="12" class="o"/><rect x="34" y="18" width="132" height="84" rx="12" fill="none" stroke="var(--or)" stroke-width="2"/><rect x="48" y="78" width="46" height="6" rx="3" class="m"/><rect x="48" y="88" width="30" height="5" rx="2.5" class="m"/><use href="#i-file" x="48" y="30" width="30" height="30"/><path d="M142 33a8 8 0 0 1 0 14M148 26a14 14 0 0 1 0 26" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" opacity=".7"/></svg></div><h3>NFC Documentos Privados</h3><p>Acceso protegido a documentación</p><div class="pr"><button class="mini" type="button" data-prod="NFC Documentos Privados">Lo quiero</button></div></article>
+      <article class="nprod" data-cat="neg"><div class="pimgw"><svg class="pimg" viewBox="0 0 200 120" role="img" aria-label="NFC Tarjeta Profesional" xmlns="http://www.w3.org/2000/svg"><rect x="34" y="18" width="132" height="84" rx="12" class="o"/><rect x="34" y="18" width="132" height="84" rx="12" fill="none" stroke="var(--or)" stroke-width="2"/><rect x="48" y="78" width="46" height="6" rx="3" class="m"/><rect x="48" y="88" width="30" height="5" rx="2.5" class="m"/><use href="#i-users" x="48" y="30" width="30" height="30"/><path d="M142 33a8 8 0 0 1 0 14M148 26a14 14 0 0 1 0 26" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" opacity=".7"/></svg></div><h3>NFC Tarjeta Profesional</h3><p>Perfil + WhatsApp + redes + contacto</p><div class="pr"><button class="mini" type="button" data-prod="NFC Tarjeta Profesional">Lo quiero</button></div></article>
+      <article class="nprod" data-cat="neg"><div class="pimgw"><svg class="pimg" viewBox="0 0 200 120" role="img" aria-label="NFC Tarjeta Empresa" xmlns="http://www.w3.org/2000/svg"><rect x="34" y="18" width="132" height="84" rx="12" class="o"/><rect x="34" y="18" width="132" height="84" rx="12" fill="none" stroke="var(--or)" stroke-width="2"/><rect x="48" y="78" width="46" height="6" rx="3" class="m"/><rect x="48" y="88" width="30" height="5" rx="2.5" class="m"/><use href="#i-box" x="48" y="30" width="30" height="30"/><path d="M142 33a8 8 0 0 1 0 14M148 26a14 14 0 0 1 0 26" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" opacity=".7"/></svg></div><h3>NFC Tarjeta Empresa</h3><p>Empresa + servicios + contacto</p><div class="pr"><button class="mini" type="button" data-prod="NFC Tarjeta Empresa">Lo quiero</button></div></article>
+      <article class="nprod" data-cat="neg"><div class="pimgw"><svg class="pimg" viewBox="0 0 200 120" role="img" aria-label="NFC Negocio" xmlns="http://www.w3.org/2000/svg"><path d="M60 104l12-70h56l12 70z" class="o"/><path d="M60 104l12-70h56l12 70z" fill="none" stroke="var(--or)" stroke-width="2"/><use href="#i-globe" x="85" y="48" width="30" height="30"/><rect x="82" y="86" width="36" height="5" rx="2.5" class="m"/></svg></div><h3>NFC Negocio</h3><p>Web + WhatsApp + redes + Maps</p><div class="pr"><button class="mini" type="button" data-prod="NFC Negocio">Lo quiero</button></div></article>
+      <article class="nprod" data-cat="neg"><div class="pimgw"><svg class="pimg" viewBox="0 0 200 120" role="img" aria-label="NFC Menú Digital" xmlns="http://www.w3.org/2000/svg"><path d="M60 104l12-70h56l12 70z" class="o"/><path d="M60 104l12-70h56l12 70z" fill="none" stroke="var(--or)" stroke-width="2"/><use href="#i-cup" x="85" y="48" width="30" height="30"/><rect x="82" y="86" width="36" height="5" rx="2.5" class="m"/></svg></div><h3>NFC Menú Digital</h3><p>Menú + WhatsApp + redes</p><div class="pr"><button class="mini" type="button" data-prod="NFC Menú Digital">Lo quiero</button></div></article>
+      <article class="nprod" data-cat="neg"><div class="pimgw"><svg class="pimg" viewBox="0 0 200 120" role="img" aria-label="NFC Carta de Vinos" xmlns="http://www.w3.org/2000/svg"><path d="M60 104l12-70h56l12 70z" class="o"/><path d="M60 104l12-70h56l12 70z" fill="none" stroke="var(--or)" stroke-width="2"/><use href="#i-cup" x="85" y="48" width="30" height="30"/><rect x="82" y="86" width="36" height="5" rx="2.5" class="m"/></svg></div><h3>NFC Carta de Vinos</h3><p>Carta + fichas + WhatsApp</p><div class="pr"><button class="mini" type="button" data-prod="NFC Carta de Vinos">Lo quiero</button></div></article>
+      <article class="nprod" data-cat="neg"><div class="pimgw"><svg class="pimg" viewBox="0 0 200 120" role="img" aria-label="NFC Reseñas Google" xmlns="http://www.w3.org/2000/svg"><path d="M60 104l12-70h56l12 70z" class="o"/><path d="M60 104l12-70h56l12 70z" fill="none" stroke="var(--or)" stroke-width="2"/><use href="#i-star" x="85" y="48" width="30" height="30"/><rect x="82" y="86" width="36" height="5" rx="2.5" class="m"/></svg></div><h3>NFC Reseñas Google</h3><p>Acceso directo a reseñas</p><div class="pr"><button class="mini" type="button" data-prod="NFC Reseñas Google">Lo quiero</button></div></article>
+      <article class="nprod" data-cat="neg"><div class="pimgw"><svg class="pimg" viewBox="0 0 200 120" role="img" aria-label="NFC Instagram" xmlns="http://www.w3.org/2000/svg"><circle cx="100" cy="64" r="44" class="o"/><circle cx="100" cy="64" r="44" fill="none" stroke="var(--or)" stroke-width="2"/><circle cx="100" cy="28" r="5" fill="var(--bg)" stroke="var(--mut)" stroke-width="2"/><use href="#i-globe" x="85" y="52" width="30" height="30"/><rect x="82" y="92" width="36" height="5" rx="2.5" class="m"/></svg></div><h3>NFC Instagram</h3><p>Perfil de Instagram + presentación</p><div class="pr"><button class="mini" type="button" data-prod="NFC Instagram">Lo quiero</button></div></article>
+      <article class="nprod" data-cat="neg"><div class="pimgw"><svg class="pimg" viewBox="0 0 200 120" role="img" aria-label="NFC WhatsApp" xmlns="http://www.w3.org/2000/svg"><circle cx="100" cy="64" r="44" class="o"/><circle cx="100" cy="64" r="44" fill="none" stroke="var(--or)" stroke-width="2"/><circle cx="100" cy="28" r="5" fill="var(--bg)" stroke="var(--mut)" stroke-width="2"/><use href="#i-msg" x="85" y="52" width="30" height="30"/><rect x="82" y="92" width="36" height="5" rx="2.5" class="m"/></svg></div><h3>NFC WhatsApp</h3><p>Botón directo a WhatsApp</p><div class="pr"><button class="mini" type="button" data-prod="NFC WhatsApp">Lo quiero</button></div></article>
+      <article class="nprod" data-cat="neg"><div class="pimgw"><svg class="pimg" viewBox="0 0 200 120" role="img" aria-label="NFC Regalo Empresarial" xmlns="http://www.w3.org/2000/svg"><rect x="46" y="44" width="108" height="62" rx="8" class="o"/><rect x="46" y="44" width="108" height="62" rx="8" fill="none" stroke="var(--or)" stroke-width="2"/><rect x="46" y="32" width="108" height="16" rx="5" class="o"/><rect x="46" y="32" width="108" height="16" rx="5" fill="none" stroke="var(--or)" stroke-width="2"/><path d="M100 32v74" stroke="var(--or)" stroke-width="2"/><use href="#i-gift" x="118" y="62" width="30" height="30"/></svg></div><h3>NFC Regalo Empresarial</h3><p>Tarjeta + mensaje + voucher o video</p><div class="pr"><button class="mini" type="button" data-prod="NFC Regalo Empresarial">Lo quiero</button></div></article>
+      <article class="nprod" data-cat="reg"><div class="pimgw"><svg class="pimg" viewBox="0 0 200 120" role="img" aria-label="NFC Álbum" xmlns="http://www.w3.org/2000/svg"><rect x="34" y="18" width="132" height="84" rx="12" class="o"/><rect x="34" y="18" width="132" height="84" rx="12" fill="none" stroke="var(--or)" stroke-width="2"/><rect x="48" y="78" width="46" height="6" rx="3" class="m"/><rect x="48" y="88" width="30" height="5" rx="2.5" class="m"/><use href="#i-file" x="48" y="30" width="30" height="30"/><path d="M142 33a8 8 0 0 1 0 14M148 26a14 14 0 0 1 0 26" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" opacity=".7"/></svg></div><h3>NFC Álbum</h3><p>Fotos + página personalizada</p><div class="pr"><button class="mini" type="button" data-prod="NFC Álbum">Lo quiero</button></div></article>
+      <article class="nprod" data-cat="reg"><div class="pimgw"><svg class="pimg" viewBox="0 0 200 120" role="img" aria-label="NFC Álbum de Pareja" xmlns="http://www.w3.org/2000/svg"><rect x="34" y="18" width="132" height="84" rx="12" class="o"/><rect x="34" y="18" width="132" height="84" rx="12" fill="none" stroke="var(--or)" stroke-width="2"/><rect x="48" y="78" width="46" height="6" rx="3" class="m"/><rect x="48" y="88" width="30" height="5" rx="2.5" class="m"/><use href="#i-star" x="48" y="30" width="30" height="30"/><path d="M142 33a8 8 0 0 1 0 14M148 26a14 14 0 0 1 0 26" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" opacity=".7"/></svg></div><h3>NFC Álbum de Pareja</h3><p>Fotos + historia + canción</p><div class="pr"><button class="mini" type="button" data-prod="NFC Álbum de Pareja">Lo quiero</button></div></article>
+      <article class="nprod" data-cat="reg"><div class="pimgw"><svg class="pimg" viewBox="0 0 200 120" role="img" aria-label="NFC Aniversario" xmlns="http://www.w3.org/2000/svg"><rect x="34" y="18" width="132" height="84" rx="12" class="o"/><rect x="34" y="18" width="132" height="84" rx="12" fill="none" stroke="var(--or)" stroke-width="2"/><rect x="48" y="78" width="46" height="6" rx="3" class="m"/><rect x="48" y="88" width="30" height="5" rx="2.5" class="m"/><use href="#i-gift" x="48" y="30" width="30" height="30"/><path d="M142 33a8 8 0 0 1 0 14M148 26a14 14 0 0 1 0 26" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" opacity=".7"/></svg></div><h3>NFC Aniversario</h3><p>Fotos + mensaje + música</p><div class="pr"><button class="mini" type="button" data-prod="NFC Aniversario">Lo quiero</button></div></article>
+      <article class="nprod" data-cat="reg"><div class="pimgw"><svg class="pimg" viewBox="0 0 200 120" role="img" aria-label="NFC Música" xmlns="http://www.w3.org/2000/svg"><circle cx="100" cy="22" r="12" fill="none" stroke="var(--mut)" stroke-width="3"/><path d="M100 34v10" stroke="var(--mut)" stroke-width="3"/><rect x="62" y="44" width="76" height="62" rx="16" class="o"/><rect x="62" y="44" width="76" height="62" rx="16" fill="none" stroke="var(--or)" stroke-width="2"/><use href="#i-zap" x="85" y="60" width="30" height="30"/></svg></div><h3>NFC Música</h3><p>Canción o playlist + diseño</p><div class="pr"><button class="mini" type="button" data-prod="NFC Música">Lo quiero</button></div></article>
+      <article class="nprod" data-cat="reg"><div class="pimgw"><svg class="pimg" viewBox="0 0 200 120" role="img" aria-label="NFC Álbum Musical" xmlns="http://www.w3.org/2000/svg"><rect x="34" y="18" width="132" height="84" rx="12" class="o"/><rect x="34" y="18" width="132" height="84" rx="12" fill="none" stroke="var(--or)" stroke-width="2"/><rect x="48" y="78" width="46" height="6" rx="3" class="m"/><rect x="48" y="88" width="30" height="5" rx="2.5" class="m"/><use href="#i-zap" x="48" y="30" width="30" height="30"/><path d="M142 33a8 8 0 0 1 0 14M148 26a14 14 0 0 1 0 26" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" opacity=".7"/></svg></div><h3>NFC Álbum Musical</h3><p>Playlist + portada + dedicatoria</p><div class="pr"><button class="mini" type="button" data-prod="NFC Álbum Musical">Lo quiero</button></div></article>
+      <article class="nprod" data-cat="reg"><div class="pimgw"><svg class="pimg" viewBox="0 0 200 120" role="img" aria-label="NFC Regalo Sorpresa" xmlns="http://www.w3.org/2000/svg"><rect x="46" y="44" width="108" height="62" rx="8" class="o"/><rect x="46" y="44" width="108" height="62" rx="8" fill="none" stroke="var(--or)" stroke-width="2"/><rect x="46" y="32" width="108" height="16" rx="5" class="o"/><rect x="46" y="32" width="108" height="16" rx="5" fill="none" stroke="var(--or)" stroke-width="2"/><path d="M100 32v74" stroke="var(--or)" stroke-width="2"/><use href="#i-gift" x="118" y="62" width="30" height="30"/></svg></div><h3>NFC Regalo Sorpresa</h3><p>Página + video, fotos y mensaje</p><div class="pr"><button class="mini" type="button" data-prod="NFC Regalo Sorpresa">Lo quiero</button></div></article>
+      <article class="nprod" data-cat="reg"><div class="pimgw"><svg class="pimg" viewBox="0 0 200 120" role="img" aria-label="NFC Carta de Amor" xmlns="http://www.w3.org/2000/svg"><rect x="34" y="18" width="132" height="84" rx="12" class="o"/><rect x="34" y="18" width="132" height="84" rx="12" fill="none" stroke="var(--or)" stroke-width="2"/><rect x="48" y="78" width="46" height="6" rx="3" class="m"/><rect x="48" y="88" width="30" height="5" rx="2.5" class="m"/><use href="#i-mail" x="48" y="30" width="30" height="30"/><path d="M142 33a8 8 0 0 1 0 14M148 26a14 14 0 0 1 0 26" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" opacity=".7"/></svg></div><h3>NFC Carta de Amor</h3><p>Carta digital + fotos + música</p><div class="pr"><button class="mini" type="button" data-prod="NFC Carta de Amor">Lo quiero</button></div></article>
+      <article class="nprod" data-cat="reg"><div class="pimgw"><svg class="pimg" viewBox="0 0 200 120" role="img" aria-label="NFC Cumpleaños" xmlns="http://www.w3.org/2000/svg"><rect x="34" y="18" width="132" height="84" rx="12" class="o"/><rect x="34" y="18" width="132" height="84" rx="12" fill="none" stroke="var(--or)" stroke-width="2"/><rect x="48" y="78" width="46" height="6" rx="3" class="m"/><rect x="48" y="88" width="30" height="5" rx="2.5" class="m"/><use href="#i-gift" x="48" y="30" width="30" height="30"/><path d="M142 33a8 8 0 0 1 0 14M148 26a14 14 0 0 1 0 26" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" opacity=".7"/></svg></div><h3>NFC Cumpleaños</h3><p>Fotos + video + mensaje</p><div class="pr"><button class="mini" type="button" data-prod="NFC Cumpleaños">Lo quiero</button></div></article>
+      <article class="nprod" data-cat="reg"><div class="pimgw"><svg class="pimg" viewBox="0 0 200 120" role="img" aria-label="NFC Experiencia Premium" xmlns="http://www.w3.org/2000/svg"><rect x="34" y="18" width="132" height="84" rx="12" class="o"/><rect x="34" y="18" width="132" height="84" rx="12" fill="none" stroke="var(--or)" stroke-width="2"/><rect x="48" y="78" width="46" height="6" rx="3" class="m"/><rect x="48" y="88" width="30" height="5" rx="2.5" class="m"/><use href="#i-star" x="48" y="30" width="30" height="30"/><path d="M142 33a8 8 0 0 1 0 14M148 26a14 14 0 0 1 0 26" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" opacity=".7"/></svg></div><h3>NFC Experiencia Premium</h3><p>Página completa + fotos + video + música + diseño</p><div class="pr"><button class="mini" type="button" data-prod="NFC Experiencia Premium">Lo quiero</button></div></article>
+      <article class="nprod" data-cat="eve"><div class="pimgw"><svg class="pimg" viewBox="0 0 200 120" role="img" aria-label="NFC Voucher" xmlns="http://www.w3.org/2000/svg"><rect x="34" y="18" width="132" height="84" rx="12" class="o"/><rect x="34" y="18" width="132" height="84" rx="12" fill="none" stroke="var(--or)" stroke-width="2"/><rect x="48" y="78" width="46" height="6" rx="3" class="m"/><rect x="48" y="88" width="30" height="5" rx="2.5" class="m"/><use href="#i-card" x="48" y="30" width="30" height="30"/><path d="M142 33a8 8 0 0 1 0 14M148 26a14 14 0 0 1 0 26" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" opacity=".7"/></svg></div><h3>NFC Voucher</h3><p>Voucher digital + código</p><div class="pr"><button class="mini" type="button" data-prod="NFC Voucher">Lo quiero</button></div></article>
+      <article class="nprod" data-cat="eve"><div class="pimgw"><svg class="pimg" viewBox="0 0 200 120" role="img" aria-label="NFC Casamiento" xmlns="http://www.w3.org/2000/svg"><rect x="34" y="18" width="132" height="84" rx="12" class="o"/><rect x="34" y="18" width="132" height="84" rx="12" fill="none" stroke="var(--or)" stroke-width="2"/><rect x="48" y="78" width="46" height="6" rx="3" class="m"/><rect x="48" y="88" width="30" height="5" rx="2.5" class="m"/><use href="#i-star" x="48" y="30" width="30" height="30"/><path d="M142 33a8 8 0 0 1 0 14M148 26a14 14 0 0 1 0 26" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" opacity=".7"/></svg></div><h3>NFC Casamiento</h3><p>Invitación + Maps + confirmación</p><div class="pr"><button class="mini" type="button" data-prod="NFC Casamiento">Lo quiero</button></div></article>
+      <article class="nprod" data-cat="eve"><div class="pimgw"><svg class="pimg" viewBox="0 0 200 120" role="img" aria-label="NFC Invitación Evento" xmlns="http://www.w3.org/2000/svg"><rect x="34" y="18" width="132" height="84" rx="12" class="o"/><rect x="34" y="18" width="132" height="84" rx="12" fill="none" stroke="var(--or)" stroke-width="2"/><rect x="48" y="78" width="46" height="6" rx="3" class="m"/><rect x="48" y="88" width="30" height="5" rx="2.5" class="m"/><use href="#i-mail" x="48" y="30" width="30" height="30"/><path d="M142 33a8 8 0 0 1 0 14M148 26a14 14 0 0 1 0 26" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" opacity=".7"/></svg></div><h3>NFC Invitación Evento</h3><p>Invitación + ubicación + confirmación de asistencia</p><div class="pr"><button class="mini" type="button" data-prod="NFC Invitación Evento">Lo quiero</button></div></article>
+      <article class="nprod" data-cat="pro"><div class="pimgw"><svg class="pimg" viewBox="0 0 200 120" role="img" aria-label="NFC Propiedad" xmlns="http://www.w3.org/2000/svg"><circle cx="100" cy="22" r="12" fill="none" stroke="var(--mut)" stroke-width="3"/><path d="M100 34v10" stroke="var(--mut)" stroke-width="3"/><rect x="62" y="44" width="76" height="62" rx="16" class="o"/><rect x="62" y="44" width="76" height="62" rx="16" fill="none" stroke="var(--or)" stroke-width="2"/><use href="#i-pin" x="85" y="60" width="30" height="30"/></svg></div><h3>NFC Propiedad</h3><p>Fotos + datos + ubicación + WhatsApp</p><div class="pr"><button class="mini" type="button" data-prod="NFC Propiedad">Lo quiero</button></div></article>
+      <article class="nprod" data-cat="pro"><div class="pimgw"><svg class="pimg" viewBox="0 0 200 120" role="img" aria-label="NFC Producto / Garantía" xmlns="http://www.w3.org/2000/svg"><circle cx="100" cy="64" r="44" class="o"/><circle cx="100" cy="64" r="44" fill="none" stroke="var(--or)" stroke-width="2"/><circle cx="100" cy="28" r="5" fill="var(--bg)" stroke="var(--mut)" stroke-width="2"/><use href="#i-shield" x="85" y="52" width="30" height="30"/><rect x="82" y="92" width="36" height="5" rx="2.5" class="m"/></svg></div><h3>NFC Producto / Garantía</h3><p>Ficha + manual + garantía</p><div class="pr"><button class="mini" type="button" data-prod="NFC Producto / Garantía">Lo quiero</button></div></article>
+      <article class="nprod" data-cat="pro"><div class="pimgw"><svg class="pimg" viewBox="0 0 200 120" role="img" aria-label="NFC Planta" xmlns="http://www.w3.org/2000/svg"><circle cx="100" cy="64" r="44" class="o"/><circle cx="100" cy="64" r="44" fill="none" stroke="var(--or)" stroke-width="2"/><circle cx="100" cy="28" r="5" fill="var(--bg)" stroke="var(--mut)" stroke-width="2"/><use href="#i-globe" x="85" y="52" width="30" height="30"/><rect x="82" y="92" width="36" height="5" rx="2.5" class="m"/></svg></div><h3>NFC Planta</h3><p>Cuidados + riego + información</p><div class="pr"><button class="mini" type="button" data-prod="NFC Planta">Lo quiero</button></div></article>
+    </div>
+    
+  </div>
+</section>
+
+
+
+
+<!-- Calculadora -->
+<section class="alt" id="ahorro">
+  <div class="wrap calc">
+    <div>
+      <h2>¿Cuánto regalás en comisiones?</h2>
+      <p class="intro">Movelos y mirá cuánto podrías quedarte si una parte de tus pedidos entra directo por tu menú QR y WhatsApp.</p>
+      <div class="field"><label for="c-ped">Pedidos por mes en apps de delivery <output id="o-ped" for="c-ped">150</output></label><input type="range" id="c-ped" min="10" max="1000" step="10" value="150"></div>
+      <div class="field"><label for="c-tic">Ticket promedio <output id="o-tic" for="c-tic">$15.000</output></label><input type="range" id="c-tic" min="3000" max="60000" step="500" value="15000"></div>
+      <div class="field"><label for="c-com">Comisión que te cobra la app <output id="o-com" for="c-com">25 %</output></label><input type="range" id="c-com" min="5" max="35" step="1" value="25"></div>
+      <div class="field"><label for="c-sh">Parte de esos pedidos que pasarías a pedido directo <output id="o-sh" for="c-sh">40 %</output></label><input type="range" id="c-sh" min="10" max="100" step="5" value="40"></div>
+    </div>
+    <div class="res" style="--d:.1s" aria-live="polite">
+      <div class="lbl">Hoy pagás en comisiones, por mes</div>
+      <div class="big" id="r-pay">$0</div>
+      <hr>
+      <div class="lbl">Podrías quedarte, por mes</div>
+      <div class="big good" id="r-save">$0</div>
+      <div class="lbl">Y en un año</div>
+      <div class="big good" id="r-year">$0</div>
+      <a class="btn btn-primary btn-block" href="#presupuesto">Quiero empezar a ahorrar</a>
+      <p class="note">Estimación orientativa. Cargá el porcentaje real que te cobra tu app.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Proceso -->
+<section class="alt" id="proceso">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>De la primera charla a tu negocio funcionando</h2>
+      <p>Cinco pasos claros. Nos enfocamos en darle orden a tu negocio y en personalizar el sistema para resolver los problemas de tu día a día. Vos seguís atendiendo.</p>
+    </div>
+    <div class="steps">
+      <div class="step"><div class="n">1</div><h3>Conversamos</h3><p>Una charla corta para entender tu rubro, tus números y qué te duele hoy.</p></div>
+      <div class="step"><div class="n">2</div><h3>Armamos tu combo</h3><p>Elegís el combo, sumás o sacás secciones y recibís un presupuesto claro.</p></div>
+      <div class="step"><div class="n">3</div><h3>Implementamos</h3><p>Configuramos el sistema, cargamos tu catálogo y diseñamos tu web y tu menú QR.</p></div>
+      <div class="step"><div class="n">4</div><h3>Capacitamos</h3><p>Enseñamos al dueño y al equipo con práctica real, en tu local.</p></div>
+      <div class="step"><div class="n">5</div><h3>Acompañamos</h3><p>Seguimos las primeras semanas, medimos resultados y ajustamos lo que haga falta.</p></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Manifiesto -->
+<section id="vision">
+  <div class="wrap">
+    <p class="manifesto">Creamos conexiones para el futuro: entre tu negocio y tus clientes, y entre tus datos y tus decisiones.</p>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="wrap">
+    <div class="sec-head solo">
+      <h2>Lo que más nos preguntan</h2>
+    </div>
+    <div class="faq">
+      <details><summary>¿Hay que pagar todos los meses? <svg class="ic"><use href="#i-down"/></svg></summary><p>No. Pagás el combo una sola vez. Después solo pagás un monto fijo si pedís una modificación, sumás un módulo o contratás soporte. El hosting en la nube está incluido.</p></details>
+      <details><summary>¿Qué pasa si después quiero cambiar o agregar algo? <svg class="ic"><use href="#i-down"/></svg></summary><p>Te pasamos un monto fijo antes de empezar. Los cambios chicos y medianos tienen precio cerrado, y cada módulo nuevo se paga una vez.</p></details>
+      <details><summary>¿Puedo empezar por el Combo 1 y subir después? <svg class="ic"><use href="#i-down"/></svg></summary><p>Sí. Podés empezar por el Menú Digital y sumar el CRM o la app más adelante, sin rehacer lo anterior.</p></details>
+      <details><summary>¿El sistema funciona sin internet? <svg class="ic"><use href="#i-down"/></svg></summary><p>La versión Windows funciona sin internet y se comparte dentro del local por red. La versión en la nube necesita conexión y permite entrar desde cualquier dispositivo.</p></details>
+      <details><summary>¿Facturan con ARCA y trabajan con mi rubro? <svg class="ic"><use href="#i-down"/></svg></summary><p>Sí, la facturación electrónica con ARCA está integrada. Y lo adaptamos a gastronomía, talleres, estética, gimnasios, clubes, playas de estacionamiento, eventos y más. Si tu rubro no está, contanos.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- Presupuesto -->
+<section class="alt" id="presupuesto">
+  <div class="wrap quote">
+    <div>
+      <h2>Armá tu combo y recibí tu presupuesto</h2>
+      <p class="intro">Elegí lo que te interesa y nos llega por WhatsApp con todo detallado. Sin compromiso.</p>
+      <ul class="perks">
+        <li><svg class="ic"><use href="#i-check"/></svg>Te respondemos con una propuesta clara</li>
+        <li><svg class="ic"><use href="#i-check"/></svg>Sumás o sacás secciones cuando quieras</li>
+        <li><svg class="ic"><use href="#i-check"/></svg>Empezás por lo que más necesitás</li>
+      </ul>
+      <div class="contact-lines" id="contact-lines"></div>
+    </div>
+
+    <form class="formcard f" id="form" style="--d:.1s" novalidate>
+      <div class="f-row">
+        <label class="f">Tu nombre<input type="text" id="f-nombre" name="nombre" autocomplete="name" required></label>
+        <label class="f">Nombre de tu negocio<input type="text" id="f-negocio" name="negocio" autocomplete="organization"></label>
+      </div>
+      <label class="f">Rubro
+        <select id="f-rubro" name="rubro">
+          <option>Gastronomía</option>
+          <option>Talleres y servicios técnicos</option>
+          <option>Estética y barberías</option>
+          <option>Spa</option>
+          <option>Gimnasio o natatorio</option>
+          <option>Club de barrio o club privado</option>
+          <option>Playa de estacionamiento</option>
+          <option>Eventos sociales</option>
+          <option>Control de ingreso y egreso de personal</option>
+          <option>Inmobiliaria o alquileres</option>
+          <option>Salud y odontología</option>
+          <option>Comercio, indumentaria o almacén</option>
+          <option>Otro</option>
+        </select>
+      </label>
+      <fieldset>
+        <legend>¿Qué combo te interesa?</legend>
+        <div class="opts">
+          <label class="opt"><input type="radio" name="combo" value="Combo 1: Menú Digital"><span>Combo 1 · Menú Digital</span></label>
+          <label class="opt"><input type="radio" name="combo" value="Combo 2: Menú Digital + CRM básico" checked><span>Combo 2 · Menú Digital + CRM básico</span></label>
+          <label class="opt"><input type="radio" name="combo" value="Combo 3: Menú Digital + CRM + App"><span>Combo 3 · Menú Digital + CRM + App</span></label>
+          <label class="opt"><input type="radio" name="combo" value="Todavía no sé, necesito asesoramiento"><span>Todavía no sé, asesoreme</span></label>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>¿Querés sumar algo? (opcional)</legend>
+        <div class="chips">
+          <label class="opt"><input type="checkbox" name="extra" value="Control de personal (horas de entrada y salida)"><span>Control de personal</span></label>
+          <label class="opt"><input type="checkbox" name="extra" value="Fidelización con NFC"><span>Fidelización NFC</span></label>
+          <label class="opt"><input type="checkbox" name="extra" value="Mesas, mozos y comandas"><span>Mesas y mozos</span></label>
+          <label class="opt"><input type="checkbox" name="extra" value="Órdenes de trabajo"><span>Órdenes de trabajo</span></label>
+          <label class="opt"><input type="checkbox" name="extra" value="Turnos y reservas"><span>Turnos y reservas</span></label>
+          <label class="opt"><input type="checkbox" name="extra" value="Abonos y socios"><span>Abonos y socios</span></label>
+          <label class="opt"><input type="checkbox" name="extra" value="Balanzas, impresoras y periféricos"><span>Periféricos</span></label>
+          <label class="opt"><input type="checkbox" name="extra" value="Sucursal adicional"><span>Sucursal adicional</span></label>
+          <label class="opt"><input type="checkbox" name="extra" value="Página web a medida"><span>Página web</span></label>
+          <label class="opt"><input type="checkbox" name="extra" value="SEO local"><span>SEO local</span></label>
+          <label class="opt"><input type="checkbox" name="extra" value="NFC Inicio: 1 tarjeta + 5 llaveros"><span>NFC Inicio</span></label>
+          <label class="opt"><input type="checkbox" name="extra" value="NFC Local: 10 tarjetas"><span>NFC Local</span></label>
+          <label class="opt"><input type="checkbox" name="extra" value="NFC Equipo: 10 llaveros de fichaje"><span>NFC Equipo</span></label>
+          <label class="opt"><input type="checkbox" name="extra" value="NFC Socios: 50 tarjetas de acceso"><span>NFC Socios</span></label>
+        </div>
+      </fieldset>
+      <label class="f">Comentarios (opcional)<textarea id="f-msg" name="msg" placeholder="Contanos qué querés mejorar en tu negocio"></textarea></label>
+      <fieldset>
+        <legend>Así va a llegar tu mensaje</legend>
+        <pre class="preview" id="preview" aria-live="polite"></pre>
+      </fieldset>
+      <p class="err" id="err" role="alert"></p>
+      <button class="btn btn-primary btn-block" type="submit"><svg class="ic"><use href="#i-msg"/></svg> Enviar por WhatsApp</button>
+      <p class="alt-link">¿Preferís el mail? <a href="#" id="mail-link">Escribinos por correo</a></p>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="f-grid">
+      <div>
+        <a class="logo" href="#inicio" aria-label="Vincular Business, inicio">
+          <svg width="46" height="38" viewBox="0 0 108 88" aria-hidden="true"><path d="M8 20 L38 80 L68 20" fill="none" stroke="#FFFFFF" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/><g fill="none" stroke="#FF7A1A" stroke-width="8" stroke-linecap="round"><path d="M82 18a22 22 0 0 1 0 26"/><path d="M97 7a40 40 0 0 1 0 48"/></g></svg>
+          <span>Vincular Business<small>Desde 2022 <span class="stars">★★★</span></small></span>
+        </a>
+        <p class="about">Digitalización, software de gestión y fidelización para comercios y servicios de Argentina.</p>
+      </div>
+      <div>
+        <h4>Servicios</h4>
+        <ul>
+          <li><a href="#servicios">Qué hacemos</a></li>
+          <li><a href="#modulos">Módulos</a></li>
+          <li><a href="#rubros">Rubros</a></li>
+          <li><a href="#combos">Combos</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Empresa</h4>
+        <ul>
+          <li><a href="#proceso">Cómo trabajamos</a></li>
+          <li><a href="#extras">Servicios extra</a></li>
+          <li><a href="#ahorro">Calculadora</a></li>
+          <li><a href="#catalogo-nfc">Catálogo NFC</a></li>
+          <li><a href="#faq">Preguntas frecuentes</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contacto</h4>
+        <ul class="f-contact" id="footer-contact"></ul>
+      </div>
+    </div>
+    <div class="f-bottom">
+      <span>© <span id="year">2026</span> Vincular Business. Todos los derechos reservados.</span>
+      <span>Hecho en Argentina <span class="stars">★★★</span></span>
+    </div>
+  </div>
+</footer>
+
+
+<a class="fab" href="#" data-wa="Hola! Quiero mejorar mi negocio con Vincular Business." aria-label="Mejorá tu negocio: escribinos por WhatsApp"><svg class="ic"><use href="#i-trend"/></svg><span>Mejorá tu negocio</span></a>
+
+<script>
+(() => {
+  'use strict';
+
+  /* ============================================================
+     DATOS EDITABLES. Cambiá estos valores y se actualizan solos
+     los botones de WhatsApp, el formulario y el pie de página.
+     (Valores iniciales tomados de Rave Holding.)
+     ============================================================ */
+  const CONFIG = {
+    marca: 'Vincular Business',
+    whatsapp: '5493875143900',            // sin +, sin espacios ni guiones
+    whatsappVisible: '+54 9 387 514-3900',
+    email: 'raveholding@gmail.com',
+    instagram: '',                        // usuario sin @ (dejalo vacío para ocultarlo)
+    ciudad: 'Salta, Argentina',
+    horario: '',                          // por ejemplo: 'Lunes a viernes de 9 a 18 h'
+    // ---- PRECIOS (en pesos argentinos). Referencia: dólar oficial ~ $1.550 (oct 2026).
+    // Cambiá cualquier número y la web se actualiza sola. Dejá un combo en null para mostrar "Presupuesto a medida".
+    dolar: 1550,
+    // Todos son pagos únicos (sin abono mensual).
+    precios: {
+      c1: { unico: 100000 },                // Menú Digital
+      c2: { unico: 200000 },                // Menú Digital + CRM básico
+      c3: { unico: 500000 },               // Menú Digital + CRM + App
+      n1: { unico: 35000 },                 // NFC Inicio: 1 tarjeta + 5 llaveros
+      n2: { unico: 55000 },                 // NFC Local: 10 tarjetas
+      n3: { unico: 65000 },                 // NFC Equipo: 10 llaveros de fichaje
+      n4: { unico: 220000 }                 // NFC Socios: 50 tarjetas de acceso
+    },
+    horaDesarrollo: 40000,                  // valor por hora de desarrollo a medida
+    descuentoEfectivo: '10 %',              // descuento por pago en efectivo ('' para ocultar el porcentaje)
+    // Servicios posteriores a la entrega: [nombre, detalle, precio, '' o 'por mes']
+    servicios: [
+      ['Modificación chica', 'Textos, precios, fotos y ajustes de diseño', 10000, ''],
+      ['Modificación mediana', 'Nueva sección o cambio de funcionamiento', 40000, ''],
+      ['Soporte mensual (opcional)', 'Asistencia, actualizaciones y cambios chicos incluidos', 20000, 'por mes'],
+      ['Hosting en la nube', 'Dominio, SSL y copias automáticas', 0, 'incluido']
+    ],
+    modulosBase: [
+      ['Clientes y cuentas corrientes (fiados)', 'Saldos, límites de crédito y consentimiento de WhatsApp'],
+      ['Ventas y caja', 'Apertura, cierre y arqueo'],
+      ['Inventario y productos', 'Categorías, imágenes e importación masiva desde Excel'],
+      ['Facturación con y sin ARCA', 'Facturas fiscales y documentos internos'],
+      ['Dashboard y reportes', 'Diarios, semanales y mensuales'],
+      ['Usuarios y permisos por rol', 'Cada persona ve lo que le corresponde'],
+      ['Menú digital sincronizado', 'Publicás y se actualiza al instante']
+    ],
+    modulosExtra: [
+      ['Control de personal (horas de entrada y salida)', 'Fichaje con tarjeta o llavero NFC', 45000],
+      ['Fidelización con NFC', 'Sellos, puntos y cupones', 35000],
+      ['Mesas, mozos y comandas', 'Para gastronomía', 55000],
+      ['Órdenes de trabajo', 'Para talleres y servicios técnicos', 55000],
+      ['Turnos y reservas', 'Agenda por profesional o recurso', 45000],
+      ['Abonos y socios', 'Clubes, gimnasios y playas de estacionamiento', 55000],
+      ['Balanzas, impresoras y periféricos', 'Conexión asistida', 35000],
+      ['Pantalla táctil y modo kiosco', 'Más pantalla de cliente', 30000],
+      ['Portal Wi-Fi para clientes', 'Registro con consentimiento', 35000],
+      ['Sucursal adicional', 'Sincronizada en el mismo panel', 60000]
+    ],
+    modulosCustom: [
+      ['Barrera de entrada', 'Control de acceso de vehículos o personas con NFC'],
+      ['Integración con hardware específico', 'Molinetes, cerraduras, balanzas especiales'],
+      ['Reportes y tableros a medida', 'Con los datos que vos decidas'],
+      ['Integraciones con terceros', 'Pasarelas de pago, tiendas online'],
+      ['Migración de datos', 'Desde Excel o desde tu sistema actual']
+    ]
+  };
+
+  const $ = (s, c = document) => c.querySelector(s);
+  const $$ = (s, c = document) => [...c.querySelectorAll(s)];
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  document.documentElement.classList.add('js');
+
+  const waURL = (msg) => `https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(msg)}`;
+
+  /* ---------- Enlaces de WhatsApp ---------- */
+  $$('[data-wa]').forEach((a) => {
+    a.href = waURL(a.dataset.wa || `Hola! Quiero consultar por ${CONFIG.marca}.`);
+    a.target = '_blank';
+    a.rel = 'noopener noreferrer';
+  });
+
+  /* ---------- Contacto (sección y pie) ---------- */
+  const icon = (id) => `<svg class="ic" aria-hidden="true"><use href="#i-${id}"/></svg>`;
+  const lines = [];
+  lines.push(`<a href="${waURL('Hola! Quiero consultar por ' + CONFIG.marca + '.')}" target="_blank" rel="noopener noreferrer">${icon('msg')}${CONFIG.whatsappVisible}</a>`);
+  if (CONFIG.email) lines.push(`<a href="mailto:${CONFIG.email}">${icon('mail')}${CONFIG.email}</a>`);
+  if (CONFIG.instagram) lines.push(`<a href="https://instagram.com/${CONFIG.instagram}" target="_blank" rel="noopener noreferrer">${icon('globe')}@${CONFIG.instagram}</a>`);
+  $('#contact-lines').innerHTML = lines.join('');
+
+  const foot = [];
+  foot.push(`<li>${icon('msg')}<a href="${waURL('Hola! Quiero consultar por ' + CONFIG.marca + '.')}" target="_blank" rel="noopener noreferrer">${CONFIG.whatsappVisible}</a></li>`);
+  if (CONFIG.email) foot.push(`<li>${icon('mail')}<a href="mailto:${CONFIG.email}">${CONFIG.email}</a></li>`);
+  if (CONFIG.instagram) foot.push(`<li>${icon('globe')}<a href="https://instagram.com/${CONFIG.instagram}" target="_blank" rel="noopener noreferrer">@${CONFIG.instagram}</a></li>`);
+  if (CONFIG.ciudad) foot.push(`<li>${icon('pin')}<span>${CONFIG.ciudad}</span></li>`);
+  if (CONFIG.horario) foot.push(`<li>${icon('clock')}<span>${CONFIG.horario}</span></li>`);
+  $('#footer-contact').innerHTML = foot.join('');
+  $('#year').textContent = new Date().getFullYear();
+
+  /* ---------- Menú móvil ---------- */
+  const burger = $('#burger');
+  const links = $('#navlinks');
+  const setMenu = (open) => {
+    links.classList.toggle('open', open);
+    burger.setAttribute('aria-expanded', String(open));
+    burger.setAttribute('aria-label', open ? 'Cerrar menú' : 'Abrir menú');
+    burger.innerHTML = `<svg class="ic"><use href="#i-${open ? 'x' : 'menu'}"/></svg>`;
+  };
+  burger.addEventListener('click', () => setMenu(!links.classList.contains('open')));
+  $$('a', links).forEach((a) => a.addEventListener('click', () => setMenu(false)));
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') setMenu(false); });
+
+  /* ---------- Barra de progreso ---------- */
+  const bar = $('#progress');
+  const onScroll = () => {
+    const h = document.documentElement;
+    const max = h.scrollHeight - h.clientHeight;
+    bar.style.width = (max > 0 ? (h.scrollTop / max) * 100 : 0) + '%';
+  };
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  /* ---------- Pestañas accesibles ---------- */
+  function initTabs(root) {
+    const list = $('[role=tablist]', root);
+    const tabs = $$('[role=tab]', list);
+    const panels = $$('[role=tabpanel]', root);
+    const select = (t) => {
+      tabs.forEach((x) => { const on = x === t; x.setAttribute('aria-selected', String(on)); x.tabIndex = on ? 0 : -1; });
+      panels.forEach((p) => { p.hidden = p.id !== t.getAttribute('aria-controls'); });
+    };
+    tabs.forEach((t, i) => {
+      t.addEventListener('click', () => select(t));
+      t.addEventListener('keydown', (e) => {
+        let n = null;
+        if (e.key === 'ArrowDown' || e.key === 'ArrowRight') n = tabs[(i + 1) % tabs.length];
+        if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') n = tabs[(i - 1 + tabs.length) % tabs.length];
+        if (e.key === 'Home') n = tabs[0];
+        if (e.key === 'End') n = tabs[tabs.length - 1];
+        if (n) { e.preventDefault(); n.focus(); select(n); }
+      });
+    });
+  }
+  $$('#tabs-mod, #tabs-rub').forEach(initTabs);
+
+  /* ---------- QR decorativo ---------- */
+  function drawQR(svg) {
+    const N = 25;
+    let seed = Number(svg.dataset.seed || 1);
+    const rnd = () => { seed = (seed * 1664525 + 1013904223) % 4294967296; return seed / 4294967296; };
+    const nearFinder = (x, y) => (x < 8 && y < 8) || (x >= N - 8 && y < 8) || (x < 8 && y >= N - 8);
+    let shapes = '';
+    const drawFinder = (ox, oy) => {
+      shapes += `<rect x="${ox}" y="${oy}" width="7" height="7" fill="#0A2E6E"/>`;
+      shapes += `<rect x="${ox + 1}" y="${oy + 1}" width="5" height="5" fill="#fff"/>`;
+      shapes += `<rect x="${ox + 2}" y="${oy + 2}" width="3" height="3" fill="#0A2E6E"/>`;
+    };
+    for (let y = 0; y < N; y++) for (let x = 0; x < N; x++) {
+      if (nearFinder(x, y)) continue;
+      if (rnd() > 0.5) shapes += `<rect x="${x}" y="${y}" width="1" height="1" fill="#0A2E6E"/>`;
+    }
+    drawFinder(0, 0); drawFinder(N - 7, 0); drawFinder(0, N - 7);
+    svg.innerHTML = shapes;
+  }
+  $$('svg.qr').forEach(drawQR);
+
+  /* ---------- Inclinación suave del mockup del hero ---------- */
+  const stage = $('#stage');
+  const hero = $('#inicio');
+  if (stage && !reduceMotion && window.matchMedia('(pointer: fine)').matches) {
+    hero.addEventListener('mousemove', (e) => {
+      const r = stage.getBoundingClientRect();
+      const px = (e.clientX - (r.left + r.width / 2)) / r.width;
+      const py = (e.clientY - (r.top + r.height / 2)) / r.height;
+      stage.style.setProperty('--ry', (px * 8).toFixed(2) + 'deg');
+      stage.style.setProperty('--rx', (-py * 6).toFixed(2) + 'deg');
+    });
+    hero.addEventListener('mouseleave', () => { stage.style.setProperty('--ry', '0deg'); stage.style.setProperty('--rx', '0deg'); });
+  }
+
+  /* ---------- Calculadora de comisiones ---------- */
+  const nf = new Intl.NumberFormat('es-AR', { style: 'currency', currency: 'ARS', maximumFractionDigits: 0 });
+  const money = { format: (n) => nf.format(n).replace(/\s/g, '') };
+  const cPed = $('#c-ped'), cTic = $('#c-tic'), cCom = $('#c-com'), cSh = $('#c-sh');
+  const out = { pay: $('#r-pay'), save: $('#r-save'), year: $('#r-year') };
+  const shown = { pay: 0, save: 0, year: 0 };
+  const animate = (key, to) => {
+    const el = out[key];
+    if (reduceMotion) { el.textContent = money.format(to); shown[key] = to; return; }
+    const from = shown[key], t0 = performance.now(), dur = 450;
+    const step = (t) => {
+      const k = Math.min(1, (t - t0) / dur);
+      const v = from + (to - from) * (1 - Math.pow(1 - k, 3));
+      el.textContent = money.format(Math.round(v));
+      if (k < 1) requestAnimationFrame(step); else shown[key] = to;
+    };
+    requestAnimationFrame(step);
+  };
+  const calc = () => {
+    const ped = +cPed.value, tic = +cTic.value, com = +cCom.value, sh = +cSh.value;
+    $('#o-ped').textContent = ped.toLocaleString('es-AR');
+    $('#o-tic').textContent = money.format(tic);
+    $('#o-com').textContent = com + ' %';
+    $('#o-sh').textContent = sh + ' %';
+    const pay = ped * tic * (com / 100);
+    const save = pay * (sh / 100);
+    animate('pay', pay); animate('save', save); animate('year', save * 12);
+  };
+  [cPed, cTic, cCom, cSh].forEach((i) => i.addEventListener('input', calc));
+  calc();
+
+  /* ---------- Formulario → WhatsApp / mail ---------- */
+  const form = $('#form');
+  const preview = $('#preview');
+  const err = $('#err');
+  const buildMessage = () => {
+    const v = (id) => $(id).value.trim();
+    const combo = ($('input[name=combo]:checked', form) || {}).value || 'Todavía no sé, necesito asesoramiento';
+    const extras = $$('input[name=extra]:checked', form).map((i) => i.value);
+    const rows = [
+      `Hola! Quiero un presupuesto de ${CONFIG.marca}.`,
+      '',
+      `• Nombre: ${v('#f-nombre') || '(sin completar)'}`,
+      `• Negocio: ${v('#f-negocio') || '(sin completar)'}`,
+      `• Rubro: ${$('#f-rubro').value}`,
+      `• Combo: ${combo}`,
+      `• Extras: ${extras.length ? extras.join(', ') : 'ninguno por ahora'}`
+    ];
+    if (v('#f-msg')) rows.push(`• Comentarios: ${v('#f-msg')}`);
+    return rows.join('\n');
+  };
+  const refresh = () => {
+    const msg = buildMessage();
+    preview.textContent = msg;
+    $('#mail-link').href = `mailto:${CONFIG.email}?subject=${encodeURIComponent('Consulta de presupuesto · ' + CONFIG.marca)}&body=${encodeURIComponent(msg)}`;
+  };
+  form.addEventListener('input', () => { err.textContent = ''; refresh(); });
+  form.addEventListener('change', refresh);
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    if (!$('#f-nombre').value.trim()) {
+      err.textContent = 'Contanos tu nombre para poder responderte.';
+      $('#f-nombre').focus();
+      return;
+    }
+    const win = window.open(waURL(buildMessage()), '_blank', 'noopener');
+    if (!win) window.location.href = waURL(buildMessage());
+  });
+  refresh();
+
+  /* ---------- Precios y descuento (se muestran solo si los cargás en CONFIG) ---------- */
+  const ARS = new Intl.NumberFormat('es-AR');
+  const peso = (n) => '$' + ARS.format(n).replace(/\s/g, '');
+  const usd = (n) => 'USD ' + ARS.format(Math.round(n / CONFIG.dolar / 5) * 5);
+  $$('[data-price]').forEach((el) => {
+    const v = CONFIG.precios[el.dataset.price];
+    if (!v || !v.unico) return;
+    const combo = el.closest('.combo');
+    el.innerHTML = `<span class="big">${peso(v.unico)}</span>` + (combo ? '<span class="alta">Pago único · sin abonos mensuales</span>' : '') + `<span class="usd">${combo ? 'Referencia: ' : 'Pago único · '}${usd(v.unico)}</span>`;
+  });
+  const cash = $('[data-cash]');
+  if (cash && CONFIG.descuentoEfectivo) cash.textContent = `Efectivo con ${CONFIG.descuentoEfectivo} de descuento`;
+
+  /* ---------- Módulos del CRM ---------- */
+  const rowLi = (n, d, extra = '') => `<li><span>${n}<small>${d}</small></span>${extra}</li>`;
+  $('#mods-base').innerHTML = CONFIG.modulosBase.map(([n, d]) => rowLi(n, d)).join('');
+  $('#mods-extra').innerHTML = CONFIG.modulosExtra.map(([n, d, p]) => rowLi(n, d, ``)).join('');
+  $('#mods-custom').innerHTML = CONFIG.modulosCustom.map(([n, d]) => rowLi(n, d)).join('');
+  $('#after').innerHTML = CONFIG.servicios.map(([n, d, p, per]) => `<div><b>${n}</b><small>${d}</small><span class="pm">${p ? peso(p) + ' <em>' + (per || 'monto fijo') + '</em>' : 'Gratis'}</span></div>`).join('');
+  $$('[data-from]').forEach((el) => { el.textContent = peso(CONFIG.precios[el.dataset.from].unico); });
+  const custom = $('[data-custom]');
+  if (custom) custom.addEventListener('click', () => {
+    const m = $('#f-msg');
+    const line = 'Quiero consultar por un módulo a mi medida.';
+    if (!m.value.includes(line)) m.value = (m.value ? m.value + '\n' : '') + line;
+    refresh();
+  });
+
+  /* ---------- Botones "Quiero el NFC" ---------- */
+  $$('[data-nfc]').forEach((b) => b.addEventListener('click', () => {
+    const cb = $$('input[name=extra]', form).find((i) => i.value === b.dataset.nfc);
+    if (cb) { cb.checked = true; refresh(); }
+    $('#presupuesto').scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth' });
+    setTimeout(() => $('#f-nombre').focus({ preventScroll: true }), reduceMotion ? 0 : 600);
+  }));
+
+  /* ---------- Botones "Quiero el Combo X" ---------- */
+  $$('[data-combo]').forEach((b) => b.addEventListener('click', () => {
+    const radios = $$('input[name=combo]', form);
+    const r = radios[Number(b.dataset.combo) - 1];
+    if (r) { r.checked = true; refresh(); }
+    $('#presupuesto').scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth' });
+    setTimeout(() => $('#f-nombre').focus({ preventScroll: true }), reduceMotion ? 0 : 600);
+  }));
+
+  /* ---------- Cinta de actividad: duplicar contenido para el bucle ---------- */
+  const track = $('#track');
+  if (track) {
+    [...track.children].forEach((el) => { const c = el.cloneNode(true); c.dataset.dup = '1'; c.setAttribute('aria-hidden', 'true'); track.appendChild(c); });
+  }
+
+  /* ---------- Inicio rápido por rubro ---------- */
+  const goQuote = (focus = true) => {
+    $('#presupuesto').scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth' });
+    if (focus) setTimeout(() => $('#f-nombre').focus({ preventScroll: true }), reduceMotion ? 0 : 650);
+  };
+  $$('[data-rubro]').forEach((b) => b.addEventListener('click', () => {
+    const sel = $('#f-rubro');
+    const opt = [...sel.options].find((o) => o.textContent.trim() === b.dataset.rubro);
+    if (opt) sel.value = opt.value;
+    refresh();
+    goQuote();
+  }));
+
+  /* ---------- Catálogo NFC: filtro por categoría y pedido ---------- */
+  const catTabs = $$('.cattabs .tab');
+  const prods = $$('#ncat .nprod');
+  const showCat = (cat) => {
+    catTabs.forEach((t) => t.setAttribute('aria-selected', String(t.dataset.cat === cat)));
+    prods.forEach((p) => { p.hidden = !(cat === 'all' || p.dataset.cat === cat); });
+  };
+  catTabs.forEach((t) => t.addEventListener('click', () => showCat(t.dataset.cat)));
+  showCat('neg');
+  $$('[data-prod]').forEach((b) => b.addEventListener('click', () => {
+    const m = $('#f-msg');
+    const line = `Quiero sumar: ${b.dataset.prod}.`;
+    if (!m.value.includes(line)) m.value = (m.value ? m.value + '\n' : '') + line;
+    refresh();
+    goQuote(true);
+  }));
+
+})();
+</script>
+</body>
+</html>
