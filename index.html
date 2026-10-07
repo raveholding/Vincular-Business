@@ -975,7 +975,7 @@ a.qbtn{text-decoration:none}
       <article class="solo">
         <svg class="ic"><use href="#i-card"/></svg>
         <h3>Tarjeta digital</h3>
-        <p>Tu perfil con WhatsApp, redes, servicios y ubicación, listo para compartir con un QR. Ideal para profesionales y oficios.</p>
+        <p>Tu perfil con WhatsApp, redes, servicios y ubicación, listo para compartir con un QR. Con tarjeta NFC común, o inkjet por <b data-from="s1b"></b>. Ideal para profesionales y oficios.</p>
         <div class="price" data-price="s1"><span>Presupuesto a medida</span></div>
         <button class="btn btn-ghost btn-block" type="button" data-combo="5">Quiero la tarjeta digital</button>
       </article>
@@ -1452,15 +1452,16 @@ a.qbtn{text-decoration:none}
       c2: { unico: 200000 },                // Combo 2: + CRM básico
       c3: { unico: 350000 },                // Combo 3: Sistema completo (3 módulos extras incluidos)
       c4: { unico: 700000 },                // Combo 4: Sistema completo + App
-      s1: { unico: 30000 },                 // Tarjeta digital
-      s2: { unico: 80000 },                 // Turnero con cartera de clientes
+      s1: { unico: 20000 },                 // Tarjeta digital NFC común
+      s1b: { unico: 30000 },                // Tarjeta digital NFC inkjet
+      s2: { unico: 70000 },                 // Turnero con cartera de clientes
       s3: { unico: 100000 },                // Sistema en HTML (= Combo 1)
       n1: { unico: 35000 },                 // NFC Inicio: 1 tarjeta + 5 llaveros
       n2: { unico: 55000 },                 // NFC Local: 10 tarjetas
       n3: { unico: 65000 },                 // NFC Equipo: 10 llaveros de fichaje
       n4: { unico: 220000 }                 // NFC Socios: 50 tarjetas de acceso
     },
-    desde: ['c4'],                          // precios que se muestran como 'Desde' (se cotizan según el proyecto)
+    desde: ['c4', 's1'],                          // precios que se muestran como 'Desde' (se cotizan según el proyecto)
     horaDesarrollo: 40000,                  // valor por hora de desarrollo a medida
     descuentoEfectivo: '10 %',              // descuento por pago en efectivo ('' para ocultar el porcentaje)
     // Servicios posteriores a la entrega: [nombre, detalle, precio, '' o 'por mes']
