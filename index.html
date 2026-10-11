@@ -642,6 +642,20 @@ a.qbtn{text-decoration:none}
 .diff{grid-template-columns:repeat(4,1fr)}
 @media(max-width:1100px){.diff{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:640px){.diff{grid-template-columns:1fr}}
+
+/* ---------- 4 combos y módulos por combo ---------- */
+.combos{grid-template-columns:repeat(4,1fr)}
+.combo{padding:44px 28px 36px}
+.mods4{grid-template-columns:repeat(4,1fr);margin-bottom:8px}
+.mods4 .mod{padding:32px 24px}
+.mods4 .mod h3{font-size:1.5rem}
+@media(max-width:1099px){
+  .combos,.mods4{grid-template-columns:1fr}
+  .combo{border-right:0;border-bottom:1px solid var(--line)}
+  .combo:last-child{border-bottom:0}
+  .mods4 .mod{border-right:0;border-bottom:1px solid var(--line)}
+  .mods4 .mod:last-child{border-bottom:0}
+}
 </style>
 </head>
 <body>
@@ -890,8 +904,8 @@ a.qbtn{text-decoration:none}
       <a class="line" href="#nfc">
         <svg class="ic"><use href="#i-wifi"/></svg>
         <h3>Productos y combos NFC</h3>
-        <p>Tarjetas, llaveros y 30 productos con un toque. Con chips e impresión nuestros.</p>
-        <span class="from">Combos NFC desde <b data-from="n1"></b></span>
+        <p>Tarjetas, llaveros y 30 productos con un toque, armados a medida. Con chips e impresión nuestros.</p>
+        <span class="from">Tarjetas desde <b data-from="s1"></b> · llaveros desde <b data-from="l1"></b></span>
       </a>
     </div>
   </div>
@@ -902,13 +916,13 @@ a.qbtn{text-decoration:none}
   <div class="wrap">
     <div class="sec-head">
       <h2>Sistemas y digitalización</h2>
-      <p>Elegí hasta dónde llegar. Pagás una sola vez, sin abonos mensuales. Si más adelante necesitás asistencia o cambios, se cobran aparte a un valor fijo. Los equipos NFC se compran aparte.</p>
+      <p>Elegí hasta dónde llegar. Pagás una sola vez y el sistema se arma 100 % a medida de tu negocio. Si más adelante necesitás asistencia o cambios, se cobran aparte a un valor fijo. Los equipos NFC se compran aparte.</p>
     </div>
     <p class="notice"><svg class="ic"><use href="#i-lightbulb"/></svg>Pago único en pesos argentinos. Hosting en la nube incluido. Sin seña: probás una demo antes de pagar. Los valores pueden actualizarse; el presupuesto que aceptes fija el precio.</p>
 
     <div class="combos">
       <article class="combo">
-        <span class="num">Combo 1</span>
+        <span class="num">Menú</span>
         <h3>Menú Digital</h3>
         <p class="sub">Que te encuentren y te pidan por WhatsApp, sin comisiones.</p>
         <div class="price" data-price="c1"><span>Presupuesto a medida</span></div>
@@ -919,57 +933,62 @@ a.qbtn{text-decoration:none}
           <li><svg class="ic"><use href="#i-check"/></svg>Sellos digitales de fidelidad por QR</li>
           <li><svg class="ic"><use href="#i-check"/></svg>Capacitación y soporte de arranque</li>
         </ul>
-        <button class="btn btn-ghost btn-block" type="button" data-combo="1">Quiero el Combo 1</button>
+        <button class="btn btn-ghost btn-block" type="button" data-combo="1">Quiero el Menú</button>
       </article>
 
       <article class="combo feat" style="--d:.1s">
         <span class="badge">Más conveniente</span>
-        <span class="num">Combo 2</span>
+        <span class="num">Básico</span>
         <h3>Menú Digital + CRM básico</h3>
-        <p class="sub">Todo ordenado: clientes, ventas, stock y facturación.</p>
+        <p class="sub">Todo ordenado: clientes, ventas y stock en tiempo real.</p>
         <div class="price" data-price="c2"><span>Presupuesto a medida</span></div>
         <ul>
-          <li class="inc"><svg class="ic"><use href="#i-layers"/></svg>Todo lo del Combo 1, más:</li>
+          <li class="inc"><svg class="ic"><use href="#i-layers"/></svg>Todo lo del Menú, más:</li>
           <li><svg class="ic"><use href="#i-check"/></svg>CRM básico: clientes, fiados y cobranza por WhatsApp</li>
-          <li><svg class="ic"><use href="#i-check"/></svg>Ventas, caja, stock y facturación ARCA</li>
+          <li><svg class="ic"><use href="#i-check"/></svg>Ventas, caja y stock en tiempo real</li>
           <li><svg class="ic"><use href="#i-check"/></svg>Pantalla táctil y pantalla para el cliente</li>
+          <li><svg class="ic"><use href="#i-check"/></svg>Usuarios y permisos por rol</li>
           <li><svg class="ic"><use href="#i-check"/></svg>Reportes diarios, semanales y mensuales</li>
           <li><svg class="ic"><use href="#i-check"/></svg>Versión Windows o nube, a elección</li>
         </ul>
-        <button class="btn btn-primary btn-block" type="button" data-combo="2">Quiero el Combo 2</button>
+        <button class="btn btn-primary btn-block" type="button" data-combo="2">Quiero el Básico</button>
       </article>
 
       <article class="combo" style="--d:.2s">
-        <span class="num">Combo 3</span>
+        <span class="num">Completo</span>
         <h3>Sistema completo</h3>
-        <p class="sub">Menú Digital + CRM + módulos extras incluidos, sin app.</p>
+        <p class="sub">Facturación, personal, mesas y cobros en un solo lugar.</p>
         <div class="price" data-price="c3"><span>Presupuesto a medida</span></div>
         <ul>
-          <li class="inc"><svg class="ic"><use href="#i-layers"/></svg>Todo lo del Combo 2, más:</li>
-          <li><svg class="ic"><use href="#i-check"/></svg>3 módulos extras a tu elección</li>
-          <li><svg class="ic"><use href="#i-check"/></svg>Balanzas, impresoras y periféricos configurados</li>
-          <li><svg class="ic"><use href="#i-check"/></svg>Importación de tus productos y clientes</li>
-          <li><svg class="ic"><use href="#i-check"/></svg>Soporte de arranque ampliado</li>
+          <li class="inc"><svg class="ic"><use href="#i-layers"/></svg>Todo lo del Básico, más:</li>
+          <li><svg class="ic"><use href="#i-check"/></svg>Facturación electrónica ARCA</li>
+          <li><svg class="ic"><use href="#i-check"/></svg>Personal completo: entrada y salida con QR o NFC, tareas asignadas y organigrama</li>
+          <li><svg class="ic"><use href="#i-check"/></svg>Mesas, mozos y comandas</li>
+          <li><svg class="ic"><use href="#i-check"/></svg>Cobros con Mercado Pago y MODO</li>
+          <li><svg class="ic"><use href="#i-check"/></svg>Periféricos configurados e importación de tus datos</li>
         </ul>
-        <button class="btn btn-ghost btn-block" type="button" data-combo="3">Quiero el Combo 3</button>
+        <button class="btn btn-ghost btn-block" type="button" data-combo="3">Quiero el Completo</button>
       </article>
 
       <article class="combo" style="--d:.3s">
-        <span class="num">Combo 4</span>
+        <span class="num">Completo + App</span>
         <h3>Sistema completo + App</h3>
         <p class="sub">Tu marca en Play Store y App Store.</p>
         <div class="price" data-price="c4"><span>Presupuesto a medida</span></div>
         <ul>
-          <li class="inc"><svg class="ic"><use href="#i-layers"/></svg>Todo lo del Combo 3, más:</li>
+          <li class="inc"><svg class="ic"><use href="#i-layers"/></svg>Todo lo del Completo, más:</li>
           <li><svg class="ic"><use href="#i-check"/></svg>App con tu marca para Android e iPhone</li>
           <li><svg class="ic"><use href="#i-check"/></svg>Pedidos, reservas y fidelidad en la app</li>
+          <li><svg class="ic"><use href="#i-check"/></svg>Integración con PedidosYa</li>
           <li><svg class="ic"><use href="#i-check"/></svg>Promos directo al celular</li>
           <li><svg class="ic"><use href="#i-check"/></svg>Publicación en ambas tiendas</li>
         </ul>
-        <p class="goal">El valor final depende de la personalización y de los costos de Google Play y App Store. Las cuentas quedan a tu nombre.</p>
-        <button class="btn btn-ghost btn-block" type="button" data-combo="4">Quiero el Combo 4</button>
+        <p class="goal">Los costos de Google Play y App Store y el soporte de la app se cotizan aparte. Las cuentas quedan a tu nombre.</p>
+        <button class="btn btn-ghost btn-block" type="button" data-combo="4">Quiero el Completo + App</button>
       </article>
     </div>
+
+    <p class="after-sub" style="margin-top:20px">Pago único y 100 % a medida. Si necesitás una función que no está en tu combo, la cotizamos según lo que haga. Todos los precios son en pesos argentinos.</p>
 
     <h3 class="after-h">¿Recién empezás o necesitás solo una parte?</h3>
     <div class="solos">
@@ -982,17 +1001,17 @@ a.qbtn{text-decoration:none}
       </article>
       <article class="solo">
         <svg class="ic"><use href="#i-clock"/></svg>
-        <h3>Turnero con cartera de clientes</h3>
-        <p>Agenda online, ficha de cada cliente y recordatorios por WhatsApp. Ideal para barberías, estética y consultorios.</p>
+        <h3>Turnero con cartera y fidelización</h3>
+        <p>Agenda online, ficha de cada cliente y recordatorios por WhatsApp. Con fidelización por QR, o con NFC por <b data-from="s2b"></b>. Lo sumás a tu combo o lo contratás solo.</p>
         <div class="price" data-price="s2"><span>Presupuesto a medida</span></div>
         <button class="btn btn-ghost btn-block" type="button" data-combo="6">Quiero el turnero</button>
       </article>
       <article class="solo">
         <svg class="ic"><use href="#i-globe"/></svg>
-        <h3>Sistema en HTML</h3>
-        <p>Menú o catálogo con QR y pedidos por WhatsApp. Es el Combo 1: la base para sumar el resto cuando quieras.</p>
+        <h3>Diseño web personalizado</h3>
+        <p>Una interfaz 100 % a tu marca, diseñada para tu negocio. Se cobra aparte del sistema y se suma a cualquier combo.</p>
         <div class="price" data-price="s3"><span>Presupuesto a medida</span></div>
-        <button class="btn btn-ghost btn-block" type="button" data-combo="1">Quiero el sistema en HTML</button>
+        <button class="btn btn-ghost btn-block" type="button" data-prod="Diseño frontend personalizado">Quiero el diseño</button>
       </article>
     </div>
 
@@ -1000,18 +1019,23 @@ a.qbtn{text-decoration:none}
       <summary>Ver comparativa completa <svg class="ic"><use href="#i-down"/></svg></summary>
       <div class="tablewrap">
         <table class="cmp">
-          <thead><tr><th scope="col">Qué incluye</th><th scope="col">Combo 1</th><th scope="col">Combo 2</th><th scope="col">Combo 3</th><th scope="col">Combo 4</th></tr></thead>
+          <thead><tr><th scope="col">Qué incluye</th><th scope="col">Menú</th><th scope="col">Básico</th><th scope="col">Completo</th><th scope="col">Completo + App</th></tr></thead>
           <tbody>
             <tr><th scope="row">Menú o catálogo HTML y pedidos por WhatsApp</th><td class="y"><svg class="ic"><use href="#i-check"/></svg></td><td class="y"><svg class="ic"><use href="#i-check"/></svg></td><td class="y"><svg class="ic"><use href="#i-check"/></svg></td><td class="y"><svg class="ic"><use href="#i-check"/></svg></td></tr>
             <tr><th scope="row">Web con SEO local y Google Business</th><td class="y"><svg class="ic"><use href="#i-check"/></svg></td><td class="y"><svg class="ic"><use href="#i-check"/></svg></td><td class="y"><svg class="ic"><use href="#i-check"/></svg></td><td class="y"><svg class="ic"><use href="#i-check"/></svg></td></tr>
             <tr><th scope="row">Sellos de fidelidad por QR</th><td class="y"><svg class="ic"><use href="#i-check"/></svg></td><td class="y"><svg class="ic"><use href="#i-check"/></svg></td><td class="y"><svg class="ic"><use href="#i-check"/></svg></td><td class="y"><svg class="ic"><use href="#i-check"/></svg></td></tr>
             <tr><th scope="row">CRM básico: clientes, fiados, cobranza</th><td class="n">—</td><td class="y"><svg class="ic"><use href="#i-check"/></svg></td><td class="y"><svg class="ic"><use href="#i-check"/></svg></td><td class="y"><svg class="ic"><use href="#i-check"/></svg></td></tr>
-            <tr><th scope="row">Ventas, caja, stock y ARCA</th><td class="n">—</td><td class="y"><svg class="ic"><use href="#i-check"/></svg></td><td class="y"><svg class="ic"><use href="#i-check"/></svg></td><td class="y"><svg class="ic"><use href="#i-check"/></svg></td></tr>
+            <tr><th scope="row">Ventas, caja y stock en tiempo real</th><td class="n">—</td><td class="y"><svg class="ic"><use href="#i-check"/></svg></td><td class="y"><svg class="ic"><use href="#i-check"/></svg></td><td class="y"><svg class="ic"><use href="#i-check"/></svg></td></tr>
             <tr><th scope="row">Pantalla táctil y pantalla para el cliente</th><td class="n">—</td><td class="y"><svg class="ic"><use href="#i-check"/></svg></td><td class="y"><svg class="ic"><use href="#i-check"/></svg></td><td class="y"><svg class="ic"><use href="#i-check"/></svg></td></tr>
             <tr><th scope="row">Reportes</th><td class="n">—</td><td class="y"><svg class="ic"><use href="#i-check"/></svg></td><td class="y"><svg class="ic"><use href="#i-check"/></svg></td><td class="y"><svg class="ic"><use href="#i-check"/></svg></td></tr>
-            <tr><th scope="row">Módulos extras</th><td class="n">—</td><td class="y">A elección</td><td class="y">3 incluidos</td><td class="y">3 incluidos</td></tr>
+            <tr><th scope="row">Facturación electrónica ARCA</th><td class="n">—</td><td class="n">—</td><td class="y"><svg class="ic"><use href="#i-check"/></svg></td><td class="y"><svg class="ic"><use href="#i-check"/></svg></td></tr>
+            <tr><th scope="row">Personal: entrada y salida QR o NFC, tareas y organigrama</th><td class="n">—</td><td class="n">—</td><td class="y"><svg class="ic"><use href="#i-check"/></svg></td><td class="y"><svg class="ic"><use href="#i-check"/></svg></td></tr>
+            <tr><th scope="row">Mesas, mozos y comandas</th><td class="n">—</td><td class="n">—</td><td class="y"><svg class="ic"><use href="#i-check"/></svg></td><td class="y"><svg class="ic"><use href="#i-check"/></svg></td></tr>
+            <tr><th scope="row">Cobros con Mercado Pago y MODO</th><td class="n">—</td><td class="n">—</td><td class="y"><svg class="ic"><use href="#i-check"/></svg></td><td class="y"><svg class="ic"><use href="#i-check"/></svg></td></tr>
             <tr><th scope="row">Periféricos configurados</th><td class="n">—</td><td class="n">—</td><td class="y"><svg class="ic"><use href="#i-check"/></svg></td><td class="y"><svg class="ic"><use href="#i-check"/></svg></td></tr>
             <tr><th scope="row">App en Play Store y App Store</th><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="y"><svg class="ic"><use href="#i-check"/></svg></td></tr>
+            <tr><th scope="row">Integración con PedidosYa</th><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="y"><svg class="ic"><use href="#i-check"/></svg></td></tr>
+            <tr><th scope="row">Funciones extra a medida</th><td class="y">Se cotiza</td><td class="y">Se cotiza</td><td class="y">Se cotiza</td><td class="y">Se cotiza</td></tr>
             <tr><th scope="row">Equipos NFC (se compran aparte)</th><td class="y">Opcional</td><td class="y">Opcional</td><td class="y">Opcional</td><td class="y">Opcional</td></tr>
           </tbody>
         </table>
@@ -1051,21 +1075,24 @@ a.qbtn{text-decoration:none}
 <section id="modulos-crm">
   <div class="wrap">
     <div class="sec-head">
-      <h2>Módulos del CRM: sumás solo lo que usás</h2>
-      <p>Los básicos vienen en los Combos 2, 3 y 4. Sumás lo que necesites y lo que no existe, lo desarrollamos para vos.</p>
+      <h2>Qué incluye cada combo, módulo por módulo</h2>
+      <p>Cada combo suma módulos sobre el anterior. Y si necesitás solo algunas funciones extras, las agregás a tu combo sin pasar al siguiente.</p>
     </div>
+    <div class="mods mods4" id="mods-combos"></div>
+    <h3 class="after-h">Sumá funciones extras a tu combo</h3>
+    <p class="after-sub">Se cotizan según la función. Pagás una sola vez por cada módulo que sumes.</p>
     <div class="mods">
-      <article class="mod">
-        <span class="tagm">Incluidos</span>
-        <h3>Módulos básicos</h3>
-        <p>El núcleo que necesita cualquier negocio.</p>
-        <ul id="mods-base"></ul>
-      </article>
       <article class="mod feat">
         <span class="tagm">Para sumar</span>
         <h3>Módulos extras</h3>
         <p>Los activamos cuando los necesitás, en el momento que quieras.</p>
-        <ul class="priced" id="mods-extra"></ul>
+        <ul id="mods-extra"></ul>
+      </article>
+      <article class="mod">
+        <span class="tagm">Integraciones</span>
+        <h3>Conectado con tus herramientas</h3>
+        <p>Cobros y pedidos entran directo al sistema.</p>
+        <ul id="mods-integ"></ul>
       </article>
       <article class="mod">
         <span class="tagm">A tu medida</span>
@@ -1085,41 +1112,41 @@ a.qbtn{text-decoration:none}
 <section id="nfc">
   <div class="wrap">
     <div class="sec-head">
-      <h2>Combos NFC: los nuestros o a tu medida</h2>
-      <p>Se compran aparte: con tu sistema o solos, con tu marca y tu diseño. Elegí uno de nuestros combos o armalo con las cantidades y productos que necesites.</p>
+      <h2>Combos NFC a medida de tu necesidad</h2>
+      <p>Se compran aparte: con tu sistema o solos, con tu marca y tu diseño. Cada combo se arma según lo que necesite tu negocio: productos, cantidades y diseño. Nosotros ponemos chips, impresión y configuración.</p>
     </div>
     <div class="nfcpacks">
       <article class="nfcpack">
-        <span class="num">NFC Inicio</span>
-        <h3>1 tarjeta + 5 llaveros</h3>
-        <p>Para probar la fidelización con tus clientes habituales.</p>
-        <div class="price" data-price="n1"><span>Presupuesto a medida</span></div>
-        <button class="btn btn-ghost btn-block" type="button" data-nfc="NFC Inicio: 1 tarjeta + 5 llaveros">Sumar NFC Inicio</button>
+        <span class="num">Tarjeta NFC</span>
+        <h3>Tarjeta común</h3>
+        <p>Con tu perfil, tu menú o lo que quieras abrir con un toque.</p>
+        <div class="price" data-price="s1" data-unit="por unidad"><span>Presupuesto a medida</span></div>
+        <button class="btn btn-ghost btn-block" type="button" data-prod="Tarjeta NFC común">Quiero la tarjeta</button>
       </article>
       <article class="nfcpack">
-        <span class="num">NFC Local</span>
-        <h3>10 tarjetas</h3>
-        <p>Para repartir en caja y sumar sellos o puntos en cada compra.</p>
-        <div class="price" data-price="n2"><span>Presupuesto a medida</span></div>
-        <button class="btn btn-ghost btn-block" type="button" data-nfc="NFC Local: 10 tarjetas">Sumar NFC Local</button>
+        <span class="num">Tarjeta NFC inkjet</span>
+        <h3>Tarjeta inkjet</h3>
+        <p>Impresión a todo color con tu diseño completo.</p>
+        <div class="price" data-price="s1b" data-unit="por unidad"><span>Presupuesto a medida</span></div>
+        <button class="btn btn-ghost btn-block" type="button" data-prod="Tarjeta NFC inkjet">Quiero la inkjet</button>
       </article>
       <article class="nfcpack">
-        <span class="num">NFC Equipo</span>
-        <h3>10 llaveros de fichaje</h3>
-        <p>Para que tu personal registre ingreso y egreso con un toque.</p>
-        <div class="price" data-price="n3"><span>Presupuesto a medida</span></div>
-        <button class="btn btn-ghost btn-block" type="button" data-nfc="NFC Equipo: 10 llaveros de fichaje">Sumar NFC Equipo</button>
+        <span class="num">Llaveros NFC</span>
+        <h3>Llaveros</h3>
+        <p>Para fidelizar clientes o fichar personal. Si querés un modelo 3D personalizado, el valor depende del diseño.</p>
+        <div class="price" data-price="l1" data-unit="por unidad, o según el modelo 3D"><span>Presupuesto a medida</span></div>
+        <button class="btn btn-ghost btn-block" type="button" data-prod="Llaveros NFC">Quiero llaveros</button>
       </article>
       <article class="nfcpack">
-        <span class="num">NFC Socios</span>
-        <h3>50 tarjetas de acceso</h3>
-        <p>Para clubes, gimnasios y playas: abonados y socios con su propia tarjeta.</p>
-        <div class="price" data-price="n4"><span>Presupuesto a medida</span></div>
-        <button class="btn btn-ghost btn-block" type="button" data-nfc="NFC Socios: 50 tarjetas de acceso">Sumar NFC Socios</button>
+        <span class="num">Por mayor</span>
+        <h3>Precios por mayor</h3>
+        <p>Para clubes, gimnasios, eventos y comercios con muchos clientes o empleados.</p>
+        <div class="price"><span>Consultanos</span></div>
+        <button class="btn btn-ghost btn-block" type="button" data-prod="NFC por mayor">Consultar por mayor</button>
       </article>
     </div>
     <div class="nfcmed">
-      <div><h3>Armá tu combo NFC a medida</h3><p>Elegí los productos del catálogo, las cantidades y el diseño. Nosotros ponemos chips, impresión y configuración.</p></div>
+      <div><h3>Armá tu combo NFC a medida</h3><p>Elegí los productos del catálogo, las cantidades y el diseño. Te pasamos el valor según lo que necesites.</p></div>
       <button class="btn btn-primary" type="button" data-prod="Combo NFC a medida">Armar mi combo</button>
     </div>
     <p class="nfc-note">Chips, impresión y personalización a cargo nuestro. <a href="#catalogo-nfc">Mirá el catálogo de productos NFC</a>.</p>
@@ -1233,7 +1260,8 @@ a.qbtn{text-decoration:none}
       <details><summary>¿Hay que pagar todos los meses? <svg class="ic"><use href="#i-down"/></svg></summary><p>No. Pagás el combo una sola vez. Si después necesitás asistencia, pedís una modificación, sumás un módulo o contratás soporte, se cobra aparte un monto fijo que te informamos antes de hacerlo. El hosting en la nube está incluido.</p></details>
       <details><summary>¿Qué pasa si después quiero cambiar o agregar algo? <svg class="ic"><use href="#i-down"/></svg></summary><p>Te pasamos un monto fijo antes de empezar. Los cambios chicos y medianos tienen precio cerrado, y cada módulo nuevo se paga una vez.</p></details>
       <details><summary>¿Puedo comprar solo la tarjeta digital o el turnero?<svg class="ic"><use href="#i-down"/></svg></summary><p>Sí. Son productos sueltos para quien necesita solo una parte. Más adelante podés sumar el resto del sistema sin rehacer lo anterior.</p></details>
-      <details><summary>¿Puedo empezar por el Combo 1 y subir después? <svg class="ic"><use href="#i-down"/></svg></summary><p>Sí. Podés empezar por el Menú Digital y sumar el CRM o la app más adelante, sin rehacer lo anterior.</p></details>
+      <details><summary>¿Puedo empezar por el Menú y subir después? <svg class="ic"><use href="#i-down"/></svg></summary><p>Sí. Podés empezar por el Menú Digital y pasar al Básico, al Completo o a la app más adelante, sin rehacer lo anterior. También podés sumar solo algunas funciones a tu combo.</p></details>
+      <details><summary>¿Qué cuesta tener la app en las tiendas? <svg class="ic"><use href="#i-down"/></svg></summary><p>El combo Completo + App incluye el desarrollo y la publicación. Los costos de las cuentas de Google Play y App Store y el soporte de la app se cotizan aparte, y las cuentas quedan a tu nombre.</p></details>
       <details><summary>¿Piden seña? <svg class="ic"><use href="#i-down"/></svg></summary><p>No. Primero te mostramos una demo para que pruebes el sistema. El pago y sus condiciones se acuerdan por escrito en el presupuesto, y emitimos factura por cada pago.</p></details>
       <details><summary>¿Se puede usar con pantalla táctil? <svg class="ic"><use href="#i-down"/></svg></summary><p>Sí. El sistema está pensado para usarse con el dedo en una tablet, una notebook táctil o una pantalla de caja. Además, el cliente puede ver en su propia pantalla lo que se va cargando y el total a pagar.</p></details>
       <details><summary>¿El sistema funciona sin internet? <svg class="ic"><use href="#i-down"/></svg></summary><p>La versión Windows funciona sin internet y se comparte dentro del local por red. La versión en la nube necesita conexión y permite entrar desde cualquier dispositivo.</p></details>
@@ -1281,10 +1309,10 @@ a.qbtn{text-decoration:none}
       <fieldset>
         <legend>¿Qué combo te interesa?</legend>
         <div class="opts">
-          <label class="opt"><input type="radio" name="combo" value="Combo 1: Menú Digital"><span>Combo 1 · Menú Digital</span></label>
-          <label class="opt"><input type="radio" name="combo" value="Combo 2: Menú Digital + CRM básico" checked><span>Combo 2 · Menú Digital + CRM básico</span></label>
-          <label class="opt"><input type="radio" name="combo" value="Combo 3: Sistema completo"><span>Combo 3 · Sistema completo</span></label>
-          <label class="opt"><input type="radio" name="combo" value="Combo 4: Sistema completo + App"><span>Combo 4 · Sistema completo + App</span></label>
+          <label class="opt"><input type="radio" name="combo" value="Menú Digital"><span>Menú Digital</span></label>
+          <label class="opt"><input type="radio" name="combo" value="Básico: Menú Digital + CRM básico" checked><span>Básico · Menú + CRM</span></label>
+          <label class="opt"><input type="radio" name="combo" value="Completo: sistema completo"><span>Completo · Sistema completo</span></label>
+          <label class="opt"><input type="radio" name="combo" value="Completo + App"><span>Completo + App</span></label>
           <label class="opt"><input type="radio" name="combo" value="Tarjeta digital"><span>Solo tarjeta digital</span></label>
           <label class="opt"><input type="radio" name="combo" value="Turnero con cartera de clientes"><span>Solo turnero con cartera</span></label>
           <label class="opt"><input type="radio" name="combo" value="Todavía no sé, necesito asesoramiento"><span>Todavía no sé, asesoreme</span></label>
@@ -1303,10 +1331,10 @@ a.qbtn{text-decoration:none}
           <label class="opt"><input type="checkbox" name="extra" value="Sucursal adicional"><span>Sucursal adicional</span></label>
           <label class="opt"><input type="checkbox" name="extra" value="Página web a medida"><span>Página web</span></label>
           <label class="opt"><input type="checkbox" name="extra" value="SEO local"><span>SEO local</span></label>
-          <label class="opt"><input type="checkbox" name="extra" value="NFC Inicio: 1 tarjeta + 5 llaveros"><span>NFC Inicio</span></label>
-          <label class="opt"><input type="checkbox" name="extra" value="NFC Local: 10 tarjetas"><span>NFC Local</span></label>
-          <label class="opt"><input type="checkbox" name="extra" value="NFC Equipo: 10 llaveros de fichaje"><span>NFC Equipo</span></label>
-          <label class="opt"><input type="checkbox" name="extra" value="NFC Socios: 50 tarjetas de acceso"><span>NFC Socios</span></label>
+          <label class="opt"><input type="checkbox" name="extra" value="Tarjetas NFC"><span>Tarjetas NFC</span></label>
+          <label class="opt"><input type="checkbox" name="extra" value="Llaveros NFC"><span>Llaveros NFC</span></label>
+          <label class="opt"><input type="checkbox" name="extra" value="Combo NFC a medida"><span>Combo NFC a medida</span></label>
+          <label class="opt"><input type="checkbox" name="extra" value="Diseño frontend personalizado"><span>Diseño personalizado</span></label>
         </div>
       </fieldset>
       <label class="f">Comentarios (opcional)<textarea id="f-msg" name="msg" placeholder="Contanos qué querés mejorar en tu negocio"></textarea></label>
@@ -1450,20 +1478,18 @@ a.qbtn{text-decoration:none}
     // Cambiá cualquier número y la web se actualiza sola. Dejá un combo en null para mostrar "Presupuesto a medida".
     // Todos son pagos únicos (sin abono mensual).
     precios: {
-      c1: { unico: 100000 },                // Combo 1: Menú Digital
-      c2: { unico: 200000 },                // Combo 2: + CRM básico
-      c3: { unico: 350000 },                // Combo 3: Sistema completo (3 módulos extras incluidos)
-      c4: { unico: 700000 },                // Combo 4: Sistema completo + App
+      c1: { unico: 100000 },                // Menú Digital
+      c2: { unico: 300000 },                // Básico: Menú + CRM básico
+      c3: { unico: 500000 },                // Completo
+      c4: { unico: 1000000 },               // Completo + App (soporte y tiendas se cotizan aparte)
       s1: { unico: 20000 },                 // Tarjeta digital NFC común
       s1b: { unico: 30000 },                // Tarjeta digital NFC inkjet
-      s2: { unico: 70000 },                 // Turnero con cartera de clientes
-      s3: { unico: 100000 },                // Sistema en HTML (= Combo 1)
-      n1: { unico: 35000 },                 // NFC Inicio: 1 tarjeta + 5 llaveros
-      n2: { unico: 55000 },                 // NFC Local: 10 tarjetas
-      n3: { unico: 65000 },                 // NFC Equipo: 10 llaveros de fichaje
-      n4: { unico: 220000 }                 // NFC Socios: 50 tarjetas de acceso
+      s2: { unico: 80000 },                 // Turnero con cartera + fidelización QR
+      s2b: { unico: 100000 },               // Turnero con cartera + fidelización NFC
+      s3: { unico: 700000 },                // Diseño frontend personalizado (aparte del sistema)
+      l1: { unico: 10000 }                  // Llavero NFC (o según modelo 3D personalizado)
     },
-    desde: ['c4', 's1'],                          // precios que se muestran como 'Desde' (se cotizan según el proyecto)
+    desde: [],                          // precios que se muestran como 'Desde' (se cotizan según el proyecto)
     horaDesarrollo: 40000,                  // valor por hora de desarrollo a medida
     descuentoEfectivo: '10 %',              // descuento por pago en efectivo ('' para ocultar el porcentaje)
     // Servicios posteriores a la entrega: [nombre, detalle, precio, '' o 'por mes']
@@ -1473,33 +1499,62 @@ a.qbtn{text-decoration:none}
       ['Soporte mensual (opcional)', 'Asistencia, actualizaciones y cambios chicos incluidos', 20000, 'por mes'],
       ['Hosting en la nube', 'Dominio, SSL y copias automáticas', 0, 'incluido']
     ],
-    modulosBase: [
-      ['Clientes y cuentas corrientes (fiados)', 'Saldos, límites de crédito y consentimiento de WhatsApp'],
-      ['Ventas y caja', 'Apertura, cierre y arqueo'],
-      ['Pantalla táctil y pantalla para el cliente', 'Se usa con el dedo y el cliente ve su compra en su propia pantalla'],
-      ['Inventario y productos', 'Categorías, imágenes e importación masiva desde Excel'],
-      ['Facturación con y sin ARCA', 'Facturas fiscales y documentos internos'],
-      ['Dashboard y reportes', 'Diarios, semanales y mensuales'],
-      ['Usuarios y permisos por rol', 'Cada persona ve lo que le corresponde'],
-      ['Menú digital sincronizado', 'Publicás y se actualiza al instante']
+    // Módulos incluidos en cada combo (cada uno suma sobre el anterior)
+    modulosCombos: [
+      ['Menú', '$c1', null, [
+        ['Menú o catálogo digital', 'En HTML con tu marca y QR'],
+        ['Carrito y pedidos por WhatsApp', 'Sin comisiones'],
+        ['Web con SEO local', 'Y perfil en Google Business'],
+        ['Sellos de fidelidad por QR', 'Para que vuelvan']
+      ]],
+      ['Básico', '$c2', 'Todo lo del Menú, más:', [
+        ['CRM: clientes y fiados', 'Saldos, límites y cobranza por WhatsApp'],
+        ['Ventas y caja', 'Apertura, cierre y arqueo'],
+        ['Inventario y stock en tiempo real', 'Categorías, imágenes e importación desde Excel'],
+        ['Pantalla táctil y pantalla para el cliente', 'Se usa con el dedo'],
+        ['Usuarios y permisos por rol', 'Cada persona ve lo que le corresponde'],
+        ['Dashboard y reportes', 'Diarios, semanales y mensuales']
+      ]],
+      ['Completo', '$c3', 'Todo lo del Básico, más:', [
+        ['Facturación electrónica ARCA', 'Facturas fiscales y documentos internos'],
+        ['Personal completo', 'Entrada y salida con QR o NFC, tareas asignadas y organigrama de tareas'],
+        ['Mesas, mozos y comandas', 'Para gastronomía'],
+        ['Cobros con Mercado Pago y MODO', 'Integrados al sistema'],
+        ['Periféricos configurados', 'Balanzas, impresoras y lectores'],
+        ['Importación de tus datos', 'Productos y clientes']
+      ]],
+      ['Completo + App', '$c4', 'Todo lo del Completo, más:', [
+        ['App con tu marca', 'Android e iPhone'],
+        ['Pedidos, reservas y fidelidad en la app', 'Todo en el celular de tu cliente'],
+        ['Integración con PedidosYa', 'Pedidos centralizados'],
+        ['Promos al celular', 'Avisos directo a tus clientes'],
+        ['Publicación en las tiendas', 'Cuentas a tu nombre'],
+        ['Soporte', 'Se cotiza aparte, junto con los costos de las tiendas']
+      ]]
     ],
+    // Funciones para sumar a cualquier combo (se cotizan según la función; sin precio en la web)
     modulosExtra: [
-      ['Control de personal (horas de entrada y salida)', 'Fichaje con tarjeta o llavero NFC', 45000],
-      ['Fidelización con NFC', 'Sellos, puntos y cupones', 35000],
-      ['Mesas, mozos y comandas', 'Para gastronomía', 55000],
-      ['Órdenes de trabajo', 'Para talleres y servicios técnicos', 55000],
-      ['Turnos y reservas', 'Agenda por profesional o recurso', 45000],
-      ['Abonos y socios', 'Clubes, gimnasios y playas de estacionamiento', 55000],
-      ['Balanzas, impresoras y periféricos', 'Conexión asistida', 35000],
-      ['Modo kiosco de autoservicio', 'El cliente arma su pedido solo en una pantalla táctil', 30000],
-      ['Portal Wi-Fi para clientes', 'Registro con consentimiento', 35000],
-      ['Sucursal adicional', 'Sincronizada en el mismo panel', 60000]
+      ['Facturación electrónica ARCA', 'Incluida en Completo'],
+      ['Personal con horarios, tareas y organigrama', 'Incluido en Completo'],
+      ['Mesas, mozos y comandas', 'Incluido en Completo'],
+      ['Fidelización con NFC', 'Sellos, puntos y cupones'],
+      ['Turnero con cartera de clientes', 'Con fidelización QR o NFC'],
+      ['Órdenes de trabajo', 'Para talleres y servicios técnicos'],
+      ['Turnos y reservas', 'Agenda por profesional o recurso'],
+      ['Abonos y socios', 'Clubes, gimnasios y playas de estacionamiento'],
+      ['Modo kiosco de autoservicio', 'El cliente arma su pedido solo'],
+      ['Portal Wi-Fi para clientes', 'Registro con consentimiento'],
+      ['Sucursal adicional', 'Sincronizada en el mismo panel']
+    ],
+    modulosIntegraciones: [
+      ['Mercado Pago y MODO', 'Incluidos en Completo'],
+      ['PedidosYa', 'Incluido en Completo + App'],
+      ['Tiendas online y otras pasarelas', 'A medida']
     ],
     modulosCustom: [
       ['Barrera de entrada', 'Control de acceso de vehículos o personas con NFC'],
       ['Integración con hardware específico', 'Molinetes, cerraduras, balanzas especiales'],
       ['Reportes y tableros a medida', 'Con los datos que vos decidas'],
-      ['Integraciones con terceros', 'Pasarelas de pago, tiendas online'],
       ['Migración de datos', 'Desde Excel o desde tu sistema actual']
     ]
   };
@@ -1707,20 +1762,26 @@ a.qbtn{text-decoration:none}
   /* ---------- Precios y descuento (se muestran solo si los cargás en CONFIG) ---------- */
   const ARS = new Intl.NumberFormat('es-AR');
   const peso = (n) => '$' + ARS.format(n).replace(/\s/g, '');
+  const c4note = (k) => (k === 'c4' ? 'Pago único · soporte y tiendas se cotizan aparte' : '');
   $$('[data-price]').forEach((el) => {
     const v = CONFIG.precios[el.dataset.price];
     if (!v || !v.unico) return;
     const combo = el.closest('.combo');
     const desde = (CONFIG.desde || []).includes(el.dataset.price);
-    el.innerHTML = `<span class="big">${desde ? '<em>Desde</em> ' : ''}${peso(v.unico)}</span>` + (combo ? `<span class="alta">${desde ? 'Pago único · se cotiza según tu proyecto' : 'Pago único · sin abonos mensuales'}</span>` : '') + (combo ? '' : `<span class="usd">Pago único</span>`);
+    const unit = el.dataset.unit;
+    el.innerHTML = `<span class="big">${desde ? '<em>Desde</em> ' : ''}${peso(v.unico)}</span>` + (combo ? `<span class="alta">${c4note(el.dataset.price) || (desde ? 'Pago único · se cotiza según tu proyecto' : 'Pago único · sin abonos mensuales')}</span>` : `<span class="usd">${unit || 'Pago único'}</span>`);
   });
   const cash = $('[data-cash]');
   if (cash && CONFIG.descuentoEfectivo) cash.textContent = `Efectivo con ${CONFIG.descuentoEfectivo} de descuento`;
 
   /* ---------- Módulos del CRM ---------- */
   const rowLi = (n, d, extra = '') => `<li><span>${n}<small>${d}</small></span>${extra}</li>`;
-  $('#mods-base').innerHTML = CONFIG.modulosBase.map(([n, d]) => rowLi(n, d)).join('');
-  $('#mods-extra').innerHTML = CONFIG.modulosExtra.map(([n, d, p]) => rowLi(n, d, ``)).join('');
+  $('#mods-combos').innerHTML = CONFIG.modulosCombos.map(([nombre, key, intro, items], i) => {
+    const p = CONFIG.precios[key.slice(1)];
+    return `<article class="mod${i === 1 ? ' feat' : ''}"><span class="tagm">${nombre}</span><h3>${p ? peso(p.unico) : nombre}</h3><p>${intro || 'La base para que te encuentren y te pidan.'}</p><ul>${items.map(([n, d]) => rowLi(n, d)).join('')}</ul></article>`;
+  }).join('');
+  $('#mods-extra').innerHTML = CONFIG.modulosExtra.map(([n, d]) => rowLi(n, d)).join('');
+  $('#mods-integ').innerHTML = CONFIG.modulosIntegraciones.map(([n, d]) => rowLi(n, d)).join('');
   $('#mods-custom').innerHTML = CONFIG.modulosCustom.map(([n, d]) => rowLi(n, d)).join('');
   $('#after').innerHTML = CONFIG.servicios.map(([n, d, p, per]) => `<div><b>${n}</b><small>${d}</small><span class="pm">${p ? peso(p) + ' <em>' + (per || 'monto fijo') + '</em>' : 'Gratis'}</span></div>`).join('');
   $$('[data-from]').forEach((el) => { el.textContent = peso(CONFIG.precios[el.dataset.from].unico); });
