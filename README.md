@@ -6,3 +6,5 @@ Sitio comercial de Vincular Business (since 2022 ★★★): sistemas, digitaliz
 - `assets/`: logos. `logo-web` (horizontal) e `icon-app` (logo V con ondas NFC para la app, perfiles de redes y favicon, SVG y PNG 512/1024).
 
 Precios, contacto y listas de módulos se editan en el objeto `CONFIG` al inicio del script de `index.html`.
+
+- `tarjeta/nicolas/`: tarjeta digital de Nicolás (se graba en el tag NFC). `tarjeta/?n=Nombre&t=3875143900&r=Cargo` arma la de cualquier vendedor. `tarjeta/crear/` es el generador con QR. No se indexan en Google.

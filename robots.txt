@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /tarjeta/
 
 Sitemap: https://vincularbusiness.com.ar/sitemap.xml
