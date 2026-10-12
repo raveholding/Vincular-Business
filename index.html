@@ -656,6 +656,23 @@ a.qbtn{text-decoration:none}
   .mods4 .mod{border-right:0;border-bottom:1px solid var(--line)}
   .mods4 .mod:last-child{border-bottom:0}
 }
+
+/* ---------- Post-venta ---------- */
+.post{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--line);border-radius:20px;overflow:hidden;background:var(--s1)}
+.postc{padding:34px 30px;border-right:1px solid var(--line);display:flex;flex-direction:column}
+.postc:last-child{border-right:0}
+.postc.feat{background:var(--s2);box-shadow:inset 0 3px 0 var(--or)}
+.postc h3{font-size:1.4rem;margin:6px 0 8px;letter-spacing:-.02em}
+.postc>p{color:var(--mut);margin-bottom:18px}
+.postc .price{margin:6px 0 14px;font:600 1.15rem var(--f);color:#fff}
+.postc .price .big{font-size:2.2rem;letter-spacing:-.04em}
+.postc ul{list-style:none;padding:0;margin:0;font-size:.97rem;color:#D6DBE3}
+.postc li{padding:14px 0;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:16px;align-items:flex-start}
+.postc li small{display:block;color:var(--dim);font-size:.84rem;margin-top:3px}
+.postc li b{white-space:nowrap;font-size:1.15rem;text-align:right;color:#fff}
+.postc li b em{display:block;font:400 .78rem var(--f);color:var(--dim);font-style:normal}
+.postc .goal{margin-top:auto;padding-top:16px}
+@media(max-width:960px){.post{grid-template-columns:1fr}.postc{border-right:0;border-bottom:1px solid var(--line)}.postc:last-child{border-bottom:0}}
 </style>
 </head>
 <body>
@@ -1102,9 +1119,32 @@ a.qbtn{text-decoration:none}
         <a class="btn btn-ghost btn-block" href="#presupuesto" data-custom>Contanos tu idea</a>
       </article>
     </div>
-    <h3 class="after-h">Después de la entrega, estamos para lo que necesites</h3>
-    <p class="after-sub">Tu sistema se paga una sola vez. La asistencia, los cambios y los módulos nuevos se cobran solo si los necesitás, a un valor fijo que te informamos antes.</p>
-    <div class="after" id="after"></div>
+    <h3 class="after-h">Servicio y soporte post-venta</h3>
+    <p class="after-sub">Alternativas flexibles para que el sistema acompañe la evolución de tu negocio con total tranquilidad. Tu sistema se paga una sola vez.</p>
+    <div class="post">
+      <article class="postc">
+        <span class="tagm">Sin abono mensual</span>
+        <h3>Soporte a demanda</h3>
+        <p>Para requerimientos o ajustes puntuales, cuando los necesites.</p>
+        <ul>
+          <li><span>Modificación o corrección chica<small>Ajustes menores de configuración, reportes o interfaz</small></span><b><span data-from="p1"></span><em>por trabajo</em></b></li>
+          <li><span>Desarrollo o modificación personalizada<small>Requerimientos específicos o mejoras a medida</small></span><b><span data-from="p2"></span><em>por hora</em></b></li>
+        </ul>
+      </article>
+      <article class="postc feat">
+        <span class="tagm">Opcional</span>
+        <h3>Plan de Soporte y Mantenimiento Integral</h3>
+        <div class="price"><span class="big" data-from="p3"></span><span class="alta">por mes</span></div>
+        <p>Para negocios que buscan prioridad, continuidad operativa y asistencia constante, sin sorpresas en los costos.</p>
+        <ul>
+          <li><span>Modificaciones y ajustes personalizados incluidos<small>Correcciones chicas y desarrollos menores sin costo adicional dentro del abono</small></span></li>
+          <li><span>Atención y respuesta prioritaria<small>Prioridad en incidentes técnicos y consultas de tu equipo</small></span></li>
+          <li><span>Soporte directo<small>Por WhatsApp o llamada, para dudas del uso diario</small></span></li>
+          <li><span>Mantenimiento preventivo<small>Supervisión periódica del funcionamiento general y de las integraciones</small></span></li>
+        </ul>
+        <p class="goal">Las modificaciones de gran escala que requieran un desarrollo extendido se presupuestan por separado, a tarifa preferencial.</p>
+      </article>
+    </div>
   </div>
 </section>
 
@@ -1257,8 +1297,8 @@ a.qbtn{text-decoration:none}
       <h2>Lo que más nos preguntan</h2>
     </div>
     <div class="faq">
-      <details><summary>¿Hay que pagar todos los meses? <svg class="ic"><use href="#i-down"/></svg></summary><p>No. Pagás el combo una sola vez. Si después necesitás asistencia, pedís una modificación, sumás un módulo o contratás soporte, se cobra aparte un monto fijo que te informamos antes de hacerlo. El hosting en la nube está incluido.</p></details>
-      <details><summary>¿Qué pasa si después quiero cambiar o agregar algo? <svg class="ic"><use href="#i-down"/></svg></summary><p>Te pasamos un monto fijo antes de empezar. Los cambios chicos y medianos tienen precio cerrado, y cada módulo nuevo se paga una vez.</p></details>
+      <details><summary>¿Hay que pagar todos los meses? <svg class="ic"><use href="#i-down"/></svg></summary><p>No. Pagás el combo una sola vez. Si después necesitás un ajuste, lo pedís cuando quieras: una modificación chica cuesta $30.000 por trabajo y el desarrollo personalizado $50.000 por hora. Si preferís prioridad y asistencia constante, existe un Plan de Soporte y Mantenimiento opcional de $100.000 por mes. El hosting en la nube está incluido.</p></details>
+      <details><summary>¿Qué pasa si después quiero cambiar o agregar algo? <svg class="ic"><use href="#i-down"/></svg></summary><p>Te pasamos el valor antes de empezar. Una modificación chica cuesta $30.000 por trabajo, el desarrollo personalizado $50.000 por hora, y cada módulo nuevo se cotiza según la función. Con el Plan de Soporte y Mantenimiento ($100.000 por mes, opcional) las correcciones chicas y los desarrollos menores van incluidos.</p></details>
       <details><summary>¿Puedo comprar solo la tarjeta digital o el turnero?<svg class="ic"><use href="#i-down"/></svg></summary><p>Sí. Son productos sueltos para quien necesita solo una parte. Más adelante podés sumar el resto del sistema sin rehacer lo anterior.</p></details>
       <details><summary>¿Puedo empezar por el Menú y subir después? <svg class="ic"><use href="#i-down"/></svg></summary><p>Sí. Podés empezar por el Menú Digital y pasar al Básico, al Completo o a la app más adelante, sin rehacer lo anterior. También podés sumar solo algunas funciones a tu combo.</p></details>
       <details><summary>¿Qué cuesta tener la app en las tiendas? <svg class="ic"><use href="#i-down"/></svg></summary><p>El combo Completo + App incluye el desarrollo y la publicación. Los costos de las cuentas de Google Play y App Store y el soporte de la app se cotizan aparte, y las cuentas quedan a tu nombre.</p></details>
@@ -1367,7 +1407,7 @@ a.qbtn{text-decoration:none}
         <h3>3. Precios y facturación</h3>
         <p>Los precios están en pesos argentinos. Pueden actualizarse, pero el presupuesto aceptado mantiene su valor durante su vigencia. Emitimos factura por cada pago, conforme a la normativa de ARCA.</p>
         <h3>4. Pago único y servicios posteriores</h3>
-        <p>El pago único cubre lo detallado en el presupuesto. Los cambios posteriores, los módulos nuevos y el soporte mensual opcional se cotizan según los valores publicados o se acuerdan por escrito. El hosting en la nube se brinda sin cargo adicional, en los términos del presupuesto.</p>
+        <p>El pago único cubre lo detallado en el presupuesto. Los cambios posteriores, los módulos nuevos y el Plan de Soporte y Mantenimiento opcional se cobran según los valores publicados o se acuerdan por escrito. El hosting en la nube se brinda sin cargo adicional, en los términos del presupuesto.</p>
         <h3>5. Demo y forma de pago</h3>
         <p>Antes de contratar podés probar una demo sin costo ni compromiso. No pedimos seña: la forma de pago se acuerda por escrito en el presupuesto.</p>
         <h3>6. Revocación y garantía</h3>
@@ -1487,17 +1527,12 @@ a.qbtn{text-decoration:none}
       s2: { unico: 80000 },                 // Turnero con cartera + fidelización QR
       s2b: { unico: 100000 },               // Turnero con cartera + fidelización NFC
       s3: { unico: 700000 },                // Diseño frontend personalizado (aparte del sistema)
-      l1: { unico: 10000 }                  // Llavero NFC (o según modelo 3D personalizado)
+      l1: { unico: 10000 },                 // Llavero NFC (o según modelo 3D personalizado)
+      p1: { unico: 30000 },                 // Post-venta: modificación o corrección chica (por trabajo)
+      p2: { unico: 50000 },                 // Post-venta: desarrollo o modificación personalizada (por hora)
+      p3: { unico: 100000 }                 // Plan de Soporte y Mantenimiento Integral (por mes, opcional)
     },
     desde: [],                          // precios que se muestran como 'Desde' (se cotizan según el proyecto)
-    horaDesarrollo: 40000,                  // valor por hora de desarrollo a medida
-    // Servicios posteriores a la entrega: [nombre, detalle, precio, '' o 'por mes']
-    servicios: [
-      ['Modificación chica', 'Textos, precios, fotos y ajustes de diseño', 20000, ''],
-      ['Modificación mediana', 'Nueva sección o cambio de funcionamiento', 40000, ''],
-      ['Soporte mensual (opcional)', 'Asistencia, actualizaciones y cambios chicos incluidos', 40000, 'por mes'],
-      ['Hosting en la nube', 'Dominio, SSL y copias automáticas', 0, 'incluido']
-    ],
     // Módulos incluidos en cada combo (cada uno suma sobre el anterior)
     modulosCombos: [
       ['Menú', '$c1', null, [
@@ -1780,7 +1815,6 @@ a.qbtn{text-decoration:none}
   $('#mods-extra').innerHTML = CONFIG.modulosExtra.map(([n, d]) => rowLi(n, d)).join('');
   $('#mods-integ').innerHTML = CONFIG.modulosIntegraciones.map(([n, d]) => rowLi(n, d)).join('');
   $('#mods-custom').innerHTML = CONFIG.modulosCustom.map(([n, d]) => rowLi(n, d)).join('');
-  $('#after').innerHTML = CONFIG.servicios.map(([n, d, p, per]) => `<div><b>${n}</b><small>${d}</small><span class="pm">${p ? peso(p) + ' <em>' + (per || 'monto fijo') + '</em>' : 'Gratis'}</span></div>`).join('');
   $$('[data-from]').forEach((el) => { el.textContent = peso(CONFIG.precios[el.dataset.from].unico); });
   const custom = $('[data-custom]');
   if (custom) custom.addEventListener('click', () => {
