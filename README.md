@@ -7,4 +7,4 @@ Sitio comercial de Vincular Business (since 2022 ★★★): sistemas, digitaliz
 
 Precios, contacto y listas de módulos se editan en el objeto `CONFIG` al inicio del script de `index.html`.
 
-- `tarjeta/nicolas/`: tarjeta digital de Nicolás (se graba en el tag NFC). `tarjeta/?n=Nombre&t=3875143900&r=Cargo` arma la de cualquier vendedor. `tarjeta/crear/` es el generador con QR. No se indexan en Google.
+- `tarjeta/nicolas/`: tarjeta digital de Nicolás (se graba en el tag NFC). `tarjeta/?n=Nombre&t=3874484132&r=Cargo` arma la de cualquier vendedor. `tarjeta/crear/` es el generador con QR. No se indexan en Google.
