@@ -1975,14 +1975,14 @@ a.qbtn{text-decoration:none}
   /* ---------- Precios y descuento (se muestran solo si los cargás en CONFIG) ---------- */
   const ARS = new Intl.NumberFormat('es-AR');
   const peso = (n) => '$' + ARS.format(n).replace(/\s/g, '');
-  const c4note = (k) => (k === 'c4' ? 'Pago único · tiendas de apps se cotizan aparte' : '');
+  const c4note = (k) => (k === 'c4' ? '+ ' + peso(CONFIG.precios.p3.unico) + ' por mes · tiendas de apps aparte' : '');
   $$('[data-price]').forEach((el) => {
     const v = CONFIG.precios[el.dataset.price];
     if (!v || !v.unico) return;
     const combo = el.closest('.combo');
     const desde = (CONFIG.desde || []).includes(el.dataset.price);
     const unit = el.dataset.unit;
-    el.innerHTML = `<span class="big">${desde ? '<em>Desde</em> ' : ''}${peso(v.unico)}</span>` + (combo ? `<span class="alta">${c4note(el.dataset.price) || (desde ? 'Pago único · se cotiza según tu proyecto' : 'Pago único + ' + peso(CONFIG.precios.p3.unico) + ' de mantenimiento por mes')}</span>` : `<span class="usd">${unit || 'Pago único'}</span>`);
+    el.innerHTML = `<span class="big">${desde ? '<em>Desde</em> ' : ''}${peso(v.unico)}</span>` + (combo ? `<span class="alta">${c4note(el.dataset.price) || '+ ' + peso(CONFIG.precios.p3.unico) + ' por mes'}</span>` : `<span class="usd">${unit || 'Pago único'}</span>`);
   });
 
   /* ---------- Módulos del CRM ---------- */
