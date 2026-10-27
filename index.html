@@ -68,11 +68,9 @@ h3{font-size:1.3rem;font-weight:600;letter-spacing:-.02em;line-height:1.2}
 .btn-block{width:100%}
 
 
+.catimg{margin:0 auto;max-width:760px}
+.catimg img{width:100%;height:auto;display:block;border-radius:14px;border:1px solid var(--line)}
 .catfull{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:28px}
-.catlb{position:fixed;inset:0;z-index:300;background:rgba(0,0,0,.92);display:none;align-items:flex-start;justify-content:center;overflow:auto;padding:16px}
-.catlb.on{display:flex}
-.catlb img{max-width:min(100%,760px);height:auto;border-radius:12px;display:block}
-.catlb .x{position:fixed;top:12px;right:12px;z-index:301}
 /* ---------- Progreso y navegación ---------- */
 .progress{position:fixed;top:0;left:0;height:2px;width:0;background:var(--or);z-index:120}
 .nav{position:sticky;top:0;z-index:100;background:rgba(0,0,0,.82);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
@@ -522,21 +520,10 @@ footer .about{max-width:28em}
 .diff{grid-template-columns:repeat(2,1fr)}
 .manifesto{max-width:30em}
 #vision{padding:72px 0}
-.cattabs{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:28px}
-.cattabs .tab{padding:11px 20px;border:1px solid var(--line);border-radius:999px;background:transparent;color:var(--mut);font:600 .95rem var(--f);cursor:pointer}
-.cattabs .tab[aria-selected=true]{border-color:var(--or);color:#fff}
-.ncat{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line)}
-.nprod{padding:28px 28px 24px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);display:flex;flex-direction:column}
-.nprod[hidden]{display:none}
-.nprod h3{font-size:1.1rem;margin-bottom:6px}
-.nprod p{color:var(--mut);font-size:.93rem;line-height:1.5;flex:1}
-.nprod .pr{display:flex;justify-content:space-between;align-items:center;margin-top:20px;gap:12px}
-.nprod .pr b{font:700 1.2rem var(--f);color:#fff}
 .mini{background:transparent;border:1px solid var(--line2);color:#fff;border-radius:8px;padding:.55em 1em;font:600 .88rem var(--f);cursor:pointer}
 .mini:hover{border-color:var(--or);color:var(--or)}
 .nfc-note a{color:var(--blue)}
-@media(max-width:960px){.ncat{grid-template-columns:repeat(2,1fr)}.diff{grid-template-columns:1fr}}
-@media(max-width:600px){.ncat{grid-template-columns:1fr}}
+@media(max-width:960px){.diff{grid-template-columns:1fr}}
 a.qbtn{text-decoration:none}
 
 .combo .goal{margin:14px 0 0;font-size:.92rem;color:var(--mut);line-height:1.45}
@@ -593,14 +580,9 @@ a.qbtn{text-decoration:none}
 .line .from b{color:var(--or);font-weight:700}
 @media(max-width:720px){.lines{grid-template-columns:1fr}}
 
-.pimgw{margin:-8px -8px 18px;background:var(--s1);border:1px solid var(--line);border-radius:12px;color:var(--or)}
-.pimg{display:block;width:100%;height:auto;max-height:150px}
-.pimg .o{fill:var(--s2)}.pimg .m{fill:var(--line)}
-.nprod .pr{justify-content:flex-start}
 .nfcmed{display:flex;align-items:center;justify-content:space-between;gap:24px;margin-top:16px;padding:24px 28px;border:1px solid rgba(255,122,26,.45);border-radius:16px;background:var(--s1)}
 .nfcmed h3{margin:0 0 4px;font-size:1.2rem}.nfcmed p{margin:0;color:var(--mut)}
 @media(max-width:720px){.nfcmed{flex-direction:column;align-items:stretch}}
-.pimg use{fill:none;stroke:#fff;stroke-width:1.8}
 
 .combos{grid-template-columns:repeat(4,1fr)}
 .combo{padding:44px 28px 36px}
@@ -685,7 +667,6 @@ a.qbtn{text-decoration:none}
 .postc .goal{margin-top:auto;padding-top:16px}
 @media(max-width:960px){.post{grid-template-columns:1fr}.postc{border-right:0;border-bottom:1px solid var(--line)}.postc:last-child{border-bottom:0}}
 
-.pimgw{overflow:hidden}.pimg.pimgx{max-height:none;aspect-ratio:720/493;object-fit:cover;border-radius:11px}
 
 .dem-h{margin-top:72px}
 .dem-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:28px;margin-top:28px}
@@ -1280,49 +1261,14 @@ a.qbtn{text-decoration:none}
   <div class="wrap">
     <div class="sec-head">
       <h2>Catálogo de productos NFC</h2>
-      <p>Un toque con el celular y se abre lo que vos quieras: tu menú, tu perfil, una invitación, un recuerdo. Cada producto se personaliza con tu diseño. Los valores son por unidad y desde el monto indicado: el precio final depende del diseño 3D y de la cantidad.</p>
+      <p>Un toque con el celular y se abre lo que vos quieras: tu menú, tu perfil, una invitación, un recuerdo. Cada producto se personaliza con tu diseño. Se cotizan por unidad, desde $20.000: el precio final depende del diseño 3D y de la cantidad.</p>
     </div>
-    <div class="cattabs" role="tablist" aria-label="Categorías del catálogo NFC"><button class="tab" type="button" role="tab" data-cat="neg" aria-selected="true">Negocios y profesionales</button><button class="tab" type="button" role="tab" data-cat="id" aria-selected="false">Identificación y seguridad</button><button class="tab" type="button" role="tab" data-cat="reg" aria-selected="false">Regalos y recuerdos</button><button class="tab" type="button" role="tab" data-cat="eve" aria-selected="false">Eventos y bouchers</button><button class="tab" type="button" role="tab" data-cat="pro" aria-selected="false">Propiedades y productos</button><button class="tab" type="button" role="tab" data-cat="all" aria-selected="false">Todos</button></div>
-    <div class="ncat" id="ncat">
-      <article class="nprod" data-cat="id"><div class="pimgw"><svg class="pimg" viewBox="0 0 200 120" role="img" aria-label="NFC Mascota" xmlns="http://www.w3.org/2000/svg"><circle cx="100" cy="64" r="44" class="o"/><circle cx="100" cy="64" r="44" fill="none" stroke="var(--or)" stroke-width="2"/><circle cx="100" cy="28" r="5" fill="var(--bg)" stroke="var(--mut)" stroke-width="2"/><use href="#i-star" x="85" y="52" width="30" height="30"/><rect x="82" y="92" width="36" height="5" rx="2.5" class="m"/></svg></div><h3>NFC Mascota</h3><p>Sticker o chapita + perfil + WhatsApp</p><div class="pr"><b>Desde $20.000</b><button class="mini" type="button" data-prod="NFC Mascota">Lo quiero</button></div></article>
-      <article class="nprod" data-cat="id"><div class="pimgw"><svg class="pimg" viewBox="0 0 200 120" role="img" aria-label="NFC Gato" xmlns="http://www.w3.org/2000/svg"><circle cx="100" cy="64" r="44" class="o"/><circle cx="100" cy="64" r="44" fill="none" stroke="var(--or)" stroke-width="2"/><circle cx="100" cy="28" r="5" fill="var(--bg)" stroke="var(--mut)" stroke-width="2"/><use href="#i-star" x="85" y="52" width="30" height="30"/><rect x="82" y="92" width="36" height="5" rx="2.5" class="m"/></svg></div><h3>NFC Gato</h3><p>Identificación + perfil + contacto</p><div class="pr"><b>Desde $20.000</b><button class="mini" type="button" data-prod="NFC Gato">Lo quiero</button></div></article>
-      <article class="nprod" data-cat="id"><div class="pimgw"><img class="pimg pimgx" src="assets/nfc/16.jpg" width="720" height="493" loading="lazy" alt="NFC Niño Seguro: ejemplo ilustrativo"></div><h3>NFC Niño Seguro</h3><p>Tarjeta o pulsera + contacto de emergencia</p><div class="pr"><b>Desde $20.000</b><button class="mini" type="button" data-prod="NFC Niño Seguro">Lo quiero</button></div></article>
-      <article class="nprod" data-cat="id"><div class="pimgw"><img class="pimg pimgx" src="assets/nfc/17.jpg" width="720" height="493" loading="lazy" alt="NFC Mochila: ejemplo ilustrativo"></div><h3>NFC Mochila</h3><p>Identificación + contacto familiar</p><div class="pr"><b>Desde $20.000</b><button class="mini" type="button" data-prod="NFC Mochila">Lo quiero</button></div></article>
-      <article class="nprod" data-cat="id"><div class="pimgw"><img class="pimg pimgx" src="assets/nfc/18.jpg" width="720" height="493" loading="lazy" alt="NFC Auto: ejemplo ilustrativo"></div><h3>NFC Auto</h3><p>Identificación + contactos + información</p><div class="pr"><b>Desde $20.000</b><button class="mini" type="button" data-prod="NFC Auto">Lo quiero</button></div></article>
-      <article class="nprod" data-cat="id"><div class="pimgw"><img class="pimg pimgx" src="assets/nfc/19.jpg" width="720" height="493" loading="lazy" alt="NFC Documentos Privados: ejemplo ilustrativo"></div><h3>NFC Documentos Privados</h3><p>Acceso protegido a documentación</p><div class="pr"><b>Desde $20.000</b><button class="mini" type="button" data-prod="NFC Documentos Privados">Lo quiero</button></div></article>
-      <article class="nprod" data-cat="neg"><div class="pimgw"><img class="pimg pimgx" src="assets/nfc/20.jpg" width="720" height="493" loading="lazy" alt="NFC Tarjeta Profesional: ejemplo ilustrativo"></div><h3>NFC Tarjeta Profesional</h3><p>Perfil + WhatsApp + redes + contacto</p><div class="pr"><b>Desde $20.000</b><button class="mini" type="button" data-prod="NFC Tarjeta Profesional">Lo quiero</button></div></article>
-      <article class="nprod" data-cat="neg"><div class="pimgw"><img class="pimg pimgx" src="assets/nfc/21.jpg" width="720" height="493" loading="lazy" alt="NFC Tarjeta Empresa: ejemplo ilustrativo"></div><h3>NFC Tarjeta Empresa</h3><p>Empresa + servicios + contacto</p><div class="pr"><b>Desde $20.000</b><button class="mini" type="button" data-prod="NFC Tarjeta Empresa">Lo quiero</button></div></article>
-      <article class="nprod" data-cat="neg"><div class="pimgw"><img class="pimg pimgx" src="assets/nfc/22.jpg" width="720" height="493" loading="lazy" alt="NFC Negocio: ejemplo ilustrativo"></div><h3>NFC Negocio</h3><p>Web + WhatsApp + redes + Maps</p><div class="pr"><b>Desde $20.000</b><button class="mini" type="button" data-prod="NFC Negocio">Lo quiero</button></div></article>
-      <article class="nprod" data-cat="neg"><div class="pimgw"><img class="pimg pimgx" src="assets/nfc/23.jpg" width="720" height="493" loading="lazy" alt="NFC Menú Digital: ejemplo ilustrativo"></div><h3>NFC Menú Digital</h3><p>Menú + WhatsApp + redes</p><div class="pr"><b>Desde $30.000</b><button class="mini" type="button" data-prod="NFC Menú Digital">Lo quiero</button></div></article>
-      <article class="nprod" data-cat="neg"><div class="pimgw"><img class="pimg pimgx" src="assets/nfc/24.jpg" width="720" height="493" loading="lazy" alt="NFC Carta de Vinos: ejemplo ilustrativo"></div><h3>NFC Carta de Vinos</h3><p>Carta + fichas + WhatsApp</p><div class="pr"><b>Desde $30.000</b><button class="mini" type="button" data-prod="NFC Carta de Vinos">Lo quiero</button></div></article>
-      <article class="nprod" data-cat="neg"><div class="pimgw"><img class="pimg pimgx" src="assets/nfc/25.jpg" width="720" height="493" loading="lazy" alt="NFC Reseñas Google: ejemplo ilustrativo"></div><h3>NFC Reseñas Google</h3><p>Acceso directo a reseñas</p><div class="pr"><b>Desde $20.000</b><button class="mini" type="button" data-prod="NFC Reseñas Google">Lo quiero</button></div></article>
-      <article class="nprod" data-cat="neg"><div class="pimgw"><img class="pimg pimgx" src="assets/nfc/26.jpg" width="720" height="493" loading="lazy" alt="NFC Instagram: ejemplo ilustrativo"></div><h3>NFC Instagram</h3><p>Perfil de Instagram + presentación</p><div class="pr"><b>Desde $20.000</b><button class="mini" type="button" data-prod="NFC Instagram">Lo quiero</button></div></article>
-      <article class="nprod" data-cat="neg"><div class="pimgw"><img class="pimg pimgx" src="assets/nfc/27.jpg" width="720" height="493" loading="lazy" alt="NFC WhatsApp: ejemplo ilustrativo"></div><h3>NFC WhatsApp</h3><p>Botón directo a WhatsApp</p><div class="pr"><b>Desde $20.000</b><button class="mini" type="button" data-prod="NFC WhatsApp">Lo quiero</button></div></article>
-      <article class="nprod" data-cat="neg"><div class="pimgw"><img class="pimg pimgx" src="assets/nfc/28.jpg" width="720" height="493" loading="lazy" alt="NFC Regalo Empresarial: ejemplo ilustrativo"></div><h3>NFC Regalo Empresarial</h3><p>Tarjeta + mensaje + boucher o video</p><div class="pr"><b>Desde $20.000</b><button class="mini" type="button" data-prod="NFC Regalo Empresarial">Lo quiero</button></div></article>
-      <article class="nprod" data-cat="reg"><div class="pimgw"><img class="pimg pimgx" src="assets/nfc/07.jpg" width="720" height="493" loading="lazy" alt="NFC Álbum: ejemplo ilustrativo"></div><h3>NFC Álbum</h3><p>Fotos + página personalizada</p><div class="pr"><b>Desde $20.000</b><button class="mini" type="button" data-prod="NFC Álbum">Lo quiero</button></div></article>
-      <article class="nprod" data-cat="reg"><div class="pimgw"><img class="pimg pimgx" src="assets/nfc/08.jpg" width="720" height="493" loading="lazy" alt="NFC Álbum de Pareja: ejemplo ilustrativo"></div><h3>NFC Álbum de Pareja</h3><p>Fotos + historia + canción</p><div class="pr"><b>Desde $20.000</b><button class="mini" type="button" data-prod="NFC Álbum de Pareja">Lo quiero</button></div></article>
-      <article class="nprod" data-cat="reg"><div class="pimgw"><img class="pimg pimgx" src="assets/nfc/09.jpg" width="720" height="493" loading="lazy" alt="NFC Aniversario: ejemplo ilustrativo"></div><h3>NFC Aniversario</h3><p>Fotos + mensaje + música</p><div class="pr"><b>Desde $20.000</b><button class="mini" type="button" data-prod="NFC Aniversario">Lo quiero</button></div></article>
-      <article class="nprod" data-cat="reg"><div class="pimgw"><img class="pimg pimgx" src="assets/nfc/10.jpg" width="720" height="493" loading="lazy" alt="NFC Música: ejemplo ilustrativo"></div><h3>NFC Música</h3><p>Canción o playlist + diseño</p><div class="pr"><b>Desde $20.000</b><button class="mini" type="button" data-prod="NFC Música">Lo quiero</button></div></article>
-      <article class="nprod" data-cat="reg"><div class="pimgw"><img class="pimg pimgx" src="assets/nfc/11.jpg" width="720" height="493" loading="lazy" alt="NFC Álbum Musical: ejemplo ilustrativo"></div><h3>NFC Álbum Musical</h3><p>Playlist + portada + dedicatoria</p><div class="pr"><b>Desde $20.000</b><button class="mini" type="button" data-prod="NFC Álbum Musical">Lo quiero</button></div></article>
-      <article class="nprod" data-cat="reg"><div class="pimgw"><img class="pimg pimgx" src="assets/nfc/12.jpg" width="720" height="493" loading="lazy" alt="NFC Regalo Sorpresa: ejemplo ilustrativo"></div><h3>NFC Regalo Sorpresa</h3><p>Página + video, fotos y mensaje</p><div class="pr"><b>Desde $20.000</b><button class="mini" type="button" data-prod="NFC Regalo Sorpresa">Lo quiero</button></div></article>
-      <article class="nprod" data-cat="reg"><div class="pimgw"><img class="pimg pimgx" src="assets/nfc/13.jpg" width="720" height="493" loading="lazy" alt="NFC Carta de Amor: ejemplo ilustrativo"></div><h3>NFC Carta de Amor</h3><p>Carta digital + fotos + música</p><div class="pr"><b>Desde $20.000</b><button class="mini" type="button" data-prod="NFC Carta de Amor">Lo quiero</button></div></article>
-      <article class="nprod" data-cat="reg"><div class="pimgw"><img class="pimg pimgx" src="assets/nfc/14.jpg" width="720" height="493" loading="lazy" alt="NFC Cumpleaños: ejemplo ilustrativo"></div><h3>NFC Cumpleaños</h3><p>Fotos + video + mensaje</p><div class="pr"><b>Desde $20.000</b><button class="mini" type="button" data-prod="NFC Cumpleaños">Lo quiero</button></div></article>
-      <article class="nprod" data-cat="reg"><div class="pimgw"><img class="pimg pimgx" src="assets/nfc/15.jpg" width="720" height="493" loading="lazy" alt="NFC Experiencia Premium: ejemplo ilustrativo"></div><h3>NFC Experiencia Premium</h3><p>Página completa + fotos + video + música + diseño</p><div class="pr"><b>Desde $30.000</b><button class="mini" type="button" data-prod="NFC Experiencia Premium">Lo quiero</button></div></article>
-      <article class="nprod" data-cat="eve"><div class="pimgw"><img class="pimg pimgx" src="assets/nfc/01.jpg" width="720" height="493" loading="lazy" alt="NFC Boucher: ejemplo ilustrativo"></div><h3>NFC Boucher</h3><p>Boucher digital + código</p><div class="pr"><b>Desde $20.000</b><button class="mini" type="button" data-prod="NFC Boucher">Lo quiero</button></div></article>
-      <article class="nprod" data-cat="eve"><div class="pimgw"><img class="pimg pimgx" src="assets/nfc/02.jpg" width="720" height="493" loading="lazy" alt="NFC Casamiento: ejemplo ilustrativo"></div><h3>NFC Casamiento</h3><p>Invitación + Maps + confirmación</p><div class="pr"><b>Desde $20.000</b><button class="mini" type="button" data-prod="NFC Casamiento">Lo quiero</button></div></article>
-      <article class="nprod" data-cat="eve"><div class="pimgw"><img class="pimg pimgx" src="assets/nfc/03.jpg" width="720" height="493" loading="lazy" alt="NFC Invitación Evento: ejemplo ilustrativo"></div><h3>NFC Invitación Evento</h3><p>Invitación + ubicación + confirmación de asistencia</p><div class="pr"><b>Desde $20.000</b><button class="mini" type="button" data-prod="NFC Invitación Evento">Lo quiero</button></div></article>
-      <article class="nprod" data-cat="pro"><div class="pimgw"><img class="pimg pimgx" src="assets/nfc/06.jpg" width="720" height="493" loading="lazy" alt="NFC Propiedad: ejemplo ilustrativo"></div><h3>NFC Propiedad</h3><p>Fotos + datos + ubicación + WhatsApp</p><div class="pr"><b>Desde $20.000</b><button class="mini" type="button" data-prod="NFC Propiedad">Lo quiero</button></div></article>
-      <article class="nprod" data-cat="pro"><div class="pimgw"><img class="pimg pimgx" src="assets/nfc/05.jpg" width="720" height="493" loading="lazy" alt="NFC Producto / Garantía: ejemplo ilustrativo"></div><h3>NFC Producto / Garantía</h3><p>Ficha + manual + garantía</p><div class="pr"><b>Desde $20.000</b><button class="mini" type="button" data-prod="NFC Producto / Garantía">Lo quiero</button></div></article>
-      <article class="nprod" data-cat="pro"><div class="pimgw"><img class="pimg pimgx" src="assets/nfc/04.jpg" width="720" height="493" loading="lazy" alt="NFC Planta: ejemplo ilustrativo"></div><h3>NFC Planta</h3><p>Cuidados + riego + información</p><div class="pr"><b>Desde $20.000</b><button class="mini" type="button" data-prod="NFC Planta">Lo quiero</button></div></article>
-    </div>
-    
-    <div class="catfull">
-      <button class="btn btn-primary" type="button" id="catfull-open" aria-haspopup="dialog">Ver catálogo completo</button>
-      <a class="btn btn-ghost" href="assets/catalogo-nfc.jpg" download="Catalogo-NFC-Vincular-Business.jpg">Descargar catálogo</a>
-    </div>
-    <div class="catlb" id="catlb" role="dialog" aria-modal="true" aria-label="Catálogo de soluciones NFC">
-      <button class="btn btn-ghost x" type="button" id="catfull-close" aria-label="Cerrar catálogo">Cerrar</button>
+    <figure class="catimg">
       <img src="assets/catalogo-nfc.jpg" width="736" height="1441" loading="lazy" alt="Catálogo de soluciones NFC de Vincular Business con los 28 productos">
+    </figure>
+    <div class="catfull">
+      <button class="btn btn-primary" type="button" data-prod="Producto NFC">Quiero mi producto NFC</button>
+      <a class="btn btn-ghost" href="assets/catalogo-nfc.jpg" download="Catalogo-NFC-Vincular-Business.jpg">Descargar catálogo</a>
     </div>
   </div>
 </section>
@@ -2040,14 +1986,6 @@ a.qbtn{text-decoration:none}
   }));
 
   /* ---------- Catálogo NFC: filtro por categoría y pedido ---------- */
-  const catTabs = $$('.cattabs .tab');
-  const prods = $$('#ncat .nprod');
-  const showCat = (cat) => {
-    catTabs.forEach((t) => t.setAttribute('aria-selected', String(t.dataset.cat === cat)));
-    prods.forEach((p) => { p.hidden = !(cat === 'all' || p.dataset.cat === cat); });
-  };
-  catTabs.forEach((t) => t.addEventListener('click', () => showCat(t.dataset.cat)));
-  showCat('neg');
   $$('[data-prod]').forEach((b) => b.addEventListener('click', () => {
     const m = $('#f-msg');
     const line = `Quiero sumar: ${b.dataset.prod}.`;
@@ -2055,17 +1993,6 @@ a.qbtn{text-decoration:none}
     refresh();
     goQuote(true);
   }));
-
-  /* ---------- Catálogo NFC completo (imagen ampliada) ---------- */
-  (() => {
-    const lb = document.getElementById('catlb'), op = document.getElementById('catfull-open'), cl = document.getElementById('catfull-close');
-    if (!lb || !op || !cl) return;
-    const shut = () => { lb.classList.remove('on'); document.body.style.overflow = ''; op.focus(); };
-    op.addEventListener('click', () => { lb.classList.add('on'); document.body.style.overflow = 'hidden'; cl.focus(); });
-    cl.addEventListener('click', shut);
-    lb.addEventListener('click', (e) => { if (e.target === lb) shut(); });
-    document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && lb.classList.contains('on')) shut(); });
-  })();
 })();
 </script>
 </body>
