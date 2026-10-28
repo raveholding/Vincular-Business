@@ -1,5 +1,7 @@
 # Vincular Business
 
+Tu idea en buenas manos.
+
 Sitio web de Vincular Business: https://vincularbusiness.com.ar/
 
 - `index.html`: la web completa en un solo archivo (CSS y JS incluidos). Precios, contacto y módulos se editan en el objeto `CONFIG` al inicio del script.
