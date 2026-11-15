@@ -1,5 +1,6 @@
 import { Icono, Logo } from '@/components/Icono';
 import { Tema, MenuMovil, Planes, Rubros, Formulario } from '@/components/Interactivo';
+import { Chat } from '@/components/Chat';
 import {
   CONTACTO, WA_PRUEBA, wa, DEMOS, demoUrl, BASE, PAQUETES, INCLUYE_TODOS, CLIENTES, PREGUNTAS, PORTAL, SOPORTE,
 } from '@/lib/sitio';
@@ -348,7 +349,7 @@ export default function Inicio() {
         <div className="wrap pie-fin">© {new Date().getFullYear()} Vincular Business · {CONTACTO.ciudad}</div>
       </footer>
 
-      <a className="wa-flotante" href={WA_PRUEBA} target="_blank" rel="noopener noreferrer" aria-label="Escribinos por WhatsApp"><Icono n="msg" /></a>
+      <Chat />
     </>
   );
 }
