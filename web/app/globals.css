@@ -104,7 +104,8 @@ img{max-width:100%;height:auto}
 .demos{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
 .demo{display:flex;flex-direction:column;gap:12px;padding:24px;background:var(--s1);border:1px solid var(--line);border-radius:var(--r);transition:border-color .15s,box-shadow .15s}
 .demo:hover{border-color:var(--line2);box-shadow:var(--sombra)}
-.demo-top{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.demo-top{display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
+.demo-top h3{line-height:1.25}
 .etiqueta{font-size:.74rem;font-weight:700;padding:4px 10px;border-radius:999px;background:var(--or-suave);color:var(--or-tx);white-space:nowrap}
 .modelo{font-weight:600}
 .ejemplos{color:var(--mut);font-size:.92rem}
@@ -278,7 +279,8 @@ html[data-tema=oscuro] .base{background:var(--s1);color:var(--tx);border:1px sol
 .medida{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
 .medida .oscura{background:#0b0b0c;color:#f3f5f8;border-color:#0b0b0c}
 .medida .oscura p{color:#c3c9d2}
-.medida .oscura a{color:#fff}
+.medida .oscura a:not(.btn){color:#fff}
+.medida .oscura .btn-claro,.medida .oscura .btn-claro:hover{background:#fff;color:#0b0b0c}
 .medida .oscura .btn{margin-top:auto}
 html[data-tema=oscuro] .medida .oscura{background:#000;border-color:var(--line2)}
 .btn-claro{background:#fff;color:#0b0b0c}

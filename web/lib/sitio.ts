@@ -27,28 +27,28 @@ const PAGES = 'https://raveholding.github.io';
 export const demoUrl = (d: Demo) => `${PAGES}/${d.repo}/#acceso`;
 
 export const DEMOS: Demo[] = [
-  { id: 'mayorista', nombre: 'Comercio mayorista', modelo: 'Vendés al por mayor y al por menor desde el mismo mostrador',
-    ejemplos: 'Almacén mayorista, autoservicio, kiosco, licorería',
-    puntos: ['Precios mayorista y minorista en la misma venta', 'Caja, cierres y cuenta corriente', 'Stock que baja al vender y etiquetas de góndola'],
+  { id: 'mayorista', nombre: 'Comercios minoristas y mayoristas', modelo: 'Vendés por menor y por mayor desde el mismo mostrador',
+    ejemplos: 'Almacén, autoservicio, kiosco, licorería, bazar, ferretería, indumentaria',
+    puntos: ['Precio minorista y mayorista en la misma venta', 'Caja, cierres, fiado y cuenta corriente', 'Stock que baja al vender y etiquetas de góndola'],
     repo: 'VB-Demo-Mayorista', estado: 'lista' },
-  { id: 'distribuidora', nombre: 'Distribuidora', modelo: 'Tomás pedidos, los armás en el depósito y los repartís',
-    ejemplos: 'Distribuidora de bebidas, alimentos, limpieza o materiales',
+  { id: 'distribuidora', nombre: 'Distribuidoras', modelo: 'Tomás pedidos, los armás en el depósito y los repartís',
+    ejemplos: 'Bebidas, alimentos, golosinas, limpieza, materiales y mayoristas con reparto',
     puntos: ['Preventa con el celular y hoja de ruta', 'Pedidos, armado y remitos', 'Stock por depósito y cobranza'],
     repo: 'VB-Demo-Distribuidora', estado: 'lista' },
-  { id: 'gastronomia', nombre: 'Gastronomía', modelo: 'El cliente se sienta, pide a la mesa o pide por delivery',
-    ejemplos: 'Restaurante, pizzería, bar, cafetería',
+  { id: 'gastronomia', nombre: 'Gastronomía', modelo: 'Atendés en mesas, mostrador o delivery',
+    ejemplos: 'Restaurantes, pizzerías, bares, cafeterías, rotiserías, heladerías',
     puntos: ['Mesas, mozos y comandas a cocina', 'Menú QR y pedidos por WhatsApp', 'Stock por receta y caja'],
     repo: 'VB-Demo-Gastronomia', estado: 'pronto' },
-  { id: 'taller', nombre: 'Taller', modelo: 'Recibís el vehículo, presupuestás y entregás',
-    ejemplos: 'Taller mecánico, lubricentro, gomería, servicio técnico',
-    puntos: ['Órdenes de trabajo por patente', 'Presupuesto aprobado por WhatsApp', 'Repuestos, historial y facturación'],
+  { id: 'taller', nombre: 'Taller mecánico integral', modelo: 'Recibís el vehículo, presupuestás, trabajás y entregás',
+    ejemplos: 'Mecánica, lubricentros, gomerías, alarmas, polarizados, audio, lavaderos',
+    puntos: ['Turnos online y órdenes de trabajo por patente', 'Presupuesto aprobado por WhatsApp', 'Repuestos, historial del vehículo y facturación'],
     repo: 'VB-Demo-Taller', estado: 'pronto' },
-  { id: 'gimclub', nombre: 'Gim.Club', modelo: 'Socios con cuota mensual que entran y salen todos los días',
-    ejemplos: 'Gimnasio, natatorio, club, estudio de entrenamiento',
+  { id: 'gimclub', nombre: 'Gim.Club · Gimnasios, academias y box', modelo: 'Socios o alumnos con cuota que entran y salen todos los días',
+    ejemplos: 'Gimnasios, personal trainer, box y CrossFit, clubes, pilates, yoga, danza, artes marciales',
     puntos: ['Cuotas, vencimientos y cobranza', 'Ingreso con tarjeta o llavero NFC', 'Clases, cupos y caja'],
     repo: 'VB-Demo-Gim.Club', estado: 'pronto' },
-  { id: 'salud-estetica', nombre: 'Salud.Estética', modelo: 'Trabajás con turnos y profesionales',
-    ejemplos: 'Barbería, peluquería, estética, spa, consultorio',
+  { id: 'salud-estetica', nombre: 'Salud, estética y barberías', modelo: 'Trabajás con turnos y profesionales',
+    ejemplos: 'Barberías, peluquerías, estética, uñas, spa, consultorios y centros de salud',
     puntos: ['Turnos online con recordatorio por WhatsApp', 'Agenda y comisiones por profesional', 'Packs de sesiones y club de clientes'],
     repo: 'VB-Demo-Salud.Estetica', estado: 'pronto' },
 ];
@@ -72,7 +72,7 @@ export const PAQUETES: Paquete[] = [
   { id: 'logistica', nombre: 'Logística avanzada', icono: 'truck', detalle: 'Reparto y hoja de ruta, preventa con GPS, pedidos y remitos, depósitos y transferencias.' },
   { id: 'digital', nombre: 'Canal digital', icono: 'globe', detalle: 'Menú y tienda online, pedidos por WhatsApp, Tiendanube, PedidosYa y API.' },
   { id: 'inteligente', nombre: 'Centro inteligente', icono: 'spark', detalle: 'Asistentes con IA, análisis del negocio, finanzas y contabilidad de gestión.' },
-  { id: 'rubro', nombre: 'Paquete de tu rubro', icono: 'grid', detalle: 'Gastronomía (mesas y comandas), turnos (estética y salud), taller (órdenes de trabajo) o socios (gimnasios y clubes).' },
+  { id: 'rubro', nombre: 'Paquete de tu rubro', icono: 'grid', detalle: 'Gastronomía (mesas y comandas), turnos (salud, estética y barberías), taller integral (órdenes de trabajo) o socios (gimnasios, academias y box).' },
 ];
 
 // ---------- Planes: suben por cantidad de módulos extra ----------
@@ -122,9 +122,9 @@ export const RUBROS = [
     con: ['Preventa con el celular y pedidos ordenados', 'Armado, remito y factura en el mismo circuito', 'Saldos y cobranzas al día por cliente'] },
   { id: 'gastronomia', nombre: 'Gastronomía', hoy: ['Comandas en papel que se traspapelan', 'Mesas que no cierran con la caja', 'Insumos que se terminan sin aviso'],
     con: ['Comandas directo a cocina y barra', 'Cada mesa cobrada y en la caja del turno', 'Stock por receta con aviso de faltantes'] },
-  { id: 'talleres', nombre: 'Talleres', hoy: ['Presupuestos que nadie aprueba por escrito', 'No sabés qué se le hizo a cada vehículo', 'Repuestos sin control'],
+  { id: 'talleres', nombre: 'Talleres integrales', hoy: ['Presupuestos que nadie aprueba por escrito', 'No sabés qué se le hizo a cada vehículo', 'Repuestos sin control'],
     con: ['Presupuesto aprobado por WhatsApp', 'Historial completo por patente', 'Repuestos descontados de cada orden'] },
-  { id: 'servicios', nombre: 'Gimnasios y estética', hoy: ['Cuotas vencidas sin cobrar', 'Turnos que se pisan', 'Clientes que no vuelven'],
+  { id: 'servicios', nombre: 'Gimnasios, salud y estética', hoy: ['Cuotas vencidas sin cobrar', 'Turnos que se pisan', 'Clientes que no vuelven'],
     con: ['Aviso automático de cuota y cobranza', 'Agenda online con recordatorios', 'Club de clientes y promociones'] },
 ];
 
