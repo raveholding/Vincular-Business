@@ -43,7 +43,7 @@ export const DEMOS: Demo[] = [
     ejemplos: 'Mecánica, lubricentro, gomería, alarmas, polarizados, audio, chapa y pintura',
     puntos: ['Turnos y órdenes de trabajo por patente', 'Presupuesto aprobado por WhatsApp', 'Repuestos, instalaciones y garantías por vehículo'],
     repo: 'VB-Demo-Taller', estado: 'pronto' },
-  { id: 'gimclub', nombre: 'Gim.Club · gimnasios, academias y box', modelo: 'Socios o alumnos con cuota que entran y salen todos los días',
+  { id: 'gimclub', nombre: 'Gimnasios, BOX, Academias', modelo: 'Socios o alumnos con cuota que entran y salen todos los días',
     ejemplos: 'Gimnasio, box y CrossFit, personal trainer, pilates y yoga, danza, artes marciales, club deportivo',
     puntos: ['Cuotas, vencimientos y cobranza', 'Ingreso con tarjeta o llavero NFC', 'Clases, cupos y caja'],
     repo: 'VB-Demo-Gim.Club', estado: 'pronto' },
