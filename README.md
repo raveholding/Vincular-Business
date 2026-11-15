@@ -10,6 +10,6 @@ Sitio web de Vincular Business: https://vincularbusiness.com.ar/
 
 La tarjeta digital de Nicolás vive en su propio repositorio: https://github.com/raveholding/nicoVB
 
-## Web en Next.js (Vercel)
+## Web nueva en Next.js (Vercel)
 
-La carpeta [`web/`](web/README.md) tiene la versión Next.js de esta web: carga más rápida, selector de demos por rubro y una página por rubro. Se genera desde este `index.html` con `tools/extraer_web.py`.
+La carpeta [`web/`](web/README.md) tiene la web nueva: suscripción con 1 mes gratis, planes por cantidad de módulos, demos por rubro y modo claro/oscuro. Se publica en Vercel.
