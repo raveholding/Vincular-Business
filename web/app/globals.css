@@ -295,3 +295,18 @@ html[data-tema=oscuro] .medida .oscura{background:#000;border-color:var(--line2)
   .segmento{display:grid;grid-template-columns:1fr 1fr;width:100%}
   .pie-in{grid-template-columns:1fr 1fr}
 }
+
+/* ---------- V3: tipos de negocio y franja de clientes en movimiento ---------- */
+.chips-neg button{display:inline-flex;flex-direction:column;align-items:flex-start;gap:1px;border-radius:14px;padding:.6em 1.1em;text-align:left}
+.chips-neg small{font-weight:500;font-size:.76rem;opacity:.7}
+.cinta-logos{position:relative;overflow:hidden;padding:10px 0;-webkit-mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent);mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent)}
+.cinta-pista{display:flex;gap:22px;width:max-content;animation:cinta 34s linear infinite}
+.cinta-logos:hover .cinta-pista{animation-play-state:paused}
+.cinta-pista li{display:grid;place-items:center;width:190px;height:120px;padding:14px;border-radius:var(--r);background:rgba(255,255,255,.55);border:1px solid var(--line);backdrop-filter:blur(6px);opacity:.72;filter:grayscale(.35);transition:opacity .25s,filter .25s,transform .25s}
+html[data-tema=oscuro] .cinta-pista li{background:rgba(255,255,255,.08)}
+.cinta-pista li:hover{opacity:1;filter:none;transform:translateY(-2px)}
+.cinta-pista img{max-height:90px;max-width:100%;width:auto;height:auto;object-fit:contain;border-radius:8px}
+@keyframes cinta{from{transform:translateX(0)}to{transform:translateX(calc(-50% - 11px))}}
+@media (prefers-reduced-motion:reduce){.cinta-pista{animation:none;flex-wrap:wrap;justify-content:center;width:auto}.cinta-pista li[aria-hidden]{display:none}}
+.cinta-cta{text-align:center;margin-top:22px}
+.cinta-cta a{display:inline-flex;align-items:center;gap:8px;font-weight:700;color:var(--or-tx);text-decoration:none}

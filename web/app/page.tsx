@@ -144,12 +144,16 @@ export default function Inicio() {
         <section id="clientes" className="sec alt">
           <div className="wrap">
             <Encabezado n="04" etq="Clientes">Negocios que ya <em>trabajan con nosotros</em></Encabezado>
-            <ul className="logos">
-              {CLIENTES.map((c) => (
-                <li key={c.nombre}><img src={c.logo} alt={`Logo de ${c.nombre}`} width={c.w} height={c.h} loading="lazy" /></li>
-              ))}
-              <li className="tu-negocio"><a href={WA_PRUEBA} target="_blank" rel="noopener noreferrer">¿Tu negocio?<span>Sumate</span></a></li>
-            </ul>
+            <div className="cinta-logos" aria-label="Logos de clientes">
+              <ul className="cinta-pista">
+                {[...CLIENTES, ...CLIENTES].map((c, i) => (
+                  <li key={i} aria-hidden={i >= CLIENTES.length ? true : undefined}>
+                    <img src={c.logo} alt={i < CLIENTES.length ? `Logo de ${c.nombre}` : ''} width={c.w} height={c.h} loading="lazy" />
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <p className="cinta-cta"><a href={WA_PRUEBA} target="_blank" rel="noopener noreferrer">¿Tu negocio? Sumate <Icono n="arrow" /></a></p>
           </div>
         </section>
 

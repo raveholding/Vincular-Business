@@ -80,10 +80,10 @@ export const PAQUETES: Paquete[] = [
 // Base $ 50.000 · Crecer $ 70.000 · Pro $ 95.200 · Total $ 140.000 por mes.
 export type Plan = { id: string; nombre: string; extras: string; para: string; precioMensual: number | null; destacado?: boolean };
 export const PLANES: Plan[] = [
-  { id: 'base', nombre: 'Base', extras: 'Sistema base, sin módulos extra', para: 'Un local que quiere ordenar ventas, caja, stock y facturación.', precioMensual: 62500 },
-  { id: 'crecer', nombre: 'Crecer', extras: 'Base + 1 módulo extra', para: 'Sumás lo que más necesitás: club de clientes, reparto, tienda online o equipo.', precioMensual: 87500 },
-  { id: 'pro', nombre: 'Pro', extras: 'Base + 3 módulos extra', para: 'Negocios con equipo, varios canales de venta o más de una caja.', precioMensual: 119000, destacado: true },
-  { id: 'total', nombre: 'Total', extras: 'Base + todos los módulos', para: 'Todo el sistema, con inteligencia artificial y prioridad en soporte.', precioMensual: 175000 },
+  { id: 'base', nombre: 'Base', extras: 'Sistema base, sin módulos extra', para: 'Kiosco o almacén: un local con una caja que quiere ordenar ventas, stock y facturación.', precioMensual: 62500 },
+  { id: 'crecer', nombre: 'Crecer', extras: 'Base + 1 módulo extra', para: 'Comercio con más movimiento: sumás club de clientes, tienda online, reparto o equipo.', precioMensual: 87500 },
+  { id: 'pro', nombre: 'Pro', extras: 'Base + 3 módulos extra', para: 'Varias sucursales, depósito o reparto, con equipo y varios canales de venta.', precioMensual: 119000, destacado: true },
+  { id: 'total', nombre: 'Total', extras: 'Base + todos los módulos', para: 'Empresa con equipos y operación grande: todo el sistema, IA y prioridad en soporte.', precioMensual: 175000 },
 ];
 export type Periodo = { id: string; nombre: string; meses: number; descuento: number };
 export const PERIODOS: Periodo[] = [
@@ -92,10 +92,13 @@ export const PERIODOS: Periodo[] = [
   { id: 'semestral', nombre: 'Semestral', meses: 6, descuento: 0.1 },
   { id: 'anual', nombre: 'Anual', meses: 12, descuento: 0.2 },
 ];
-// «¿Cuántos módulos extra necesitás?»: cada opción apunta a un plan
+// «¿Cuál se parece a tu negocio?»: cada tipo de negocio apunta a un plan
 export const ELECCION = [
-  { id: 'base', txt: 'Ninguno' }, { id: 'crecer', txt: 'Uno' }, { id: 'pro', txt: 'Hasta tres' },
-  { id: 'total', txt: 'Todos' }, { id: 'nose', txt: 'No sé todavía' },
+  { id: 'base', txt: 'Kiosco o almacén', det: 'Un local, una caja' },
+  { id: 'crecer', txt: 'Comercio', det: 'Un local con más movimiento' },
+  { id: 'pro', txt: 'Varias sucursales', det: 'Locales, depósito o reparto' },
+  { id: 'total', txt: 'Empresa', det: 'Equipos y operación grande' },
+  { id: 'nose', txt: 'No sé todavía', det: 'Te ayudamos a elegir' },
 ];
 
 // ---------- Portal del cliente (SistemaIntegralSVB) ----------

@@ -72,10 +72,10 @@ export function Planes() {
           </button>
         ))}
       </div>
-      <p className="paso-tit">2. ¿Cuántos módulos extra necesitás?</p>
-      <div className="chips" role="group" aria-label="Módulos extra">
+      <p className="paso-tit">2. ¿Cuál se parece a tu negocio?</p>
+      <div className="chips chips-neg" role="group" aria-label="Tipo de negocio">
         {ELECCION.map((x) => (
-          <button key={x.id} type="button" aria-pressed={elec === x.id} onClick={() => setElec(x.id)}>{x.txt}</button>
+          <button key={x.id} type="button" aria-pressed={elec === x.id} onClick={() => setElec(x.id)}>{x.txt}<small>{x.det}</small></button>
         ))}
       </div>
       {elec === 'nose' && <p className="ayuda">Empezá con <b>Pro</b>: es el que más eligen. En el mes gratis vemos juntos qué módulos usás y te dejamos el plan justo.</p>}
