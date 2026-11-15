@@ -138,8 +138,8 @@ html[data-tema=oscuro] .base{background:var(--s1);color:var(--tx);border:1px sol
 
 /* Clientes */
 .logos{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px}
-.logos li{display:grid;place-items:center;aspect-ratio:4/3;padding:16px;background:#fff;border:1px solid var(--line);border-radius:var(--r)}
-.logos img{max-height:110px;width:auto;object-fit:contain}
+.logos li{display:grid;place-items:center;height:150px;padding:16px;background:#fff;border:1px solid var(--line);border-radius:var(--r)}
+.logos img{max-height:110px;max-width:100%;width:auto;height:auto;object-fit:contain}
 .logos .tu-negocio{background:var(--s1)}
 .tu-negocio a{display:grid;text-align:center;text-decoration:none;font-weight:800;font-size:1.1rem}
 .tu-negocio span{color:var(--or-tx);font-size:.9rem}
