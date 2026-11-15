@@ -353,7 +353,7 @@ html[data-tema=oscuro] .cinta-pista li{background:rgba(255,255,255,.08)}
 .tabla thead th{background:var(--s2);font-weight:700}
 .tabla tbody th{font-weight:600;color:var(--tx)}
 .tabla td{color:var(--mut)}
-.tabla td.t-precio{color:var(--tx);font-weight:700;white-space:nowrap}
+.tabla td.precio{color:var(--tx);font-weight:700;white-space:nowrap}
 .soporte .nota{font-size:.95rem;border-left:3px solid var(--or);padding-left:12px}
 .pasos-soporte{color:var(--mut);padding-left:22px}
 .pasos-soporte li{margin:6px 0}.pasos-soporte b{color:var(--tx)}
