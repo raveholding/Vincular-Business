@@ -68,6 +68,11 @@ h3{font-size:1.3rem;font-weight:600;letter-spacing:-.02em;line-height:1.2}
 .btn-block{width:100%}
 
 
+/* ---------- Clientes ---------- */
+.clientes{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:16px;align-items:stretch}
+.cliente{display:flex;align-items:center;justify-content:center;min-height:170px;padding:16px;border:1px solid var(--line);border-radius:14px;background:var(--s2);margin:0}
+.cliente img{max-width:100%;max-height:130px;width:auto;height:auto;border-radius:10px;display:block}
+.cliente.txt{font:600 1.15rem/1.2 var(--f);color:#fff;text-align:center;letter-spacing:-.01em}
 .catimg{margin:0 auto;max-width:760px}
 .catimg img{width:100%;height:auto;display:block;border-radius:14px;border:1px solid var(--line)}
 .catfull{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:28px}
@@ -890,6 +895,24 @@ a.qbtn{text-decoration:none}
       <a class="btn btn-ghost" id="demo-wa" href="#presupuesto">Quiero verlo con mi rubro</a>
     </div>
     <p class="micro" style="text-align:center;margin-top:14px">Es una demostración con datos de ejemplo: no es un servicio activo. Tu sistema se arma a medida con tu marca y tus datos.</p>
+  </div>
+</section>
+
+<!-- Clientes -->
+<section id="clientes">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Negocios que ya confían en nuestro sistema</h2>
+      <p>Más ventas, más clientes que vuelven y trazabilidad completa de todo lo que pasa en el negocio: quién hizo qué, cuándo y con qué resultado.</p>
+    </div>
+    <ul class="clientes" style="list-style:none;padding:0;margin:0">
+      <li><figure class="cliente"><img src="assets/clientes/sebachavez.jpg" alt="Logo de Seba Chavez Car Service" width="200" height="205" loading="lazy"></figure></li>
+      <li><figure class="cliente"><img src="assets/clientes/bacano.jpg" alt="Logo de Bacano Show Room Barber Shop" width="180" height="177" loading="lazy"></figure></li>
+      <li><figure class="cliente"><img src="assets/clientes/almacen-rave.jpg" alt="Logo de Almacén RAVE" width="300" height="168" loading="lazy"></figure></li>
+      <li><figure class="cliente"><img src="assets/clientes/medicinal-terps.png" alt="Logo de Medicinal Terps" width="200" height="200" loading="lazy"></figure></li>
+      <li><figure class="cliente"><img src="assets/clientes/cannabismatica.jpg" alt="Logo de Cannabismatica, investigación y desarrollo" width="332" height="120" loading="lazy"></figure></li>
+      <li><figure class="cliente txt">Clínica de la PC</figure></li>
+    </ul>
   </div>
 </section>
 
