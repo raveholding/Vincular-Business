@@ -1,0 +1,42 @@
+/* ===== Estilos nuevos de la web Next.js (sobre los del sitio original, mismos colores y tipografía) ===== */
+
+/* Selector de demos por rubro (portada) */
+.vb-rubros{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:16px}
+@media (max-width:420px){.vb-rubros{grid-template-columns:1fr}}
+.vb-rubro{display:flex;flex-direction:column;gap:12px;padding:22px;border:1px solid var(--line);border-radius:14px;background:var(--s1)}
+.vb-rubro h3{display:flex;align-items:center;gap:.5em}
+.vb-rubro h3 .ic{color:var(--or)}
+.vb-rubro>p{color:var(--mut);font-size:.95rem}
+.vb-demos{display:flex;flex-direction:column;gap:8px;margin-top:auto}
+.vb-demo{display:flex;flex-direction:column;padding:12px 14px;border:1px solid var(--line2);border-radius:10px;text-decoration:none;transition:border-color .2s,background .2s}
+.vb-demo strong{color:#fff;font-weight:600}
+.vb-demo span{color:var(--mut);font-size:.88rem}
+.vb-demo:hover{border-color:var(--or);background:rgba(255,122,26,.08)}
+.vb-demo-wa:hover{border-color:var(--wa);background:rgba(37,211,102,.08)}
+.vb-mas{color:var(--blue);font-size:.92rem;text-decoration:none}
+.vb-mas:hover{text-decoration:underline}
+.vb-otros{text-align:center;margin-top:28px;color:var(--mut)}
+.vb-otros a{color:var(--or)}
+
+/* Páginas de cada rubro */
+.vb-top{position:sticky;top:0;z-index:50;background:rgba(0,0,0,.86);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.vb-top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:68px}
+.vb-top img{height:34px;width:auto}
+.vb-top nav{display:flex;gap:18px;flex-wrap:wrap}
+.vb-top nav a{text-decoration:none;color:var(--mut);font-weight:500}
+.vb-top nav a:hover{color:#fff}
+.vb-hero{padding:clamp(56px,9vw,110px) 0 40px}
+.vb-hero .eyebrow{color:var(--or);font-weight:600;letter-spacing:.02em;margin-bottom:14px}
+.vb-hero h1{font-size:clamp(2.2rem,5vw,3.8rem);max-width:18ch}
+.vb-hero p.lead{color:var(--mut);font-size:1.15rem;max-width:60ch;margin-top:18px}
+.vb-hero .cta-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+.vb-sec{padding:40px 0}
+.vb-sec h2{font-size:clamp(1.6rem,3.2vw,2.4rem);margin-bottom:22px}
+.vb-lista{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px;list-style:none;padding:0;margin:0}
+.vb-lista li{display:flex;gap:10px;align-items:flex-start;padding:16px;border:1px solid var(--line);border-radius:12px;background:var(--s1)}
+.vb-lista li .ic{color:var(--green);margin-top:.2em}
+.vb-nota{color:var(--mut);margin-top:16px}
+.vb-pie{border-top:1px solid var(--line);padding:32px 0 48px;color:var(--dim);font-size:.92rem;margin-top:40px}
+.vb-pie .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.vb-pie a{color:var(--mut)}
+@media (max-width:640px){.vb-top nav{display:none}}
