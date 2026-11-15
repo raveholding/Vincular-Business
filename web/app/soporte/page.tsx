@@ -103,7 +103,7 @@ export default function Soporte() {
           <div className="tabla-scroll">
             <table className="tabla">
               <thead><tr><th scope="col">Servicio</th><th scope="col">Qué incluye</th><th scope="col">Precio</th></tr></thead>
-              <tbody>{ADICIONAL.map(([a, b, c]) => <tr key={a}><th scope="row">{a}</th><td>{b}</td><td className="precio">{c}</td></tr>)}</tbody>
+              <tbody>{ADICIONAL.map(([a, b, c]) => <tr key={a}><th scope="row">{a}</th><td>{b}</td><td className="t-precio">{c}</td></tr>)}</tbody>
             </table>
           </div>
 
@@ -128,7 +128,7 @@ export default function Soporte() {
           <div className="tabla-scroll">
             <table className="tabla">
               <thead><tr><th scope="col">Capacitación</th><th scope="col">Para quién</th><th scope="col">Formato</th><th scope="col">Precio</th></tr></thead>
-              <tbody>{APARTE.map(([a, b, c, d]) => <tr key={a}><th scope="row">{a}</th><td>{b}</td><td>{c}</td><td className="precio">{d}</td></tr>)}</tbody>
+              <tbody>{APARTE.map(([a, b, c, d]) => <tr key={a}><th scope="row">{a}</th><td>{b}</td><td>{c}</td><td className="t-precio">{d}</td></tr>)}</tbody>
             </table>
           </div>
           <p className="nota">Fuera de Salta capital se suma el traslado. Las capacitaciones por videollamada se pueden grabar para tu equipo.</p>
