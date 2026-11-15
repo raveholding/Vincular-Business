@@ -60,7 +60,7 @@ function Precio({ plan, per }: { plan: Plan; per: Periodo }) {
   );
 }
 export function Planes() {
-  const [per, setPer] = useState(PERIODOS[0]);
+  const [per, setPer] = useState(PERIODOS[PERIODOS.length - 1]); // arranca en Anual: muestra el precio «desde»
   const [elec, setElec] = useState('pro');
   return (
     <div className="planes-pasos">

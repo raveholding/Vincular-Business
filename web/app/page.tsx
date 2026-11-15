@@ -185,7 +185,7 @@ export default function Inicio() {
         {/* ---------- 06 Planes ---------- */}
         <section id="planes" className="sec alt">
           <div className="wrap">
-            <Encabezado n="06" etq="Planes y precios" sub="Desde $ 50.000 al mes. El plan sube según cuántos módulos extra sumás, y cambiás de plan cuando quieras.">
+            <Encabezado n="06" etq="Planes y precios" sub="Desde $ 50.000 al mes pagando el año. El plan sube según cuántos módulos extra sumás, y cambiás de plan cuando quieras.">
               Pagás por lo que <em>usás</em>
             </Encabezado>
             <ul className="sellos">
