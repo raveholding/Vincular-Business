@@ -91,7 +91,7 @@ export function Planes() {
               <Precio plan={p} per={per} />
               <p className="para">{p.para}</p>
               <a className={elegido ? 'btn btn-pri btn-block' : 'btn btn-sec btn-block'}
-                href={wa(`Hola! Quiero probar 1 mes gratis Vincular Business. Me interesa el plan ${p.nombre} (${p.extras}), pago ${per.nombre.toLowerCase()}.`)}
+                href={wa(`Hola! Quiero probar 1 mes gratis del Sistema Vincular Business. Me interesa el plan ${p.nombre} (${p.extras}), pago ${per.nombre.toLowerCase()}.`)}
                 target="_blank" rel="noopener noreferrer">Empezar 1 mes gratis</a>
             </article>
           );
@@ -136,7 +136,7 @@ export function Formulario() {
   const [msg, setMsg] = useState('');
   const [err, setErr] = useState('');
   const texto = [
-    `Hola! Soy ${nombre || '(nombre)'}${negocio ? `, de ${negocio}` : ''}.`,
+    `Hola! Soy ${nombre || '(nombre)'}${negocio ? `, de ${negocio}` : ''}. Te escribo por el Sistema Vincular Business.`,
     `Quiero: ${nec}.`,
     msg && `Comentario: ${msg}`,
   ].filter(Boolean).join('\n');

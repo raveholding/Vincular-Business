@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 };
 
 const WA_ARREP = wa('Hola! Quiero ejercer mi derecho de arrepentimiento (Botón de arrepentimiento). Mi nombre y negocio son: ');
-const WA_BAJA = wa('Hola! Quiero dar de baja mi suscripción a Vincular Business (Botón de baja). Mi nombre y negocio son: ');
+const WA_BAJA = wa('Hola! Quiero dar de baja mi suscripción al Sistema Vincular Business (Botón de baja). Mi nombre y negocio son: ');
 
 export default function Legal() {
   return (

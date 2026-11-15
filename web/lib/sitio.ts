@@ -16,7 +16,7 @@ export const CONTACTO = {
 };
 
 export const wa = (msg: string) => `https://wa.me/${CONTACTO.whatsapp}?text=${encodeURIComponent(msg)}`;
-export const WA_PRUEBA = wa('Hola! Quiero probar Vincular Business 1 mes gratis.');
+export const WA_PRUEBA = wa('Hola! Quiero probar 1 mes gratis del Sistema Vincular Business.');
 
 // ---------- Demos (solo las nuevas) ----------
 export type Demo = {
@@ -27,28 +27,28 @@ const PAGES = 'https://raveholding.github.io';
 export const demoUrl = (d: Demo) => `${PAGES}/${d.repo}/#acceso`;
 
 export const DEMOS: Demo[] = [
-  { id: 'mayorista', nombre: 'Comercios minoristas y mayoristas', modelo: 'Vendés por menor y por mayor desde el mismo mostrador',
+  { id: 'mayorista', nombre: 'Comercios minoristas y mayoristas', modelo: 'Vendés por menor, por mayor o las dos cosas desde el mismo mostrador',
     ejemplos: 'Almacén, autoservicio, kiosco, licorería, bazar, ferretería, indumentaria',
-    puntos: ['Precio minorista y mayorista en la misma venta', 'Caja, cierres, fiado y cuenta corriente', 'Stock que baja al vender y etiquetas de góndola'],
+    puntos: ['Precios mayorista y minorista en la misma venta', 'Caja, cierres y cuenta corriente', 'Stock que baja al vender y etiquetas de góndola'],
     repo: 'VB-Demo-Mayorista', estado: 'lista' },
-  { id: 'distribuidora', nombre: 'Distribuidoras', modelo: 'Tomás pedidos, los armás en el depósito y los repartís',
-    ejemplos: 'Bebidas, alimentos, golosinas, limpieza, materiales y mayoristas con reparto',
+  { id: 'distribuidora', nombre: 'Distribuidores', modelo: 'Tomás pedidos, los armás en el depósito y los repartís',
+    ejemplos: 'Distribuidoras de bebidas, alimentos, limpieza, golosinas o materiales',
     puntos: ['Preventa con el celular y hoja de ruta', 'Pedidos, armado y remitos', 'Stock por depósito y cobranza'],
     repo: 'VB-Demo-Distribuidora', estado: 'lista' },
-  { id: 'gastronomia', nombre: 'Gastronomía', modelo: 'Atendés en mesas, mostrador o delivery',
-    ejemplos: 'Restaurantes, pizzerías, bares, cafeterías, rotiserías, heladerías',
+  { id: 'gastronomia', nombre: 'Gastronomía', modelo: 'El cliente se sienta, pide a la mesa o pide por delivery',
+    ejemplos: 'Restaurante, pizzería, bar, cafetería, rotisería, heladería',
     puntos: ['Mesas, mozos y comandas a cocina', 'Menú QR y pedidos por WhatsApp', 'Stock por receta y caja'],
     repo: 'VB-Demo-Gastronomia', estado: 'pronto' },
   { id: 'taller', nombre: 'Taller mecánico integral', modelo: 'Recibís el vehículo, presupuestás, trabajás y entregás',
-    ejemplos: 'Mecánica, lubricentros, gomerías, alarmas, polarizados, audio, lavaderos',
-    puntos: ['Turnos online y órdenes de trabajo por patente', 'Presupuesto aprobado por WhatsApp', 'Repuestos, historial del vehículo y facturación'],
+    ejemplos: 'Mecánica, lubricentro, gomería, alarmas, polarizados, audio, chapa y pintura',
+    puntos: ['Turnos y órdenes de trabajo por patente', 'Presupuesto aprobado por WhatsApp', 'Repuestos, instalaciones y garantías por vehículo'],
     repo: 'VB-Demo-Taller', estado: 'pronto' },
-  { id: 'gimclub', nombre: 'Gim.Club · Gimnasios, academias y box', modelo: 'Socios o alumnos con cuota que entran y salen todos los días',
-    ejemplos: 'Gimnasios, personal trainer, box y CrossFit, clubes, pilates, yoga, danza, artes marciales',
+  { id: 'gimclub', nombre: 'Gim.Club · gimnasios, academias y box', modelo: 'Socios o alumnos con cuota que entran y salen todos los días',
+    ejemplos: 'Gimnasio, box y CrossFit, personal trainer, pilates y yoga, danza, artes marciales, club deportivo',
     puntos: ['Cuotas, vencimientos y cobranza', 'Ingreso con tarjeta o llavero NFC', 'Clases, cupos y caja'],
     repo: 'VB-Demo-Gim.Club', estado: 'pronto' },
   { id: 'salud-estetica', nombre: 'Salud, estética y barberías', modelo: 'Trabajás con turnos y profesionales',
-    ejemplos: 'Barberías, peluquerías, estética, uñas, spa, consultorios y centros de salud',
+    ejemplos: 'Barbería, peluquería, centro de estética, spa, uñas, tatuajes, consultorio',
     puntos: ['Turnos online con recordatorio por WhatsApp', 'Agenda y comisiones por profesional', 'Packs de sesiones y club de clientes'],
     repo: 'VB-Demo-Salud.Estetica', estado: 'pronto' },
 ];

@@ -100,7 +100,7 @@ export default function Inicio() {
                   <ul>{d.puntos.map((p) => <li key={p}><Icono n="check" />{p}</li>)}</ul>
                   {d.estado === 'lista'
                     ? <a className="btn btn-sec btn-block" href={demoUrl(d)} target="_blank" rel="noopener noreferrer">Entrar a la demo<Icono n="arrow" /></a>
-                    : <a className="btn btn-sec btn-block" href={wa(`Hola! Quiero ver la demo de ${d.nombre} de Vincular Business.`)} target="_blank" rel="noopener noreferrer">Pedir demo guiada<Icono n="arrow" /></a>}
+                    : <a className="btn btn-sec btn-block" href={wa(`Hola! Quiero ver la demo de ${d.nombre} del Sistema Vincular Business.`)} target="_blank" rel="noopener noreferrer">Pedir demo guiada<Icono n="arrow" /></a>}
                 </article>
               ))}
             </div>
@@ -271,7 +271,7 @@ export default function Inicio() {
                 <h3>Escribinos</h3>
                 <p>Cotizaciones y ventas<br /><a href={`mailto:${CONTACTO.email}`}>{CONTACTO.email}</a></p>
                 <p>Soporte<br /><a href={SOPORTE} target="_blank" rel="noopener noreferrer">Página de soporte</a></p>
-                <a className="btn btn-claro btn-block" href={wa('Hola! Quiero una cotización a medida de Vincular Business.')} target="_blank" rel="noopener noreferrer">Solicitar cotización</a>
+                <a className="btn btn-claro btn-block" href={wa('Hola! Quiero una cotización a medida del Sistema Vincular Business.')} target="_blank" rel="noopener noreferrer">Solicitar cotización</a>
               </article>
             </div>
           </div>

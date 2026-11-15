@@ -283,7 +283,8 @@ html[data-tema=oscuro] .base{background:var(--s1);color:var(--tx);border:1px sol
 .medida .oscura .btn-claro,.medida .oscura .btn-claro:hover{background:#fff;color:#0b0b0c}
 .medida .oscura .btn{margin-top:auto}
 html[data-tema=oscuro] .medida .oscura{background:#000;border-color:var(--line2)}
-.btn-claro{background:#fff;color:#0b0b0c}
+.btn-claro,.medida .oscura a.btn-claro{background:#fff;color:#0b0b0c}
+.btn-claro:hover{background:var(--or);color:#140800}
 .pie-in{grid-template-columns:2fr 1fr 1fr 1fr}
 @media (max-width:1020px){
   .pie-in{grid-template-columns:1fr 1fr 1fr}
