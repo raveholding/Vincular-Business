@@ -246,7 +246,6 @@ export default function Inicio() {
             <div className="ctas centro">
               <a className="btn btn-pri" href={PORTAL} target="_blank" rel="noopener noreferrer">Ingresar al portal</a>
               <a className="btn btn-sec" href={SOPORTE} target="_blank" rel="noopener noreferrer"><Icono n="msg" />Página de soporte</a>
-              <a className="btn btn-sec" href="/soporte">Soporte y capacitación</a>
             </div>
           </div>
         </section>
@@ -337,7 +336,6 @@ export default function Inicio() {
           <nav aria-label="Clientes"><h4>Clientes</h4>
             <a href={PORTAL} target="_blank" rel="noopener noreferrer">Portal del cliente</a>
             <a href={SOPORTE} target="_blank" rel="noopener noreferrer">Soporte</a>
-            <a href="/soporte">Planes de soporte y capacitación</a>
             <a href="#portal">Estado del sistema</a>
           </nav>
           <nav aria-label="Legal"><h4>Legal</h4>
