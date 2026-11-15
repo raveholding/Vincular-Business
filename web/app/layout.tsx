@@ -1,9 +1,6 @@
 import type { Metadata, Viewport } from 'next';
-import { Manrope } from 'next/font/google';
 import { SITIO } from '@/lib/sitio';
 import './globals.css';
-
-const fuente = Manrope({ subsets: ['latin'], weight: ['400', '500', '600', '700', '800'], display: 'swap', variable: '--f' });
 
 const descripcion =
   'Sistema de gestión para comercios de Argentina: ventas, caja, stock, clientes y factura electrónica ARCA en un solo sistema. Funciona sin internet. Probalo 1 mes gratis, sin tarjeta.';
@@ -46,9 +43,13 @@ const ld = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="es-AR" className={fuente.variable} suppressHydrationWarning>
+    <html lang="es-AR" suppressHydrationWarning>
       <head>
         <script dangerouslySetInnerHTML={{ __html: temaInicial }} />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
+        {/* eslint-disable-next-line @next/next/no-page-custom-font */}
+        <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(ld) }} />
       </head>
       <body>{children}</body>

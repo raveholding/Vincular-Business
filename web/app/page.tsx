@@ -102,7 +102,7 @@ export default function Inicio() {
                 </article>
               ))}
             </div>
-            <p className="aclara">Las demos usan datos de ejemplo que quedan en tu navegador. No emiten facturas reales ni se conectan con bancos, ARCA ni equipos.</p>
+            <p className="aclara">Para entrar: usuario <b>ADMIN</b> y PIN <b>1234</b>. Las demos usan datos de ejemplo que quedan en tu navegador; no emiten facturas reales ni se conectan con bancos, ARCA ni equipos.</p>
           </div>
         </section>
 

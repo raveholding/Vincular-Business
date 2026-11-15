@@ -24,7 +24,7 @@ export type Demo = {
   repo: string; estado: 'lista' | 'pronto';
 };
 const PAGES = 'https://raveholding.github.io';
-export const demoUrl = (d: Demo) => `${PAGES}/${d.repo}/`;
+export const demoUrl = (d: Demo) => `${PAGES}/${d.repo}/#acceso`;
 
 export const DEMOS: Demo[] = [
   { id: 'mayorista', nombre: 'Comercio mayorista', modelo: 'Vendés al por mayor y al por menor desde el mismo mostrador',
