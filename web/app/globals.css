@@ -342,3 +342,24 @@ html[data-tema=oscuro] .cinta-pista li{background:rgba(255,255,255,.08)}
 .chat-cargando{padding:30px;text-align:center;color:var(--mut)}
 .chat-error{margin:0;padding:10px 16px;color:var(--no);font-weight:600;font-size:.86rem;border-top:1px solid var(--line)}
 @media (max-width:640px){.chat-txt{display:none}.chat-boton{width:58px;padding:0;justify-content:center}.chat-panel{right:12px;bottom:86px}}
+/* Soporte y capacitación */
+.soporte{max-width:1040px}
+.soporte .lead{color:var(--mut)}
+.soporte .ctas{margin:22px 0 8px}
+.tabla-scroll{overflow-x:auto;margin:14px 0;border:1px solid var(--line);border-radius:14px;background:var(--s1)}
+.tabla{width:100%;border-collapse:collapse;font-size:.95rem;min-width:620px}
+.tabla th,.tabla td{padding:12px 14px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}
+.tabla tr:last-child th,.tabla tr:last-child td{border-bottom:0}
+.tabla thead th{background:var(--s2);font-weight:700}
+.tabla tbody th{font-weight:600;color:var(--tx)}
+.tabla td{color:var(--mut)}
+.tabla td.precio{color:var(--tx);font-weight:700;white-space:nowrap}
+.soporte .nota{font-size:.95rem;border-left:3px solid var(--or);padding-left:12px}
+.pasos-soporte{color:var(--mut);padding-left:22px}
+.pasos-soporte li{margin:6px 0}.pasos-soporte b{color:var(--tx)}
+.mes-gratis{list-style:none;padding:0;margin:16px 0;display:grid;gap:12px}
+.mes-gratis li{display:flex;gap:16px;background:var(--s1);border:1px solid var(--line);border-radius:14px;padding:16px}
+.mes-gratis .cuando{flex:0 0 92px;font-weight:700;color:var(--or-tx)}
+.mes-gratis h3{margin:0 0 4px;font-size:1.05rem}.mes-gratis small{color:var(--dim);font-weight:500;margin-left:6px}
+.mes-gratis p{margin:0}
+@media (max-width:560px){.mes-gratis li{flex-direction:column;gap:4px}}
