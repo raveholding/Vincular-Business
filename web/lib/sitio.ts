@@ -76,14 +76,30 @@ export const PAQUETES: Paquete[] = [
 ];
 
 // ---------- Planes: suben por cantidad de módulos extra ----------
+// Precios mensuales en pesos (pago mes a mes). Los períodos largos aplican el descuento de PERIODOS.
 export type Plan = { id: string; nombre: string; extras: string; para: string; precioMensual: number | null; destacado?: boolean };
 export const PLANES: Plan[] = [
-  { id: 'base', nombre: 'Base', extras: 'Sistema base, sin módulos extra', para: 'Para ordenar ventas, caja y stock', precioMensual: null },
-  { id: 'crecer', nombre: 'Crecer', extras: 'Base + 1 módulo extra', para: 'Sumás lo que más necesitás', precioMensual: null },
-  { id: 'pro', nombre: 'Pro', extras: 'Base + 3 módulos extra', para: 'Para negocios con equipo y varios canales', precioMensual: null, destacado: true },
-  { id: 'total', nombre: 'Total', extras: 'Base + todos los módulos', para: 'Todo el sistema, sin límites de módulos', precioMensual: null },
+  { id: 'base', nombre: 'Base', extras: 'Sistema base, sin módulos extra', para: 'Un local que quiere ordenar ventas, caja, stock y facturación.', precioMensual: 50000 },
+  { id: 'crecer', nombre: 'Crecer', extras: 'Base + 1 módulo extra', para: 'Sumás lo que más necesitás: club de clientes, reparto, tienda online o equipo.', precioMensual: 70000 },
+  { id: 'pro', nombre: 'Pro', extras: 'Base + 3 módulos extra', para: 'Negocios con equipo, varios canales de venta o más de una caja.', precioMensual: 95000, destacado: true },
+  { id: 'total', nombre: 'Total', extras: 'Base + todos los módulos', para: 'Todo el sistema, con inteligencia artificial y prioridad en soporte.', precioMensual: 140000 },
 ];
-export const DESCUENTO_ANUAL = 0.2; // 20 % menos pagando el año
+export type Periodo = { id: string; nombre: string; meses: number; descuento: number };
+export const PERIODOS: Periodo[] = [
+  { id: 'mensual', nombre: 'Mensual', meses: 1, descuento: 0 },
+  { id: 'trimestral', nombre: 'Trimestral', meses: 3, descuento: 0.05 },
+  { id: 'semestral', nombre: 'Semestral', meses: 6, descuento: 0.1 },
+  { id: 'anual', nombre: 'Anual', meses: 12, descuento: 0.2 },
+];
+// «¿Cuántos módulos extra necesitás?»: cada opción apunta a un plan
+export const ELECCION = [
+  { id: 'base', txt: 'Ninguno' }, { id: 'crecer', txt: 'Uno' }, { id: 'pro', txt: 'Hasta tres' },
+  { id: 'total', txt: 'Todos' }, { id: 'nose', txt: 'No sé todavía' },
+];
+
+// ---------- Portal del cliente (SistemaIntegralSVB) ----------
+export const PORTAL = 'https://raveholding.github.io/SistemaIntegralSVB/#/acceso';
+export const SOPORTE = 'https://raveholding.github.io/SistemaIntegralSVB/#/contacto';
 
 export const INCLUYE_TODOS = [
   'Sistema base completo con factura ARCA',
@@ -121,7 +137,8 @@ export const CLIENTES = [
 // ---------- Preguntas ----------
 export const PREGUNTAS = [
   { p: '¿Necesito tarjeta para el mes gratis?', r: 'No. Nos escribís por WhatsApp, dejamos tu sistema listo con tus productos y lo usás un mes completo sin pagar nada ni dejar datos de pago.' },
-  { p: '¿Qué pasa cuando termina el mes?', r: 'Elegís tu plan y lo pagás por transferencia. No hay cobros ni renovaciones automáticas: seguís solo si activás un plan, y tus datos siempre son tuyos.' },
+  { p: '¿Qué pasa cuando termina el mes?', r: 'Elegís tu plan y el período (mensual, trimestral, semestral o anual) y lo pagás por transferencia. No hay cobros ni renovaciones automáticas: seguís solo si activás un plan, y tus datos siempre son tuyos.' },
+  { p: '¿Dónde veo mis pagos y pido soporte?', r: 'En el portal del cliente: ves tu contrato, tus pagos y el estado de tu servicio, y hablás directo con soporte. Tus datos además se respaldan en nuestra nube.' },
   { p: '¿Cómo funcionan los planes?', r: 'Todos incluyen el sistema base completo. El plan sube según cuántos módulos extra sumás: ninguno (Base), uno (Crecer), tres (Pro) o todos (Total). Podés cambiar de plan cuando quieras.' },
   { p: '¿Emite factura electrónica?', r: 'Sí. Factura electrónica con ARCA desde el mismo cobro, con tu certificado. Te ayudamos a dar de alta el punto de venta.' },
   { p: '¿Funciona si se corta internet?', r: 'Sí. Seguís vendiendo, cobrando y cerrando la caja. Cuando vuelve la conexión, todo se sincroniza solo con la nube.' },

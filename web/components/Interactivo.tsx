@@ -1,7 +1,7 @@
 'use client';
 import { useEffect, useState } from 'react';
 import { Icono } from './Icono';
-import { PLANES, DESCUENTO_ANUAL, RUBROS, wa, CONTACTO, type Plan } from '@/lib/sitio';
+import { PLANES, PERIODOS, ELECCION, RUBROS, wa, CONTACTO, type Plan, type Periodo } from '@/lib/sitio';
 
 // ---------- Modo claro / oscuro ----------
 export function Tema() {
@@ -44,41 +44,60 @@ export function MenuMovil({ enlaces }: { enlaces: { href: string; txt: string }[
   );
 }
 
-// ---------- Planes ----------
-const pesos = (n: number) => '$ ' + Math.round(n).toLocaleString('es-AR');
-function Precio({ plan, anual }: { plan: Plan; anual: boolean }) {
+// ---------- Planes (paso a paso, como Raspberry) ----------
+const pesos = (n: number) => '$ ' + (Math.round(n / 100) * 100).toLocaleString('es-AR');
+function Precio({ plan, per }: { plan: Plan; per: Periodo }) {
   if (plan.precioMensual == null) return <p className="precio"><span className="monto chico">Consultá el precio</span></p>;
-  const mes = anual ? plan.precioMensual * (1 - DESCUENTO_ANUAL) : plan.precioMensual;
+  const mes = plan.precioMensual * (1 - per.descuento);
   return (
-    <p className="precio">
-      <span className="monto">{pesos(mes)}</span><span className="per"> /mes</span>
-      {anual && <span className="nota">{pesos(mes * 12)} al año · ahorrás {Math.round(DESCUENTO_ANUAL * 100)} %</span>}
-    </p>
+    <div className="precio">
+      <p><span className="monto">{pesos(mes)}</span><span className="per"> /mes</span></p>
+      {per.descuento > 0
+        ? <p className="ahorro">Ahorrás {Math.round(per.descuento * 100)} % vs. el plan mensual</p>
+        : <p className="ahorro neutro">Pagás mes a mes</p>}
+      <p className="nota">Total: {pesos(mes * per.meses)} {per.meses === 1 ? 'por mes' : `por ${per.meses} meses`} · precio final en pesos</p>
+    </div>
   );
 }
 export function Planes() {
-  const [anual, setAnual] = useState(false);
+  const [per, setPer] = useState(PERIODOS[0]);
+  const [elec, setElec] = useState('pro');
   return (
-    <>
-      <div className="periodo" role="group" aria-label="Período de pago">
-        <button type="button" aria-pressed={!anual} onClick={() => setAnual(false)}>Mensual</button>
-        <button type="button" aria-pressed={anual} onClick={() => setAnual(true)}>Anual <small>−{Math.round(DESCUENTO_ANUAL * 100)} %</small></button>
-      </div>
-      <div className="planes">
-        {PLANES.map((p) => (
-          <article key={p.id} className={p.destacado ? 'plan destacado' : 'plan'}>
-            {p.destacado && <span className="cinta">El más elegido</span>}
-            <h3>{p.nombre}</h3>
-            <p className="extras">{p.extras}</p>
-            <Precio plan={p} anual={anual} />
-            <p className="para">{p.para}</p>
-            <a className={p.destacado ? 'btn btn-pri btn-block' : 'btn btn-sec btn-block'}
-              href={wa(`Hola! Quiero probar 1 mes gratis Vincular Business. Me interesa el plan ${p.nombre} (${p.extras}).`)}
-              target="_blank" rel="noopener noreferrer">Empezar 1 mes gratis</a>
-          </article>
+    <div className="planes-pasos">
+      <p className="paso-tit">1. Elegí el período</p>
+      <div className="segmento" role="group" aria-label="Período de pago">
+        {PERIODOS.map((x) => (
+          <button key={x.id} type="button" aria-pressed={per.id === x.id} onClick={() => setPer(x)}>
+            {x.nombre}{x.descuento > 0 && <small> −{Math.round(x.descuento * 100)} %</small>}
+          </button>
         ))}
       </div>
-    </>
+      <p className="paso-tit">2. ¿Cuántos módulos extra necesitás?</p>
+      <div className="chips" role="group" aria-label="Módulos extra">
+        {ELECCION.map((x) => (
+          <button key={x.id} type="button" aria-pressed={elec === x.id} onClick={() => setElec(x.id)}>{x.txt}</button>
+        ))}
+      </div>
+      {elec === 'nose' && <p className="ayuda">Empezá con <b>Pro</b>: es el que más eligen. En el mes gratis vemos juntos qué módulos usás y te dejamos el plan justo.</p>}
+      <p className="paso-tit">3. Mirá el precio y empezá gratis</p>
+      <div className="planes">
+        {PLANES.map((p) => {
+          const elegido = p.id === elec || (elec === 'nose' && p.destacado);
+          return (
+            <article key={p.id} className={elegido ? 'plan elegido' : 'plan'}>
+              {elegido ? <span className="cinta">Tu elección</span> : p.destacado && <span className="cinta suave">El más elegido</span>}
+              <h3>{p.nombre}</h3>
+              <p className="extras">{p.extras}</p>
+              <Precio plan={p} per={per} />
+              <p className="para">{p.para}</p>
+              <a className={elegido ? 'btn btn-pri btn-block' : 'btn btn-sec btn-block'}
+                href={wa(`Hola! Quiero probar 1 mes gratis Vincular Business. Me interesa el plan ${p.nombre} (${p.extras}), pago ${per.nombre.toLowerCase()}.`)}
+                target="_blank" rel="noopener noreferrer">Empezar 1 mes gratis</a>
+            </article>
+          );
+        })}
+      </div>
+    </div>
   );
 }
 

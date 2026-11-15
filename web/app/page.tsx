@@ -1,13 +1,14 @@
 import { Icono, Logo } from '@/components/Icono';
 import { Tema, MenuMovil, Planes, Rubros, Formulario } from '@/components/Interactivo';
 import {
-  CONTACTO, WA_PRUEBA, wa, DEMOS, demoUrl, BASE, PAQUETES, INCLUYE_TODOS, CLIENTES, PREGUNTAS,
+  CONTACTO, WA_PRUEBA, wa, DEMOS, demoUrl, BASE, PAQUETES, INCLUYE_TODOS, CLIENTES, PREGUNTAS, PORTAL, SOPORTE,
 } from '@/lib/sitio';
 
 const NAV = [
   { href: '#demos', txt: 'Demos' },
   { href: '#incluye', txt: 'Qué incluye' },
   { href: '#planes', txt: 'Planes' },
+  { href: '#portal', txt: 'Portal' },
   { href: '#preguntas', txt: 'Preguntas' },
   { href: '#contacto', txt: 'Contacto' },
 ];
@@ -34,6 +35,7 @@ export default function Inicio() {
           </nav>
           <div className="top-acc">
             <Tema />
+            <a className="ingresar ocultar-movil" href={PORTAL} target="_blank" rel="noopener noreferrer">Ingresar</a>
             <a className="btn btn-pri btn-chico ocultar-movil" href={WA_PRUEBA} target="_blank" rel="noopener noreferrer">Probar gratis</a>
             <MenuMovil enlaces={NAV} />
           </div>
@@ -151,29 +153,130 @@ export default function Inicio() {
           </div>
         </section>
 
-        {/* ---------- 05 Planes ---------- */}
-        <section id="planes" className="sec">
+        {/* ---------- 05 Mes gratis ---------- */}
+        <section id="gratis" className="sec">
           <div className="wrap">
-            <Encabezado n="05" etq="Planes" sub="El plan sube según cuántos módulos extra sumás. Empezás con 1 mes gratis y cambiás de plan cuando quieras.">
+            <Encabezado n="05" etq="Prueba gratis" sub="Te lo dejamos funcionando con tus productos y lo usás 1 mes completo, sin tarjeta ni pago inicial. Si preferís mirar antes, entrá a una demo.">
+              Tu primer mes <em>es gratis</em>
+            </Encabezado>
+            <p className="sin-cobro">No hay cobro ni renovación automáticos: seguís solo si activás un plan.</p>
+            <h3 className="sub-tit">Cómo es el mes gratis</h3>
+            <ol className="pasos-g">
+              <li>
+                <span className="num">1</span><h3>Nos escribís</h3>
+                <p>Por WhatsApp, sin datos de pago. Cargamos tus productos, precios y usuarios, y lo empezás a usar en el día.</p>
+                <a className="btn btn-pri btn-block" href={WA_PRUEBA} target="_blank" rel="noopener noreferrer">Pedir mi mes gratis<Icono n="arrow" /></a>
+              </li>
+              <li>
+                <span className="num">2</span><h3>Lo usás durante 1 mes</h3>
+                <p>Sin pagar nada, con todos los módulos de tu plan y soporte por WhatsApp. El mes gratis es uno por negocio.</p>
+                <a className="btn btn-sec btn-block" href={PORTAL} target="_blank" rel="noopener noreferrer">Ya soy cliente, ingresar</a>
+              </li>
+              <li>
+                <span className="num">3</span><h3>Al terminar, activás tu plan</h3>
+                <p>Elegís plan y período y pagás en pesos por transferencia, con factura. Los precios están acá abajo.</p>
+                <a className="btn btn-sec btn-block" href="#planes">Ver precios</a>
+              </li>
+            </ol>
+            <p className="nota-caja">Al terminar el mes tenés 5 días para elegir tu plan sin perder nada de lo que cargaste. Tus datos siempre son tuyos: si decidís no seguir, te los entregamos en Excel.</p>
+          </div>
+        </section>
+
+        {/* ---------- 06 Planes ---------- */}
+        <section id="planes" className="sec alt">
+          <div className="wrap">
+            <Encabezado n="06" etq="Planes y precios" sub="Desde $ 50.000 al mes. El plan sube según cuántos módulos extra sumás, y cambiás de plan cuando quieras.">
               Pagás por lo que <em>usás</em>
             </Encabezado>
+            <ul className="sellos">
+              <li><Icono n="check" />1 mes gratis, sin tarjeta</li>
+              <li><Icono n="check" />Pagás en pesos, con factura</li>
+              <li><Icono n="check" />Sin cobro ni renovación automáticos</li>
+            </ul>
             <Planes />
             <div className="incluyen">
               <h3>Todos los planes incluyen</h3>
               <ul>{INCLUYE_TODOS.map((t) => <li key={t}><Icono n="check" />{t}</li>)}</ul>
             </div>
             <ol className="pasos">
-              <li><span>1</span><div><h3>Nos escribís</h3><p>Por WhatsApp, sin datos de pago. Te preguntamos cómo trabajás.</p></div></li>
-              <li><span>2</span><div><h3>Lo usás 1 mes gratis</h3><p>Te lo dejamos listo con tus productos, tu marca y tus usuarios.</p></div></li>
-              <li><span>3</span><div><h3>Activás tu plan</h3><p>Si te sirve, elegís el plan. No hay cobros ni renovaciones automáticas.</p></div></li>
+              <li><span>1</span><div><h3>Elegís tu plan al terminar el mes</h3><p>Te pasamos el monto final del plan y el período que elegiste.</p></div></li>
+              <li><span>2</span><div><h3>Pagás por transferencia</h3><p>A la cuenta de Vincular Business, en pesos. Te enviamos la factura.</p></div></li>
+              <li><span>3</span><div><h3>Ves todo en tu portal</h3><p>El pago, tu contrato y el próximo vencimiento quedan en tu portal del cliente.</p></div></li>
             </ol>
           </div>
         </section>
 
-        {/* ---------- 06 Cómo trabajamos ---------- */}
+        {/* ---------- App ---------- */}
+        <section className="sec">
+          <div className="wrap app-banda">
+            <div>
+              <h2>Usalo <em>como una app</em></h2>
+              <p className="lead">Se instala directo desde el navegador en un clic: queda con su ícono y su propia ventana, en la compu, la tablet y el celular. Sin descargar archivos ni avisos de seguridad.</p>
+              <a className="btn btn-pri" href={demoUrl(DEMOS[0])} target="_blank" rel="noopener noreferrer"><Icono n="phone" />Abrir e instalar la demo</a>
+            </div>
+            <ul className="app-pasos">
+              <li><b>Chrome y Edge</b><span>Tocá el ícono Instalar, a la derecha de la barra de dirección.</span></li>
+              <li><b>Safari en Mac</b><span>Menú Archivo, Agregar al Dock.</span></li>
+              <li><b>Celular</b><span>Menú del navegador, Agregar a la pantalla de inicio.</span></li>
+            </ul>
+          </div>
+        </section>
+
+        {/* ---------- 07 Portal del cliente ---------- */}
+        <section id="portal" className="sec alt">
+          <div className="wrap">
+            <Encabezado n="07" etq="Portal del cliente" sub="Además de tu sistema, tenés una app para tu relación con nosotros: todo a la vista y soporte directo.">
+              Tu cuenta, tus pagos y el soporte, <em>en un solo lugar</em>
+            </Encabezado>
+            <div className="portal">
+              {[
+                ['receipt', 'Contrato y pagos', 'Tu plan, tus facturas, lo que pagaste y el próximo vencimiento.'],
+                ['msg', 'Soporte directo', 'Hablás con el equipo que desarrolla el sistema, con historial de cada consulta.'],
+                ['wifi', 'Estado en vivo', 'Monitoreo en tiempo real de tu sistema y aviso si algo necesita atención.'],
+                ['shield', 'Respaldo en la nube', 'Copias de seguridad de tus datos en nuestra nube, para recuperar todo si cambiás de equipo.'],
+              ].map(([ic, t, d]) => (
+                <article key={t}><Icono n={ic} className="ic-color" /><h3>{t}</h3><p>{d}</p></article>
+              ))}
+            </div>
+            <div className="ctas centro">
+              <a className="btn btn-pri" href={PORTAL} target="_blank" rel="noopener noreferrer">Ingresar al portal</a>
+              <a className="btn btn-sec" href={SOPORTE} target="_blank" rel="noopener noreferrer"><Icono n="msg" />Página de soporte</a>
+            </div>
+          </div>
+        </section>
+
+        {/* ---------- 08 A medida ---------- */}
+        <section id="a-medida" className="sec">
+          <div className="wrap">
+            <Encabezado n="08" etq="A medida" sub="¿Necesitás algo específico? Adaptamos el sistema a tu operación.">
+              Soluciones a la medida <em>de tu empresa</em>
+            </Encabezado>
+            <div className="medida">
+              <article>
+                <Icono n="grid" className="ic-color" />
+                <h3>Personalización</h3>
+                <p>Módulos, reportes, integraciones y flujos hechos para tu empresa. Pedí una cotización y lo desarrollamos a tu medida.</p>
+              </article>
+              <article>
+                <Icono n="box" className="ic-color" />
+                <h3>Respaldo y servidor</h3>
+                <p>Respaldo automático en nuestra nube o instalación en tu propio servidor, con plan de recuperación según tu operación.</p>
+              </article>
+              <article className="oscura">
+                <Icono n="mail" />
+                <h3>Escribinos</h3>
+                <p>Cotizaciones y ventas<br /><a href={`mailto:${CONTACTO.email}`}>{CONTACTO.email}</a></p>
+                <p>Soporte<br /><a href={SOPORTE} target="_blank" rel="noopener noreferrer">Página de soporte</a></p>
+                <a className="btn btn-claro btn-block" href={wa('Hola! Quiero una cotización a medida de Vincular Business.')} target="_blank" rel="noopener noreferrer">Solicitar cotización</a>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        {/* ---------- 09 Cómo trabajamos ---------- */}
         <section id="nosotros" className="sec alt">
           <div className="wrap">
-            <Encabezado n="06" etq="Cómo trabajamos" sub="Somos de Salta. Hablás directo con quienes desarrollan el sistema.">
+            <Encabezado n="09" etq="Cómo trabajamos" sub="Somos de Salta. Hablás directo con quienes desarrollan el sistema.">
               De la primera charla <em>a tu negocio funcionando</em>
             </Encabezado>
             <div className="trabajo">
@@ -189,10 +292,10 @@ export default function Inicio() {
           </div>
         </section>
 
-        {/* ---------- 07 Preguntas ---------- */}
+        {/* ---------- 10 Preguntas ---------- */}
         <section id="preguntas" className="sec">
           <div className="wrap angosto">
-            <Encabezado n="07" etq="Preguntas">Lo que siempre <em>nos preguntan</em></Encabezado>
+            <Encabezado n="10" etq="Preguntas">Lo que siempre <em>nos preguntan</em></Encabezado>
             <div className="faq">
               {PREGUNTAS.map((q) => (
                 <details key={q.p}><summary>{q.p}</summary><p>{q.r}</p></details>
@@ -201,11 +304,11 @@ export default function Inicio() {
           </div>
         </section>
 
-        {/* ---------- 08 Contacto ---------- */}
+        {/* ---------- 11 Contacto ---------- */}
         <section id="contacto" className="sec alt">
           <div className="wrap contacto">
             <div>
-              <Encabezado n="08" etq="Contacto">Contanos de tu negocio. <em>Te lo dejamos andando.</em></Encabezado>
+              <Encabezado n="11" etq="Contacto">Contanos de tu negocio. <em>Te lo dejamos andando.</em></Encabezado>
               <ul className="canales">
                 <li><a href={WA_PRUEBA} target="_blank" rel="noopener noreferrer"><Icono n="msg" />{CONTACTO.whatsappVisible}</a></li>
                 <li><a href={`mailto:${CONTACTO.email}`}><Icono n="mail" />{CONTACTO.email}</a></li>
@@ -225,6 +328,11 @@ export default function Inicio() {
             <p className="micro">Sistema de gestión para comercios y servicios de Argentina.</p>
           </div>
           <nav aria-label="Sitio"><h4>Sitio</h4>{NAV.map((e) => <a key={e.href} href={e.href}>{e.txt}</a>)}</nav>
+          <nav aria-label="Clientes"><h4>Clientes</h4>
+            <a href={PORTAL} target="_blank" rel="noopener noreferrer">Portal del cliente</a>
+            <a href={SOPORTE} target="_blank" rel="noopener noreferrer">Soporte</a>
+            <a href="#portal">Estado del sistema</a>
+          </nav>
           <nav aria-label="Legal"><h4>Legal</h4>
             <a href="/legal#terminos">Términos y condiciones</a>
             <a href="/legal#privacidad">Privacidad</a>
