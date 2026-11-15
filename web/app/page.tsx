@@ -281,15 +281,15 @@ export default function Inicio() {
         {/* ---------- 09 Cómo trabajamos ---------- */}
         <section id="nosotros" className="sec alt">
           <div className="wrap">
-            <Encabezado n="09" etq="Cómo trabajamos" sub="Somos de Salta. Hablás directo con quienes desarrollan el sistema.">
+            <Encabezado n="09" etq="Cómo trabajamos" sub="Somos de Salta. Hablás directo con quienes desarrollan el sistema. Ofrecemos soporte y capacitación para vos y tu equipo.">
               De la primera charla <em>a tu negocio funcionando</em>
             </Encabezado>
             <div className="trabajo">
               {[
                 ['Charlamos', 'Entendemos tu rubro, tus números y qué te complica hoy.'],
                 ['Configuramos', 'Cargamos tus productos, precios, clientes y usuarios. La migración es gratis.'],
-                ['Capacitamos', 'Enseñamos al dueño y al equipo con práctica real, en tu local.'],
-                ['Acompañamos', 'Soporte por WhatsApp, actualizaciones y módulos a medida si te hacen falta.'],
+                ['Capacitamos', 'Capacitación para el dueño y el equipo, con práctica real en tu local.'],
+                ['Acompañamos', 'Soporte técnico, actualizaciones y módulos a medida si te hacen falta.'],
               ].map(([t, d], i) => (
                 <article key={t}><span className="n">0{i + 1}</span><h3>{t}</h3><p>{d}</p></article>
               ))}
