@@ -39,7 +39,7 @@ export const DEMOS: Demo[] = [
   { id: 'gastronomia', nombre: 'Gastronomía', modelo: 'El cliente se sienta, pide a la mesa o pide por delivery',
     ejemplos: 'Restaurante, pizzería, bar, cafetería, rotisería, heladería',
     puntos: ['Mesas, mozos y comandas a cocina', 'Menú QR y pedidos por WhatsApp', 'Stock por receta y caja'],
-    repo: 'VB-Demo-Gastronomia', estado: 'pronto' },
+    repo: 'VB-Demo-Gastronomia', estado: 'lista', url: 'https://raveholding.github.io/VB-Demo-Gastronomia/', acceso: 'Abre la carta · equipo: «Acceso del equipo», ADMIN · PIN 1234' },
   { id: 'taller', nombre: 'Taller mecánico integral', modelo: 'Recibís el vehículo, presupuestás, trabajás y entregás',
     ejemplos: 'Mecánica, lubricentro, gomería, alarmas, polarizados, audio, chapa y pintura',
     puntos: ['Turnos y órdenes de trabajo por patente', 'Presupuesto aprobado por WhatsApp', 'Repuestos, instalaciones y garantías por vehículo'],
