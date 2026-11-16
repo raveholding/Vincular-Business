@@ -46,7 +46,7 @@ export const DEMOS: Demo[] = [
   { id: 'gimclub', nombre: 'Gimnasios, BOX, Academias', modelo: 'Socios o alumnos con cuota que entran y salen todos los días',
     ejemplos: 'Gimnasio, box y CrossFit, personal trainer, pilates y yoga, danza, artes marciales, club deportivo',
     puntos: ['Cuotas, vencimientos y cobranza', 'Ingreso con tarjeta o llavero NFC', 'Clases, cupos y caja'],
-    repo: 'VB-Demo-Gim.Club', estado: 'pronto' },
+    repo: 'SVBDemoGimnasios', estado: 'lista' },
   { id: 'salud-estetica', nombre: 'Salud, estética y barberías', modelo: 'Trabajás con turnos y profesionales',
     ejemplos: 'Barbería, peluquería, centro de estética, spa, uñas, tatuajes, consultorio',
     puntos: ['Turnos online con recordatorio por WhatsApp', 'Agenda y comisiones por profesional', 'Packs de sesiones y club de clientes'],
