@@ -43,15 +43,15 @@ export const DEMOS: Demo[] = [
   { id: 'taller', nombre: 'Taller mecánico integral', modelo: 'Recibís el vehículo, presupuestás, trabajás y entregás',
     ejemplos: 'Mecánica, lubricentro, gomería, alarmas, polarizados, audio, chapa y pintura',
     puntos: ['Turnos y órdenes de trabajo por patente', 'Presupuesto aprobado por WhatsApp', 'Repuestos, instalaciones y garantías por vehículo'],
-    repo: 'tallermecnicoSVBdemo', estado: 'lista', url: 'https://raveholding.github.io/tallermecnicoSVBdemo/', acceso: 'Elegí un perfil para entrar' },
+    repo: 'VB-Demo-Taller', estado: 'lista', url: 'https://raveholding.github.io/VB-Demo-Taller/', acceso: 'Elegí un perfil para entrar' },
   { id: 'gimclub', nombre: 'Gimnasios, BOX, Academias', modelo: 'Socios o alumnos con cuota que entran y salen todos los días',
     ejemplos: 'Gimnasio, box y CrossFit, personal trainer, pilates y yoga, danza, artes marciales, club deportivo',
     puntos: ['Cuotas, vencimientos y cobranza', 'Ingreso con tarjeta o llavero NFC', 'Clases, cupos y caja'],
-    repo: 'SVBDemoGimnasios', estado: 'lista', acceso: 'Usuario ADMIN · PIN 1234' },
+    repo: 'VB-Demo-Gim.Club', estado: 'lista', acceso: 'Usuario ADMIN · PIN 1234' },
   { id: 'salud-estetica', nombre: 'Salud, estética y barberías', modelo: 'Trabajás con turnos y profesionales',
     ejemplos: 'Barbería, peluquería, centro de estética, spa, uñas, tatuajes, consultorio',
     puntos: ['Turnos online con recordatorio por WhatsApp', 'Agenda y comisiones por profesional', 'Packs de sesiones y club de clientes'],
-    repo: 'Bacano', estado: 'lista', acceso: 'Usuario Administrador · PIN 1111' },
+    repo: 'VB-Demo-Salud.Estetica', estado: 'lista', acceso: 'Usuario Administrador · PIN 1111' },
 ];
 
 // ---------- Qué incluye ----------
