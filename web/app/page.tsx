@@ -100,12 +100,12 @@ export default function Inicio() {
                   <p className="ejemplos">{d.ejemplos}</p>
                   <ul>{d.puntos.map((p) => <li key={p}><Icono n="check" />{p}</li>)}</ul>
                   {d.estado === 'lista'
-                    ? <a className="btn btn-sec btn-block" href={demoUrl(d)} target="_blank" rel="noopener noreferrer">Entrar a la demo<Icono n="arrow" /></a>
+                    ? <><a className="btn btn-sec btn-block" href={demoUrl(d)} target="_blank" rel="noopener noreferrer">Entrar a la demo<Icono n="arrow" /></a>{d.acceso && <p className="demo-acceso">{d.acceso}</p>}</>
                     : <a className="btn btn-sec btn-block" href={wa(`Hola! Quiero ver la demo de ${d.nombre} del Sistema Vincular Business.`)} target="_blank" rel="noopener noreferrer">Pedir demo guiada<Icono n="arrow" /></a>}
                 </article>
               ))}
             </div>
-            <p className="aclara">Para entrar: usuario <b>ADMIN</b> y PIN <b>1234</b>. Las demos usan datos de ejemplo que quedan en tu navegador; no emiten facturas reales ni se conectan con bancos, ARCA ni equipos.</p>
+            <p className="aclara">Debajo de cada demo está cómo entrar. Las demos usan datos de ejemplo que quedan en tu navegador; no emiten facturas reales ni se conectan con bancos, ARCA ni equipos.</p>
           </div>
         </section>
 

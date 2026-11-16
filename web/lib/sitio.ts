@@ -22,19 +22,20 @@ export const WA_PRUEBA = wa('Hola! Quiero probar 1 mes gratis del Sistema Vincul
 export type Demo = {
   id: string; nombre: string; modelo: string; ejemplos: string; puntos: string[];
   repo: string; estado: 'lista' | 'pronto';
+  url?: string; acceso?: string;
 };
 const PAGES = 'https://raveholding.github.io';
-export const demoUrl = (d: Demo) => `${PAGES}/${d.repo}/#acceso`;
+export const demoUrl = (d: Demo) => d.url ?? `${PAGES}/${d.repo}/#acceso`;
 
 export const DEMOS: Demo[] = [
   { id: 'mayorista', nombre: 'Comercios minoristas y mayoristas', modelo: 'Vendés por menor, por mayor o las dos cosas desde el mismo mostrador',
     ejemplos: 'Almacén, autoservicio, kiosco, licorería, bazar, ferretería, indumentaria',
     puntos: ['Precios mayorista y minorista en la misma venta', 'Caja, cierres y cuenta corriente', 'Stock que baja al vender y etiquetas de góndola'],
-    repo: 'VB-Demo-Mayorista', estado: 'lista' },
+    repo: 'VB-Demo-Mayorista', estado: 'lista', acceso: 'Usuario ADMIN · PIN 1234' },
   { id: 'distribuidora', nombre: 'Distribuidores', modelo: 'Tomás pedidos, los armás en el depósito y los repartís',
     ejemplos: 'Distribuidoras de bebidas, alimentos, limpieza, golosinas o materiales',
     puntos: ['Preventa con el celular y hoja de ruta', 'Pedidos, armado y remitos', 'Stock por depósito y cobranza'],
-    repo: 'VB-Demo-Distribuidora', estado: 'lista' },
+    repo: 'VB-Demo-Distribuidora', estado: 'lista', acceso: 'Usuario ADMIN · PIN 1234' },
   { id: 'gastronomia', nombre: 'Gastronomía', modelo: 'El cliente se sienta, pide a la mesa o pide por delivery',
     ejemplos: 'Restaurante, pizzería, bar, cafetería, rotisería, heladería',
     puntos: ['Mesas, mozos y comandas a cocina', 'Menú QR y pedidos por WhatsApp', 'Stock por receta y caja'],
@@ -42,15 +43,15 @@ export const DEMOS: Demo[] = [
   { id: 'taller', nombre: 'Taller mecánico integral', modelo: 'Recibís el vehículo, presupuestás, trabajás y entregás',
     ejemplos: 'Mecánica, lubricentro, gomería, alarmas, polarizados, audio, chapa y pintura',
     puntos: ['Turnos y órdenes de trabajo por patente', 'Presupuesto aprobado por WhatsApp', 'Repuestos, instalaciones y garantías por vehículo'],
-    repo: 'VB-Demo-Taller', estado: 'pronto' },
+    repo: 'tallermecnicoSVBdemo', estado: 'lista', url: 'https://raveholding.github.io/tallermecnicoSVBdemo/', acceso: 'Elegí un perfil para entrar' },
   { id: 'gimclub', nombre: 'Gimnasios, BOX, Academias', modelo: 'Socios o alumnos con cuota que entran y salen todos los días',
     ejemplos: 'Gimnasio, box y CrossFit, personal trainer, pilates y yoga, danza, artes marciales, club deportivo',
     puntos: ['Cuotas, vencimientos y cobranza', 'Ingreso con tarjeta o llavero NFC', 'Clases, cupos y caja'],
-    repo: 'SVBDemoGimnasios', estado: 'lista' },
+    repo: 'SVBDemoGimnasios', estado: 'lista', acceso: 'Usuario ADMIN · PIN 1234' },
   { id: 'salud-estetica', nombre: 'Salud, estética y barberías', modelo: 'Trabajás con turnos y profesionales',
     ejemplos: 'Barbería, peluquería, centro de estética, spa, uñas, tatuajes, consultorio',
     puntos: ['Turnos online con recordatorio por WhatsApp', 'Agenda y comisiones por profesional', 'Packs de sesiones y club de clientes'],
-    repo: 'VB-Demo-Salud.Estetica', estado: 'pronto' },
+    repo: 'Bacano', estado: 'lista', acceso: 'Usuario Administrador · PIN 1111' },
 ];
 
 // ---------- Qué incluye ----------
