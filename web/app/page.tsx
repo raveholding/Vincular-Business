@@ -161,7 +161,7 @@ export default function Inicio() {
         {/* ---------- 06 Planes ---------- */}
         <section id="planes" className="sec">
           <div className="wrap">
-            <Encabezado n="05" etq="Planes y precios" sub="Desde $ 50.000 al mes pagando el año. El plan sube según cuántos módulos extra sumás, y cambiás de plan cuando quieras.">
+            <Encabezado n="05" etq="Planes y precios" sub="Desde $ 50.000 al mes pagando el año, y menos todavía pagando 2 años. El plan sube según cuántos módulos extra sumás, y cambiás de plan cuando quieras.">
               Pagás por lo que <em>usás</em>
             </Encabezado>
             <ul className="sellos">
@@ -173,6 +173,14 @@ export default function Inicio() {
             <div className="incluyen">
               <h3>Todos los planes incluyen</h3>
               <ul>{INCLUYE_TODOS.map((t) => <li key={t}><Icono n="check" />{t}</li>)}</ul>
+            </div>
+            <div className="recomienda">
+              <Icono n="users" className="ic-color" />
+              <div>
+                <h3>Recomendá y ganá</h3>
+                <p>Por cada negocio que nos recomiendes y active su plan, te bonificamos <b>1 mes</b>. Y el negocio recomendado tiene <b>10 % de descuento</b> en su primer pago. Tu código está en el portal del cliente.</p>
+              </div>
+              <a className="btn btn-sec" href={wa('Hola! Quiero recomendar un negocio al Sistema Vincular Business. Mi negocio es: ')} target="_blank" rel="noopener noreferrer">Recomendar un negocio</a>
             </div>
             <p className="nota-caja">Al terminar el mes gratis elegís tu plan y pagás en pesos por transferencia, con factura. Tus datos siempre son tuyos: si decidís no seguir, te los entregamos en Excel. ¿Necesitás algo a medida? <a href={wa('Hola! Quiero una cotización a medida del Sistema Vincular Business.')} target="_blank" rel="noopener noreferrer">Pedí una cotización</a>.</p>
           </div>

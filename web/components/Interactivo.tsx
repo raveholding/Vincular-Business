@@ -60,7 +60,7 @@ function Precio({ plan, per }: { plan: Plan; per: Periodo }) {
   );
 }
 export function Planes() {
-  const [per, setPer] = useState(PERIODOS[PERIODOS.length - 1]); // arranca en Anual: muestra el precio «desde»
+  const [per, setPer] = useState(PERIODOS.find((x) => x.id === 'anual') ?? PERIODOS[0]); // arranca en Anual: muestra el precio «desde»
   const [elec, setElec] = useState('pro');
   return (
     <div className="planes-pasos">
@@ -91,7 +91,7 @@ export function Planes() {
               <Precio plan={p} per={per} />
               <p className="para">{p.para}</p>
               <a className={elegido ? 'btn btn-pri btn-block' : 'btn btn-sec btn-block'}
-                href={wa(`Hola! Quiero probar 1 mes gratis del Sistema Vincular Business. Me interesa el plan ${p.nombre} (${p.extras}), pago ${per.nombre.toLowerCase()}.`)}
+                href={wa(`Hola! Quiero probar 1 mes gratis del Sistema Vincular Business. Me interesa el plan ${p.nombre} (${p.extras}), período de pago: ${per.nombre.toLowerCase()}.`)}
                 target="_blank" rel="noopener noreferrer">Empezar 1 mes gratis</a>
             </article>
           );

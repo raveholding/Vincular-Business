@@ -342,3 +342,9 @@ html[data-tema=oscuro] .cinta-pista li{background:rgba(255,255,255,.08)}
 .chat-cargando{padding:30px;text-align:center;color:var(--mut)}
 .chat-error{margin:0;padding:10px 16px;color:var(--no);font-weight:600;font-size:.86rem;border-top:1px solid var(--line)}
 @media (max-width:640px){.chat-txt{display:none}.chat-boton{width:58px;padding:0;justify-content:center}.chat-panel{right:12px;bottom:86px}}
+/* Recomendá y ganá */
+.recomienda{margin-top:18px;display:flex;gap:18px;align-items:center;padding:22px 26px;border-radius:var(--r);background:var(--or-suave);border:1px solid rgba(255,122,26,.3)}
+.recomienda .ic{width:2em;height:2em;flex:0 0 auto}
+.recomienda h3{margin:0 0 4px}.recomienda p{margin:0;color:var(--mut)}.recomienda p b{color:var(--tx)}
+.recomienda .btn{margin-left:auto;flex:0 0 auto}
+@media (max-width:760px){.recomienda{flex-direction:column;align-items:flex-start}.recomienda .btn{margin-left:0}}
