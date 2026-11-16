@@ -1,3 +1,4 @@
+import { DemoVisor } from '@/components/DemoVisor';
 import { Icono, Logo } from '@/components/Icono';
 import { Tema, MenuMovil, Planes, Rubros, Formulario } from '@/components/Interactivo';
 import { Chat } from '@/components/Chat';
@@ -100,7 +101,7 @@ export default function Inicio() {
                   <p className="ejemplos">{d.ejemplos}</p>
                   <ul>{d.puntos.map((p) => <li key={p}><Icono n="check" />{p}</li>)}</ul>
                   {d.estado === 'lista'
-                    ? <><a className="btn btn-sec btn-block" href={demoUrl(d)} target="_blank" rel="noopener noreferrer">Entrar a la demo<Icono n="arrow" /></a>{d.acceso && <p className="demo-acceso">{d.acceso}</p>}</>
+                    ? <><DemoVisor nombre={d.nombre} url={demoUrl(d)} acceso={d.acceso} />{d.acceso && <p className="demo-acceso">{d.acceso}</p>}</>
                     : <a className="btn btn-sec btn-block" href={wa(`Hola! Quiero ver la demo de ${d.nombre} del Sistema Vincular Business.`)} target="_blank" rel="noopener noreferrer">Pedir demo guiada<Icono n="arrow" /></a>}
                 </article>
               ))}

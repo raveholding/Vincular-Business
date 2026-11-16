@@ -349,3 +349,10 @@ html[data-tema=oscuro] .cinta-pista li{background:rgba(255,255,255,.08)}
 .recomienda .btn{margin-left:auto;flex:0 0 auto}
 @media (max-width:760px){.recomienda{flex-direction:column;align-items:flex-start}.recomienda .btn{margin-left:0}}
 .demo-acceso{margin:8px 0 0;text-align:center;font-size:.85rem;color:var(--mut)}
+/* Visor de demos dentro de la web */
+.visor{position:fixed;inset:0;z-index:200;display:flex;flex-direction:column;background:var(--bg)}
+.visor-barra{display:flex;align-items:center;gap:10px;padding:10px 14px;border-bottom:1px solid var(--line);background:var(--s1)}
+.visor-tit{flex:1;min-width:0;display:flex;flex-direction:column;line-height:1.25}
+.visor-tit b{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.visor-tit span{font-size:.82rem;color:var(--mut)}
+.visor-marco{flex:1;width:100%;border:0;background:#fff}
+@media (max-width:600px){.visor-nueva{display:none}}
