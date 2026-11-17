@@ -87,7 +87,7 @@ export function Prueba() {
           <Icono n="play" />{d ? `Entrar a la demo de ${d.nombre.toLowerCase()}` : 'Elegí tu negocio para entrar a la demo'}
         </button>
 
-        <p className="pr-pie">Sin tarjeta y sin cobros automáticos. Si arrancás ahora, te incluimos una demostración por videollamada. Al continuar, aceptás los <a href="/legal">Términos y la Política de privacidad</a>.</p>
+        <p className="pr-pie">Sin tarjeta y sin cobros automáticos. Al continuar, aceptás los <a href="/legal">Términos y la Política de privacidad</a>.</p>
       </div>
     </div>
   );

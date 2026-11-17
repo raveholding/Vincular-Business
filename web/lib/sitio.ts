@@ -116,7 +116,7 @@ export const ELECCION = [
 
 // ---------- Portal del cliente (SistemaIntegralSVB) ----------
 // Recomendá y ganá
-export const RECOMIENDA = { premio: '1 mes bonificado', descuento: 10 };
+export const RECOMIENDA = { cada: 3, descuento: 10 }; // cada 3 negocios activos: 10 % en el próximo pago
 
 export const PORTAL = 'https://raveholding.github.io/SistemaIntegralSVB/#/acceso';
 export const SOPORTE = 'https://raveholding.github.io/SistemaIntegralSVB/#/contacto';
@@ -159,7 +159,7 @@ export const PREGUNTAS = [
   { p: '¿Necesito tarjeta para el mes gratis?', r: 'No. Nos escribís por WhatsApp, dejamos tu sistema listo con tus productos y lo usás un mes completo sin pagar nada ni dejar datos de pago.' },
   { p: '¿Qué pasa cuando termina el mes?', r: 'Elegís tu plan y el período (mensual, trimestral, semestral, anual o por 2 años) y lo pagás por transferencia. No hay cobros ni renovaciones automáticas: seguís solo si activás un plan, y tus datos siempre son tuyos.' },
   { p: '¿Dónde veo mis pagos y pido soporte?', r: 'En el portal del cliente: ves tu contrato, tus pagos y el estado de tu servicio, y hablás directo con soporte. Tus datos además se respaldan en nuestra nube.' },
-  { p: '¿Tienen descuento por recomendar?', r: 'Sí. Por cada negocio que nos recomiendes y active su plan, te bonificamos 1 mes de tu plan, y el negocio que recomendaste tiene 10 % de descuento en su primer pago. Tu código de recomendación está en el portal del cliente.' },
+  { p: '¿Tienen descuento por recomendar?', r: 'Sí. Cada 3 negocios que nos recomiendes y activen su plan, tenés 10 % de descuento en tu próximo pago. Tu código de recomendación está en el portal del cliente.' },
   { p: '¿Cómo funcionan los planes?', r: 'Todos incluyen el sistema base completo. El plan sube según cuántos módulos extra sumás: ninguno (Base), uno (Crecer), tres (Pro) o todos (Total). Podés cambiar de plan cuando quieras.' },
   { p: '¿Emite factura electrónica?', r: 'Sí. Factura electrónica con ARCA desde el mismo cobro, con tu certificado. Te ayudamos a dar de alta el punto de venta.' },
   { p: '¿Funciona si se corta internet?', r: 'Sí. Seguís vendiendo, cobrando y cerrando la caja. Cuando vuelve la conexión, todo se sincroniza solo con la nube.' },

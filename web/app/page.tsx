@@ -176,7 +176,7 @@ export default function Inicio() {
                 <p className="probalo-pre">O dejá que te lo mostremos</p>
                 <p className="probalo-tit">Probalo gratis acá</p>
                 <BotonPrueba className="probalo-btn">Continuar <span>· Gratis</span></BotonPrueba>
-                <p className="probalo-pie">Si arrancás ahora, te incluimos una demostración por videollamada.</p>
+                <p className="probalo-pie">Sin tarjeta y sin cobros automáticos. Te lo dejamos andando con tus productos.</p>
               </div>
             </div>
             <Planes />
@@ -203,7 +203,7 @@ export default function Inicio() {
               <Icono n="users" className="ic-color" />
               <div>
                 <h3>Recomendá y ganá</h3>
-                <p>Por cada negocio que nos recomiendes y active su plan, te bonificamos <b>1 mes</b>. Y el negocio recomendado tiene <b>10 % de descuento</b> en su primer pago. Tu código está en el portal del cliente.</p>
+                <p>Cada <b>3 negocios</b> que nos recomiendes y activen su plan, tenés <b>10 % de descuento</b> en tu próximo pago. Tu código está en el portal del cliente.</p>
               </div>
               <a className="btn btn-sec" href={wa('Hola! Quiero recomendar un negocio al Sistema Vincular Business. Mi negocio es: ')} target="_blank" rel="noopener noreferrer">Recomendar un negocio</a>
             </div>
