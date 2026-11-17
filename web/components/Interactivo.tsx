@@ -38,6 +38,7 @@ export function MenuMovil({ enlaces }: { enlaces: { href: string; txt: string }[
       {abierto && (
         <nav id="menu-movil" className="menu-panel" aria-label="Menú">
           {enlaces.map((e) => (<a key={e.href} href={e.href} onClick={() => setAbierto(false)}>{e.txt}</a>))}
+          <div className="menu-tema"><span>Claro / oscuro</span><Tema /></div>
         </nav>
       )}
     </div>

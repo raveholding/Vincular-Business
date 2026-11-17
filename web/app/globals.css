@@ -399,3 +399,22 @@ html[data-tema=oscuro] .cinta-pista li{background:rgba(255,255,255,.08)}
 .pr-btn2{margin-top:0;background:var(--s2);color:var(--tx);border:1px solid var(--line)}.pr-btn2:disabled{color:var(--dim);cursor:default}
 .pr-o{display:flex;align-items:center;gap:12px;margin:18px 0;color:var(--dim);font-size:.85rem}.pr-o::before,.pr-o::after{content:'';flex:1;height:1px;background:var(--line)}
 .pr-pie{margin-top:20px;text-align:center;color:var(--dim);font-size:.82rem}.pr-pie a{color:var(--tx)}
+
+/* Celular: la píldora entra completa en la pantalla (sin barra horizontal) */
+.logo{white-space:nowrap}
+.menu-tema{display:none;align-items:center;justify-content:space-between;gap:12px;padding:8px 6px 4px 14px;margin-top:4px;border-top:1px solid var(--line);color:var(--mut);font-weight:600;font-size:.9rem}
+@media(max-width:600px){
+  .top{padding:0 10px}
+  .top-in.wrap{width:100%;padding:6px 6px 6px 14px;min-height:56px}
+  .top-acc{gap:6px}
+  .top-in .btn-ico{width:38px;height:38px}
+  .logo{font-size:1rem;gap:7px}.logo svg{width:28px;height:26px}
+  .hero{margin-top:-68px;padding-top:calc(clamp(48px,8vw,96px) + 68px)}
+}
+@media(max-width:430px){
+  .top-acc>.btn-ico,.top-acc>button.btn-ico:first-child{display:none}
+  .menu-tema{display:flex}
+}
+@media(max-width:340px){.logo b+span,.logo span:last-child{display:none}}
+.hero-in>*{min-width:0}@media(max-width:340px){.pd-kpis{gap:6px}.hero h1{font-size:2.2rem}}
+.contacto>*,.incluye>*{min-width:0}.contacto li{overflow-wrap:anywhere}
