@@ -431,3 +431,38 @@ html[data-tema=oscuro] .cinta-pista li{background:rgba(255,255,255,.08)}
 .crecer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
 .crecer-card{display:flex;flex-direction:column;gap:8px;padding:22px;border-radius:var(--r);background:var(--s1);border:1px solid var(--line);box-shadow:var(--sombra)}
 .crecer-card h3{margin-top:4px}.crecer-card p{color:var(--mut);font-size:.97rem}
+
+/* ===== Fundadores (sección Cómo trabajamos) y tarjeta digital /equipo/<id> ===== */
+.ad-cta{margin-top:18px;text-align:center}
+.fundadores{margin-top:48px}
+.fund-tit{font-size:1.45rem;margin-bottom:18px}
+.fund-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.fund{display:flex;gap:20px;align-items:center;padding:22px;background:var(--s1);border:1px solid var(--line);border-radius:var(--r)}
+.fund img{width:112px;height:112px;flex:0 0 auto;border-radius:50%;object-fit:cover;box-shadow:0 0 0 3px var(--or)}
+.fund h4{font-size:1.15rem;margin:0}
+.fund .fund-rol{color:var(--or-tx);font-weight:700;font-size:.92rem;margin:2px 0 8px}
+.fund p{color:var(--mut);font-size:.94rem}
+.fund-link{display:inline-flex;align-items:center;gap:.4em;margin-top:10px;font-weight:700;color:var(--tx);text-decoration:none}
+.fund-link:hover{color:var(--or-tx)}
+@media (max-width:760px){.fund-grid{grid-template-columns:1fr}.fund{flex-direction:column;text-align:center}.fund img{width:120px;height:120px}}
+
+.tdig{min-height:100svh;display:grid;place-items:center;padding:28px 16px;background:radial-gradient(120% 70% at 50% 0%,rgba(255,122,26,.18),transparent 60%),#0a0b0d;color:#f3f3f1}
+.tdig-card{width:min(420px,100%);text-align:center;padding:30px 24px 26px;border-radius:28px;background:#131518;border:1px solid rgba(255,255,255,.1);box-shadow:0 30px 80px rgba(0,0,0,.45)}
+.tdig-logo{display:inline-block;color:#fff;text-decoration:none;margin-bottom:22px}
+.tdig-foto{width:148px;height:148px;border-radius:50%;object-fit:cover;box-shadow:0 0 0 4px #ff7a1a,0 0 0 10px rgba(255,122,26,.15);margin:0 auto 18px;display:block}
+.tdig h1{font-size:1.7rem;letter-spacing:-.02em;margin:0}
+.tdig-rol{color:#ff8f3f;font-weight:700;margin:6px 0 10px}
+.tdig-det{color:#b9bcc2;font-size:.95rem;margin:0 auto 22px;max-width:34ch}
+.tdig-acc{display:grid;gap:10px}
+.tdig .btn-sec{background:#1a1d21;color:#f3f3f1;border-color:rgba(255,255,255,.2)}
+.tdig-datos{list-style:none;padding:0;margin:20px 0 0;text-align:left;border-top:1px solid rgba(255,255,255,.1)}
+.tdig-datos li{border-bottom:1px solid rgba(255,255,255,.08)}
+.tdig-datos a{display:flex;align-items:center;gap:12px;padding:13px 4px;color:#f3f3f1;text-decoration:none;font-size:.95rem;word-break:break-all}
+.tdig-datos .ic{color:#ff8f3f;width:1.25em;height:1.25em;flex:0 0 auto}
+.tdig-qr{display:flex;gap:14px;align-items:center;margin-top:20px;padding:14px;border-radius:16px;background:#1a1d21;text-align:left}
+.tdig-qr img{width:96px;height:96px;border-radius:10px;background:#fff;padding:6px;flex:0 0 auto}
+.tdig-qr p{color:#b9bcc2;font-size:.86rem;margin:0}
+.tdig-volver{display:inline-flex;align-items:center;gap:.4em;margin-top:20px;color:#b9bcc2;text-decoration:none;font-weight:600;font-size:.92rem}
+.tdig-volver:hover{color:#fff}
+.tdig .logo{color:#fff}
+.fund-sub{color:var(--mut);margin:-8px 0 18px;max-width:60ch}

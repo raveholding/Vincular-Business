@@ -4,7 +4,7 @@ import { Tema, MenuMovil, Planes, Rubros, Formulario } from '@/components/Intera
 import { Chat } from '@/components/Chat';
 import { BotonPrueba, Prueba } from '@/components/Prueba';
 import {
-  CONTACTO, WA_PRUEBA, wa, DEMOS, demoUrl, BASE, PAQUETES, INCLUYE_TODOS, ADICIONALES, CRECER, CLIENTES, PREGUNTAS, PORTAL, SOPORTE,
+  CONTACTO, WA_PRUEBA, wa, DEMOS, demoUrl, BASE, PAQUETES, INCLUYE_TODOS, ADICIONALES, CRECER, CLIENTES, PREGUNTAS, PORTAL, SOPORTE, FUNDADORES,
 } from '@/lib/sitio';
 
 const NAV = [
@@ -168,7 +168,6 @@ export default function Inicio() {
                 ))}
               </ul>
             </div>
-            <p className="cinta-cta"><a href={WA_PRUEBA} target="_blank" rel="noopener noreferrer">¿Tu negocio? Sumate <Icono n="arrow" /></a></p>
           </div>
         </section>
 
@@ -183,14 +182,6 @@ export default function Inicio() {
               <li><Icono n="check" />Pagás en pesos, con factura</li>
               <li><Icono n="check" />Sin cobro ni renovación automáticos</li>
             </ul>
-            <div className="probalo">
-              <div className="probalo-in">
-                <p className="probalo-pre">O dejá que te lo mostremos</p>
-                <p className="probalo-tit">Probalo gratis acá</p>
-                <BotonPrueba className="probalo-btn">Continuar <span>· Gratis</span></BotonPrueba>
-                <p className="probalo-pie">Sin tarjeta y sin cobros automáticos. Te lo dejamos andando con tus productos.</p>
-              </div>
-            </div>
             <Planes />
             <div className="incluyen">
               <h3>Todos los planes incluyen</h3>
@@ -206,10 +197,10 @@ export default function Inicio() {
                     <h4>{a.nombre}</h4>
                     <p>{a.detalle}</p>
                     <p className="ad-inc">{a.incluye}</p>
-                    <a className="btn btn-sec" href={wa('Hola! Quiero información sobre ' + a.nombre + ' para mi negocio.')} target="_blank" rel="noopener noreferrer">Pedir información</a>
                   </div>
                 ))}
               </div>
+              <p className="ad-cta"><a className="btn btn-sec" href={wa('Hola! Quiero información sobre los adicionales del Sistema Vincular Business (NFC, asistente de IA, portero). Mi negocio es: ')} target="_blank" rel="noopener noreferrer"><Icono n="msg" />Consultar por los adicionales</a></p>
             </div>
             <div className="recomienda">
               <Icono n="users" className="ic-color" />
@@ -238,6 +229,22 @@ export default function Inicio() {
               ].map(([t, d], i) => (
                 <article key={t}><span className="n">0{i + 1}</span><h3>{t}</h3><p>{d}</p></article>
               ))}
+            </div>
+            <div className="fundadores" id="equipo">
+              <h3 className="fund-tit">Quiénes están detrás</h3>
+              <p className="fund-sub">Te ayudamos a vender más, y hablás directo con nosotros. Guardá nuestra tarjeta digital: acercá el celular a la tarjeta NFC o escaneá el QR.</p>
+              <div className="fund-grid">
+                {FUNDADORES.map((f) => (
+                  <article key={f.id} className="fund">
+                    <img src={f.foto} alt={`Foto de ${f.nombre}`} width={480} height={480} loading="lazy" />
+                    <div>
+                      <h4>{f.nombre}</h4>
+                      <p className="fund-rol">{f.rol}</p>
+                      <a className="fund-link" href={`/equipo/${f.id}`}>Ver tarjeta digital <Icono n="arrow" /></a>
+                    </div>
+                  </article>
+                ))}
+              </div>
             </div>
           </div>
         </section>

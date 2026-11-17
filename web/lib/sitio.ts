@@ -174,3 +174,22 @@ export const PREGUNTAS = [
   { p: '¿Lo puedo usar desde el celular?', r: 'Sí. Se instala como una app en la computadora, la tablet y el celular, sin descargar nada de una tienda.' },
   { p: '¿Pueden adaptarlo a mi negocio?', r: 'Sí. Somos un equipo de Salta: configuramos el sistema con tu forma de trabajar y, si te falta algo, lo desarrollamos a medida.' },
 ];
+
+// ---------- Fundadores (tarjeta digital en /equipo/<id>; el QR de la tarjeta impresa apunta ahí) ----------
+export type Fundador = {
+  id: string; nombre: string; rol: string; detalle: string; foto: string;
+  whatsapp?: string; whatsappVisible?: string; email: string; linkedin?: string; tarjetaExterna?: string;
+};
+export const FUNDADORES: Fundador[] = [
+  {
+    id: 'mateo', nombre: 'Mateo Figallo', rol: 'Software Engineer · Cofundador',
+    detalle: 'Te ayudamos a vender más: tienda online conectada al stock, Club de clientes y promociones por WhatsApp, todo en un solo sistema.',
+    foto: '/equipo/mateo.jpg', whatsapp: CONTACTO.whatsapp, whatsappVisible: CONTACTO.whatsappVisible, email: CONTACTO.email,
+  },
+  {
+    id: 'nicolas', nombre: 'Nicolás Romero Alvarado', rol: 'Técnico en Programación · Cofundador',
+    detalle: 'Te ayudamos a vender más: tienda online conectada al stock, Club de clientes y promociones por WhatsApp, todo en un solo sistema.',
+    foto: '/equipo/nicolas.jpg', whatsapp: CONTACTO.whatsapp, whatsappVisible: CONTACTO.whatsappVisible, email: CONTACTO.email,
+    tarjetaExterna: 'https://raveholding.github.io/nicoVB/',
+  },
+];
