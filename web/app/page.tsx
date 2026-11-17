@@ -240,7 +240,7 @@ export default function Inicio() {
                     <div>
                       <h4>{f.nombre}</h4>
                       <p className="fund-rol">{f.rol}</p>
-                      <a className="fund-link" href={`/equipo/${f.id}`}>Ver tarjeta digital <Icono n="arrow" /></a>
+                      <a className="fund-link" href={f.tarjeta} target="_blank" rel="noopener noreferrer">Ver tarjeta digital <Icono n="arrow" /></a>
                     </div>
                   </article>
                 ))}
