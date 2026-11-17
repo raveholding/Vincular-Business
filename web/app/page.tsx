@@ -3,7 +3,7 @@ import { Icono, Logo } from '@/components/Icono';
 import { Tema, MenuMovil, Planes, Rubros, Formulario } from '@/components/Interactivo';
 import { Chat } from '@/components/Chat';
 import {
-  CONTACTO, WA_PRUEBA, wa, DEMOS, demoUrl, BASE, PAQUETES, INCLUYE_TODOS, CLIENTES, PREGUNTAS, PORTAL, SOPORTE,
+  CONTACTO, WA_PRUEBA, wa, DEMOS, demoUrl, BASE, PAQUETES, INCLUYE_TODOS, ADICIONALES, CLIENTES, PREGUNTAS, PORTAL, SOPORTE,
 } from '@/lib/sitio';
 
 const NAV = [
@@ -174,6 +174,21 @@ export default function Inicio() {
             <div className="incluyen">
               <h3>Todos los planes incluyen</h3>
               <ul>{INCLUYE_TODOS.map((t) => <li key={t}><Icono n="check" />{t}</li>)}</ul>
+            </div>
+            <div className="adicionales">
+              <h3>Adicionales para tu negocio</h3>
+              <p className="sub-ad">Se suman a cualquier plan cuando los necesites. Los vemos juntos en la reunión.</p>
+              <div className="ad-grid">
+                {ADICIONALES.map((a) => (
+                  <div key={a.id} className="ad-card">
+                    <Icono n={a.icono} className="ic-color" />
+                    <h4>{a.nombre}</h4>
+                    <p>{a.detalle}</p>
+                    <p className="ad-inc">{a.incluye}</p>
+                    <a className="btn btn-sec" href={wa('Hola! Quiero información sobre ' + a.nombre + ' para mi negocio.')} target="_blank" rel="noopener noreferrer">Pedir información</a>
+                  </div>
+                ))}
+              </div>
             </div>
             <div className="recomienda">
               <Icono n="users" className="ic-color" />

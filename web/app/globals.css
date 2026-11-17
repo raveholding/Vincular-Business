@@ -356,3 +356,9 @@ html[data-tema=oscuro] .cinta-pista li{background:rgba(255,255,255,.08)}
 .visor-tit b{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.visor-tit span{font-size:.82rem;color:var(--mut)}
 .visor-marco{flex:1;width:100%;border:0;background:#fff}
 @media (max-width:600px){.visor-nueva{display:none}}
+
+/* Adicionales (Combo NFC, IA, portero) */
+.adicionales{margin-top:22px}.adicionales h3{margin:0 0 4px}.adicionales .sub-ad{margin:0 0 14px;color:var(--mut)}
+.ad-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}
+.ad-card{display:flex;flex-direction:column;gap:6px;padding:20px;border-radius:var(--r);border:1px dashed rgba(255,122,26,.45);background:var(--s1)}
+.ad-card .ic{width:1.8em;height:1.8em}.ad-card h4{margin:4px 0 0;font-size:1.05rem}.ad-card p{margin:0;color:var(--mut)}.ad-card .ad-inc{font-size:.85rem;font-weight:600;color:var(--tx)}.ad-card .btn{margin-top:auto;align-self:flex-start}

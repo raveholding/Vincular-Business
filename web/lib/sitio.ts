@@ -50,12 +50,19 @@ export const DEMOS: Demo[] = [
     repo: 'VB-Demo-Taller', estado: 'lista', url: 'https://raveholding.github.io/VB-Demo-Taller/', acceso: 'Elegí un perfil para entrar' },
   { id: 'gimclub', nombre: 'Gimnasios, BOX, Academias', modelo: 'Socios o alumnos con cuota que entran y salen todos los días',
     ejemplos: 'Gimnasio, box y CrossFit, personal trainer, pilates y yoga, danza, artes marciales, club deportivo',
-    puntos: ['Cuotas, vencimientos y cobranza', 'Ingreso con tarjeta o llavero NFC', 'Clases, cupos y caja'],
+    puntos: ['Cuotas, vencimientos y cobranza', 'Clases, cupos y caja', 'Ingreso con llavero NFC (Combo NFC)'],
     repo: 'VB-Demo-Gim.Club', estado: 'lista', acceso: 'Usuario ADMIN · PIN 1234' },
   { id: 'salud-estetica', nombre: 'Salud, estética y barberías', modelo: 'Trabajás con turnos y profesionales',
     ejemplos: 'Barbería, peluquería, centro de estética, spa, uñas, tatuajes, consultorio',
     puntos: ['Turnos online con recordatorio por WhatsApp', 'Agenda y comisiones por profesional', 'Packs de sesiones y club de clientes'],
     repo: 'VB-Demo-Salud.Estetica', estado: 'lista', acceso: 'Usuario Administrador · PIN 1111' },
+];
+
+// ---------- Adicionales (se cotizan en la reunión; no tienen precio publicado) ----------
+export const ADICIONALES = [
+  { id: 'nfc', icono: 'wifi', nombre: 'Combo NFC', detalle: 'Tarjetas y llaveros NFC con tu marca, lector en el mostrador y sello con el celular del cliente. Tus clientes apoyan la tarjeta y suman puntos al instante.', incluye: 'Lector, tarjetas o llaveros, instalación y capacitación' },
+  { id: 'ia', icono: 'spark', nombre: 'Asistente de voz e IA', detalle: 'Le pedís al sistema por voz o por escrito y lee las facturas de tus proveedores con IA.', incluye: 'Incluido en el plan Total' },
+  { id: 'portero', icono: 'shield', nombre: 'Portero y seguridad', detalle: 'Control de quién entra y sale, alarmas y avisos al celular del dueño.', incluye: 'Opcional para cualquier plan' },
 ];
 
 // ---------- Qué incluye ----------
