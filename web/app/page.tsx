@@ -2,6 +2,7 @@ import { DemoVisor } from '@/components/DemoVisor';
 import { Icono, Logo } from '@/components/Icono';
 import { Tema, MenuMovil, Planes, Rubros, Formulario } from '@/components/Interactivo';
 import { Chat } from '@/components/Chat';
+import { BotonPrueba, Prueba } from '@/components/Prueba';
 import {
   CONTACTO, WA_PRUEBA, wa, DEMOS, demoUrl, BASE, PAQUETES, INCLUYE_TODOS, ADICIONALES, CLIENTES, PREGUNTAS, PORTAL, SOPORTE,
 } from '@/lib/sitio';
@@ -38,7 +39,7 @@ export default function Inicio() {
           <div className="top-acc">
             <Tema />
             <a className="ingresar ocultar-movil" href={PORTAL} target="_blank" rel="noopener noreferrer">Ingresar</a>
-            <a className="btn btn-pri btn-chico ocultar-movil" href={WA_PRUEBA} target="_blank" rel="noopener noreferrer">Probar gratis</a>
+            <BotonPrueba className="btn btn-pri btn-chico">Probá gratis</BotonPrueba>
             <MenuMovil enlaces={NAV} />
           </div>
         </div>
@@ -53,7 +54,7 @@ export default function Inicio() {
               <h1>Tu negocio en orden, <em>con todo en un solo sistema.</em></h1>
               <p className="lead">Ventas, caja, stock, clientes y factura electrónica ARCA. Activás solo los módulos que usás y seguís vendiendo aunque se corte internet.</p>
               <div className="ctas">
-                <a className="btn btn-pri" href={WA_PRUEBA} target="_blank" rel="noopener noreferrer"><Icono n="msg" />Probá 1 mes gratis</a>
+                <BotonPrueba className="btn btn-pri"><Icono n="msg" />Probá 1 mes gratis</BotonPrueba>
                 <a className="btn btn-sec" href="#demos"><Icono n="play" />Entrar a las demos</a>
               </div>
               <p className="micro">Te lo dejamos listo con tus productos. Sin cobros automáticos.</p>
@@ -163,13 +164,21 @@ export default function Inicio() {
         <section id="planes" className="sec">
           <div className="wrap">
             <Encabezado n="05" etq="Planes y precios" sub="Desde $ 50.000 al mes pagando el año, y menos todavía pagando 2 años. El plan sube según cuántos módulos extra sumás, y cambiás de plan cuando quieras.">
-              Pagás por lo que <em>usás</em>
+              Empezá gratis. <em>Pagá cuando funcione.</em>
             </Encabezado>
             <ul className="sellos">
               <li><Icono n="check" />1 mes gratis, sin tarjeta</li>
               <li><Icono n="check" />Pagás en pesos, con factura</li>
               <li><Icono n="check" />Sin cobro ni renovación automáticos</li>
             </ul>
+            <div className="probalo">
+              <div className="probalo-in">
+                <p className="probalo-pre">O dejá que te lo mostremos</p>
+                <p className="probalo-tit">Probalo gratis acá</p>
+                <BotonPrueba className="probalo-btn">Continuar <span>· Gratis</span></BotonPrueba>
+                <p className="probalo-pie">Si arrancás ahora, te incluimos una demostración por videollamada.</p>
+              </div>
+            </div>
             <Planes />
             <div className="incluyen">
               <h3>Todos los planes incluyen</h3>
@@ -273,6 +282,7 @@ export default function Inicio() {
       </footer>
 
       <Chat />
+      <Prueba />
     </>
   );
 }

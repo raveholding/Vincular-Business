@@ -362,3 +362,40 @@ html[data-tema=oscuro] .cinta-pista li{background:rgba(255,255,255,.08)}
 .ad-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}
 .ad-card{display:flex;flex-direction:column;gap:6px;padding:20px;border-radius:var(--r);border:1px dashed rgba(255,122,26,.45);background:var(--s1)}
 .ad-card .ic{width:1.8em;height:1.8em}.ad-card h4{margin:4px 0 0;font-size:1.05rem}.ad-card p{margin:0;color:var(--mut)}.ad-card .ad-inc{font-size:.85rem;font-weight:600;color:var(--tx)}.ad-card .btn{margin-top:auto;align-self:flex-start}
+
+/* ===== V2 · cabecera flotante tipo píldora, bloque «Probalo gratis acá» y pantalla «Continuá con Vincular Business» ===== */
+.top{position:sticky;top:12px;background:transparent;backdrop-filter:none;border-bottom:0;padding:0 12px;pointer-events:none}
+.top-in{pointer-events:auto;min-height:62px;padding:8px 8px 8px 22px;border-radius:999px;background:color-mix(in srgb,var(--s1) 88%,transparent);backdrop-filter:saturate(1.4) blur(14px);-webkit-backdrop-filter:saturate(1.4) blur(14px);border:1px solid var(--line);box-shadow:var(--sombra)}
+.top-in .btn-pri{white-space:nowrap}
+.hero{margin-top:-74px;padding-top:calc(clamp(48px,8vw,96px) + 74px)}
+@media(max-width:600px){.top-in{padding-left:16px;gap:8px}.top-in .btn-pri{padding:.65em .95em;font-size:.85rem}}
+
+.probalo{position:relative;margin:28px 0 34px;border-radius:32px;overflow:hidden;isolation:isolate;
+  background:radial-gradient(70% 90% at 15% 20%,#ffb37a 0,transparent 60%),radial-gradient(60% 80% at 85% 30%,#a5b4fc 0,transparent 60%),radial-gradient(70% 90% at 70% 100%,#f9a8d4 0,transparent 60%),linear-gradient(135deg,#ff7a1a,#8b5cf6)}
+.probalo::after{content:'';position:absolute;inset:0;z-index:-1;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.18'/%3E%3C/svg%3E")}
+.probalo-in{display:flex;flex-direction:column;align-items:center;text-align:center;gap:14px;padding:clamp(44px,7vw,72px) 20px}
+.probalo-pre{color:rgba(255,255,255,.88);font-size:clamp(1.05rem,2.2vw,1.3rem);font-weight:600}
+.probalo-tit{color:#fff;font-size:clamp(2.2rem,6vw,3.6rem);font-weight:800;letter-spacing:-.035em;line-height:1.05;text-shadow:0 2px 24px rgba(0,0,0,.12)}
+.probalo-btn{margin-top:10px;font:700 1.1rem/1 var(--f),sans-serif;padding:1.05em 2.4em;border:0;border-radius:18px;background:#fff;color:#111214;box-shadow:0 10px 30px rgba(0,0,0,.18);cursor:pointer;transition:transform .15s}
+.probalo-btn:hover{transform:translateY(-2px)}.probalo-btn span{color:#80868f;font-weight:600}
+.probalo-pie{color:rgba(255,255,255,.85);font-size:.92rem;max-width:34ch}
+
+.pr-fondo{position:fixed;inset:0;z-index:200;background:rgba(10,11,13,.45);backdrop-filter:blur(6px);display:grid;place-items:center;padding:16px;animation:pr-in .18s ease-out}
+.pr-hoja{width:min(520px,100%);max-height:calc(100dvh - 32px);overflow-y:auto;background:var(--bg);color:var(--tx);border-radius:24px;padding:28px clamp(20px,5vw,40px) 26px;box-shadow:0 30px 80px rgba(0,0,0,.35)}
+@keyframes pr-in{from{opacity:0}to{opacity:1}}
+@media(max-width:600px){.pr-fondo{padding:0;place-items:stretch}.pr-hoja{width:100%;max-height:100dvh;border-radius:0;padding-top:22px}}
+.pr-cab{display:flex;align-items:center;justify-content:space-between;margin-bottom:26px}
+.pr-x{width:40px;height:40px;border-radius:999px;border:1px solid var(--line2);background:var(--s1);color:var(--tx);font-size:1rem;cursor:pointer}
+.pr-hoja h2{font-size:clamp(1.9rem,6vw,2.4rem)}
+.pr-sub{color:var(--mut);margin:10px 0 22px;font-size:.98rem}
+.pr-lbl{display:block;font-weight:700;font-size:.92rem;margin:16px 0 8px}
+.pr-rubros{display:flex;flex-wrap:wrap;gap:8px}
+.pr-chip{font:600 .9rem/1.2 var(--f),sans-serif;padding:.6em 1em;border-radius:999px;border:1px solid var(--line2);background:var(--s1);color:var(--tx);cursor:pointer}
+.pr-chip.on{background:var(--tx);color:var(--bg);border-color:var(--tx)}
+.pr-in{width:100%;font:500 1rem var(--f),sans-serif;padding:.95em 1.2em;border-radius:999px;border:1px solid var(--line);background:var(--s2);color:var(--tx);outline:none}
+.pr-in:focus{border-color:var(--or)}
+.pr-btn,.pr-btn2{display:flex;align-items:center;justify-content:center;gap:.6em;width:100%;margin-top:20px;padding:1.05em 1.2em;border-radius:999px;font:700 1rem/1.1 var(--f),sans-serif;text-decoration:none;cursor:pointer}
+.pr-btn{background:#16171a;color:#fff;border:0}html[data-tema=oscuro] .pr-btn{background:#fff;color:#111214}
+.pr-btn2{margin-top:0;background:var(--s2);color:var(--tx);border:1px solid var(--line)}.pr-btn2:disabled{color:var(--dim);cursor:default}
+.pr-o{display:flex;align-items:center;gap:12px;margin:18px 0;color:var(--dim);font-size:.85rem}.pr-o::before,.pr-o::after{content:'';flex:1;height:1px;background:var(--line)}
+.pr-pie{margin-top:20px;text-align:center;color:var(--dim);font-size:.82rem}.pr-pie a{color:var(--tx)}
