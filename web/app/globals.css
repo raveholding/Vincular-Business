@@ -424,3 +424,10 @@ html[data-tema=oscuro] .cinta-pista li{background:rgba(255,255,255,.08)}
   .top-in .btn-pri{padding:.6em .8em;font-size:.82rem}
   .top-in .btn-ico{width:36px;height:36px}
 }
+
+/* Para vender más (portada) */
+.crecer{margin-top:clamp(40px,6vw,64px)}
+.crecer-tit{font-size:clamp(1.7rem,3.6vw,2.6rem);margin-bottom:22px}
+.crecer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.crecer-card{display:flex;flex-direction:column;gap:8px;padding:22px;border-radius:var(--r);background:var(--s1);border:1px solid var(--line);box-shadow:var(--sombra)}
+.crecer-card h3{margin-top:4px}.crecer-card p{color:var(--mut);font-size:.97rem}

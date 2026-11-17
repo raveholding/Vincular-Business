@@ -4,7 +4,7 @@ import { Tema, MenuMovil, Planes, Rubros, Formulario } from '@/components/Intera
 import { Chat } from '@/components/Chat';
 import { BotonPrueba, Prueba } from '@/components/Prueba';
 import {
-  CONTACTO, WA_PRUEBA, wa, DEMOS, demoUrl, BASE, PAQUETES, INCLUYE_TODOS, ADICIONALES, CLIENTES, PREGUNTAS, PORTAL, SOPORTE,
+  CONTACTO, WA_PRUEBA, wa, DEMOS, demoUrl, BASE, PAQUETES, INCLUYE_TODOS, ADICIONALES, CRECER, CLIENTES, PREGUNTAS, PORTAL, SOPORTE,
 } from '@/lib/sitio';
 
 const NAV = [
@@ -51,8 +51,8 @@ export default function Inicio() {
           <div className="wrap hero-in">
             <div>
               <p className="pastilla">1 mes gratis · sin tarjeta</p>
-              <h1>Tu negocio en orden, <em>con todo en un solo sistema.</em></h1>
-              <p className="lead">Ventas, caja, stock, clientes y factura electrónica ARCA. Activás solo los módulos que usás y seguís vendiendo aunque se corte internet.</p>
+              <h1>Vendé más, <em>en el local y en tu tienda online.</em></h1>
+              <p className="lead">Tu tienda web vende con el mismo stock del mostrador, el Club de clientes hace que vuelvan y tus promociones atraen clientes nuevos. Y de paso ordenás caja, stock y factura electrónica ARCA, todo en un solo sistema.</p>
               <div className="ctas">
                 <BotonPrueba className="btn btn-pri"><Icono n="msg" />Probá 1 mes gratis</BotonPrueba>
                 <a className="btn btn-sec" href="#demos"><Icono n="play" />Entrar a las demos</a>
@@ -78,10 +78,22 @@ export default function Inicio() {
             </div>
           </div>
           <div className="wrap franja">
+            <span><Icono n="globe" />Tienda online conectada al stock</span>
+            <span><Icono n="heart" />Club de clientes y puntos</span>
             <span><Icono n="receipt" />Factura electrónica ARCA</span>
             <span><Icono n="wifi" />Funciona sin internet</span>
-            <span><Icono n="phone" />App en compu y celular</span>
-            <span><Icono n="shield" />Permisos por rol y auditoría</span>
+          </div>
+          <div className="wrap crecer">
+            <h2 className="crecer-tit">Un sistema pensado para que <em>vendas más</em></h2>
+            <div className="crecer-grid">
+              {CRECER.map((c) => (
+                <article key={c.t} className="crecer-card">
+                  <Icono n={c.i} className="ic-color" />
+                  <h3>{c.t}</h3>
+                  <p>{c.d}</p>
+                </article>
+              ))}
+            </div>
           </div>
         </section>
 

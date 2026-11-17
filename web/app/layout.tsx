@@ -3,7 +3,7 @@ import { SITIO } from '@/lib/sitio';
 import './globals.css';
 
 const descripcion =
-  'Sistema de gestión para comercios de Argentina: ventas, caja, stock, clientes y factura electrónica ARCA en un solo sistema. Funciona sin internet. Probalo 1 mes gratis, sin tarjeta.';
+  'El sistema para que tu comercio venda más: tienda online conectada al stock, Club de clientes con puntos y promociones, caja, stock y factura electrónica ARCA. Funciona sin internet. Probalo 1 mes gratis, sin tarjeta.';
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITIO),

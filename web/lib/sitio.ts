@@ -58,6 +58,14 @@ export const DEMOS: Demo[] = [
     repo: 'VB-Demo-Salud.Estetica', estado: 'lista', acceso: 'Usuario Administrador · PIN 1111' },
 ];
 
+// ---------- Para vender más (portada) ----------
+export const CRECER = [
+  { i: 'receipt', t: 'Vendé más en el mostrador', d: 'Cobrás rápido con lector y balanza, armás combos y precios por cantidad, y las alertas de stock bajo te avisan antes de quedarte sin lo que más se vende.' },
+  { i: 'globe', t: 'Vendé por la web', d: 'Tu tienda online usa el mismo inventario que el local: lo que vendés en el mostrador se descuenta en la web y al revés. Te llegan los pedidos, con retiro o envío a domicilio.' },
+  { i: 'heart', t: 'Fidelizá a tus clientes', d: 'Club de clientes con puntos, cupones y gift cards: tus clientes vuelven más seguido y gastan más en cada compra.' },
+  { i: 'users', t: 'Atraé clientes nuevos', d: 'Tu tienda con QR para la vidriera y las redes, cupones de bienvenida y promociones para compartir por WhatsApp: te encuentran, te prueban y vuelven.' },
+];
+
 // ---------- Adicionales (se cotizan en la reunión; no tienen precio publicado) ----------
 export const ADICIONALES = [
   { id: 'nfc', icono: 'wifi', nombre: 'Combo NFC', detalle: 'Tarjetas y llaveros NFC con tu marca, lector en el mostrador y sello con el celular del cliente. Tus clientes apoyan la tarjeta y suman puntos al instante.', incluye: 'Lector, tarjetas o llaveros, instalación y capacitación' },
