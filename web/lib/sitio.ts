@@ -31,7 +31,7 @@ export const DEMOS: Demo[] = [
   { id: 'mostrador', nombre: 'Comercios de mostrador', modelo: 'Vendés al consumidor final, en el mostrador o con autoservicio',
     ejemplos: 'Almacén, kiosco, autoservicio, verdulería, bazar, ferretería, indumentaria',
     puntos: ['Venta rápida con lector y balanza', 'Caja, cierres y libreta de clientes', 'Stock, precios y etiquetas de góndola'],
-    repo: 'VB-Demo-mostrdor', estado: 'lista', acceso: 'Usuario ADMIN · PIN 1234' },
+    repo: 'VB-Demo-Mostrador', estado: 'lista', acceso: 'Usuario ADMIN · PIN 1234' },
   { id: 'mayorista', nombre: 'Mayoristas', modelo: 'Vendés por menor y por mayor desde el mismo mostrador',
     ejemplos: 'Mayorista, autoservicio mayorista, bebidas, licorería, golosinería',
     puntos: ['Precios mayorista y minorista en la misma venta', 'Caja, cierres y cuenta corriente', 'Stock que baja al vender y etiquetas de góndola'],
