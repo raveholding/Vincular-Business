@@ -232,7 +232,7 @@ export default function Inicio() {
             </div>
             <div className="fundadores" id="equipo">
               <h3 className="fund-tit">Quiénes están detrás</h3>
-              <p className="fund-sub">Te ayudamos a vender más, y hablás directo con nosotros. Guardá nuestra tarjeta digital: acercá el celular a la tarjeta NFC o escaneá el QR.</p>
+              <p className="fund-sub">Te ayudamos a vender más, y hablás directo con nosotros.</p>
               <div className="fund-grid">
                 {FUNDADORES.map((f) => (
                   <article key={f.id} className="fund">
@@ -240,7 +240,6 @@ export default function Inicio() {
                     <div>
                       <h4>{f.nombre}</h4>
                       <p className="fund-rol">{f.rol}</p>
-                      <a className="fund-link" href={f.tarjeta} target="_blank" rel="noopener noreferrer">Ver tarjeta digital <Icono n="arrow" /></a>
                     </div>
                   </article>
                 ))}

@@ -124,6 +124,14 @@ export function Rubros() {
           <ul>{r.con.map((t) => <li key={t}><Icono n="check" />{t}</li>)}</ul>
         </div>
       </div>
+      {r.desde && (() => {
+        const pl = PLANES.find((x) => x.id === r.desde);
+        const dto = PERIODOS.find((p) => p.id === 'anual')?.descuento ?? 0;
+        const anual = pl?.precioMensual ? Math.round(pl.precioMensual * (1 - dto)) : null;
+        return pl ? (
+          <p className="rubro-desde">Desde el plan <b>{pl.nombre}</b>{anual ? <> · $ {anual.toLocaleString('es-AR')} al mes pagando el año</> : null}. Incluye el paquete de tu rubro.</p>
+        ) : null;
+      })()}
     </div>
   );
 }

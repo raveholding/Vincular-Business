@@ -139,17 +139,19 @@ export const INCLUYE_TODOS = [
 ];
 
 // ---------- Por rubro: hoy y con Vincular Business ----------
-export const RUBROS = [
+// desde: plan inicial cuando el rubro necesita su paquete (cuenta como 1 módulo extra). Igual para los tres rubros.
+export type Rubro = { id: string; nombre: string; hoy: string[]; con: string[]; desde?: string };
+export const RUBROS: Rubro[] = [
   { id: 'comercios', nombre: 'Comercios', hoy: ['Precios desactualizados en la góndola', 'Fiados anotados en un cuaderno', 'No sabés cuánto ganaste en el día'],
-    con: ['Precios y etiquetas al día en un paso', 'Cuenta corriente con aviso por WhatsApp', 'Resumen de ventas y ganancia al cerrar la caja'] },
+    con: ['Precios y etiquetas al día en un paso', 'Cuenta corriente con aviso por WhatsApp', 'Resumen de ventas y ganancia al cerrar la caja'], desde: 'crecer' },
   { id: 'mayoristas', nombre: 'Mayoristas y distribuidoras', hoy: ['Pedidos por WhatsApp que se pierden', 'Remitos a mano y errores al armar', 'Deudas de clientes difíciles de seguir'],
     con: ['Preventa con el celular y pedidos ordenados', 'Armado, remito y factura en el mismo circuito', 'Saldos y cobranzas al día por cliente'] },
   { id: 'gastronomia', nombre: 'Gastronomía', hoy: ['Comandas en papel que se traspapelan', 'Mesas que no cierran con la caja', 'Insumos que se terminan sin aviso'],
     con: ['Comandas directo a cocina y barra', 'Cada mesa cobrada y en la caja del turno', 'Stock por receta con aviso de faltantes'] },
   { id: 'talleres', nombre: 'Talleres integrales', hoy: ['Presupuestos que nadie aprueba por escrito', 'No sabés qué se le hizo a cada vehículo', 'Repuestos sin control'],
-    con: ['Presupuesto aprobado por WhatsApp', 'Historial completo por patente', 'Repuestos descontados de cada orden'] },
+    con: ['Presupuesto aprobado por WhatsApp', 'Historial completo por patente', 'Repuestos descontados de cada orden'], desde: 'crecer' },
   { id: 'servicios', nombre: 'Gimnasios, salud y estética', hoy: ['Cuotas vencidas sin cobrar', 'Turnos que se pisan', 'Clientes que no vuelven'],
-    con: ['Aviso automático de cuota y cobranza', 'Agenda online con recordatorios', 'Club de clientes y promociones'] },
+    con: ['Aviso automático de cuota y cobranza', 'Agenda online con recordatorios', 'Club de clientes y promociones'], desde: 'crecer' },
 ];
 
 // ---------- Clientes ----------
@@ -160,6 +162,7 @@ export const CLIENTES = [
   { nombre: 'Clínica del PC', logo: '/assets/clientes/clinica-pc.png', w: 447, h: 447 },
   { nombre: 'Medicinal Terps', logo: '/assets/clientes/medicinal-terps.png', w: 200, h: 200 },
   { nombre: 'Cannabismatica', logo: '/assets/clientes/cannabismatica.jpg', w: 332, h: 120 },
+  { nombre: 'Lem Sound', logo: '/assets/clientes/lemsound.jpg', w: 420, h: 99 },
 ];
 
 // ---------- Preguntas ----------
@@ -175,22 +178,20 @@ export const PREGUNTAS = [
   { p: '¿Pueden adaptarlo a mi negocio?', r: 'Sí. Somos un equipo de Salta: configuramos el sistema con tu forma de trabajar y, si te falta algo, lo desarrollamos a medida.' },
 ];
 
-// ---------- Fundadores (cada uno tiene su tarjeta digital NFC + QR en su propio repositorio) ----------
+// ---------- Fundadores (sus tarjetas NFC son personales y no se enlazan desde la web) ----------
 export type Fundador = {
   id: string; nombre: string; rol: string; detalle: string; foto: string;
-  whatsapp?: string; whatsappVisible?: string; email: string; linkedin?: string; tarjeta: string;
+  whatsapp?: string; whatsappVisible?: string; email: string; linkedin?: string;
 };
 export const FUNDADORES: Fundador[] = [
   {
     id: 'mateo', nombre: 'Mateo Figallo', rol: 'Software Engineer · Cofundador',
     detalle: 'Te ayudamos a vender más: tienda online conectada al stock, Club de clientes y promociones por WhatsApp, todo en un solo sistema.',
     foto: '/equipo/mateo.jpg', whatsapp: CONTACTO.whatsapp, whatsappVisible: CONTACTO.whatsappVisible, email: CONTACTO.email,
-    tarjeta: 'https://raveholding.github.io/MateoVB/',
   },
   {
     id: 'nicolas', nombre: 'Nicolás Romero Alvarado', rol: 'Técnico en Programación · Cofundador',
     detalle: 'Te ayudamos a vender más: tienda online conectada al stock, Club de clientes y promociones por WhatsApp, todo en un solo sistema.',
     foto: '/equipo/nicolas.jpg', whatsapp: CONTACTO.whatsapp, whatsappVisible: CONTACTO.whatsappVisible, email: CONTACTO.email,
-    tarjeta: 'https://raveholding.github.io/nicoVB/',
   },
 ];

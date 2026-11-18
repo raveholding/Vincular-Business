@@ -432,7 +432,7 @@ html[data-tema=oscuro] .cinta-pista li{background:rgba(255,255,255,.08)}
 .crecer-card{display:flex;flex-direction:column;gap:8px;padding:22px;border-radius:var(--r);background:var(--s1);border:1px solid var(--line);box-shadow:var(--sombra)}
 .crecer-card h3{margin-top:4px}.crecer-card p{color:var(--mut);font-size:.97rem}
 
-/* ===== Fundadores (sección Cómo trabajamos) y tarjeta digital /equipo/<id> ===== */
+/* ===== Fundadores (sección Cómo trabajamos) ===== */
 .ad-cta{margin-top:18px;text-align:center}
 .fundadores{margin-top:48px}
 .fund-tit{font-size:1.45rem;margin-bottom:18px}
@@ -442,8 +442,7 @@ html[data-tema=oscuro] .cinta-pista li{background:rgba(255,255,255,.08)}
 .fund h4{font-size:1.15rem;margin:0}
 .fund .fund-rol{color:var(--or-tx);font-weight:700;font-size:.92rem;margin:2px 0 8px}
 .fund p{color:var(--mut);font-size:.94rem}
-.fund-link{display:inline-flex;align-items:center;gap:.4em;margin-top:10px;font-weight:700;color:var(--tx);text-decoration:none}
-.fund-link:hover{color:var(--or-tx)}
 @media (max-width:760px){.fund-grid{grid-template-columns:1fr}.fund{flex-direction:column;text-align:center}.fund img{width:120px;height:120px}}
 
 .fund-sub{color:var(--mut);margin:-8px 0 18px;max-width:60ch}
+.rubro-desde{margin:16px auto 0;text-align:center;color:var(--mut);font-size:.95rem}.rubro-desde b{color:var(--or-tx)}
