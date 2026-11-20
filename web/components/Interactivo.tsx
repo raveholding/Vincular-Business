@@ -1,7 +1,7 @@
 'use client';
 import { useEffect, useState } from 'react';
 import { Icono } from './Icono';
-import { PLANES, PERIODOS, ELECCION, RUBROS, wa, CONTACTO, type Plan, type Periodo } from '@/lib/sitio';
+import { PLANES, PERIODOS, ELECCION, RUBROS, RUBRO_PLAN, wa, CONTACTO, type Plan, type Periodo } from '@/lib/sitio';
 
 // ---------- Modo claro / oscuro ----------
 export function Tema() {
@@ -61,11 +61,28 @@ function Precio({ plan, per }: { plan: Plan; per: Periodo }) {
   );
 }
 export function Planes() {
+  const [rub, setRub] = useState(RUBRO_PLAN[0]);
   const [per, setPer] = useState(PERIODOS.find((x) => x.id === 'anual') ?? PERIODOS[0]); // arranca en Anual: muestra el precio «desde»
   const [elec, setElec] = useState('pro');
+  const esp = !!rub.paquete; // rubro especializado: arranca en Crecer con su paquete incluido
+  const planes = PLANES.filter((p) => !(esp && p.id === 'base'));
+  const opciones = ELECCION.filter((x) => !(esp && x.id === 'base'));
+  const elegir = (r: typeof rub) => { setRub(r); if (r.paquete && elec === 'base') setElec('crecer'); };
+  const extras = (p: Plan) => !esp ? p.extras
+    : p.id === 'crecer' ? `Base + paquete ${rub.paquete}`
+    : p.id === 'pro' ? `Base + paquete ${rub.paquete} + 2 módulos extra`
+    : p.extras;
+  const para = (p: Plan) => esp && p.id === 'crecer' ? `Todo el sistema base más ${rub.incluye}.` : p.para;
   return (
     <div className="planes-pasos">
-      <p className="paso-tit">1. Elegí el período</p>
+      <p className="paso-tit">1. ¿De qué rubro es tu negocio?</p>
+      <div className="chips chips-neg" role="group" aria-label="Rubro">
+        {RUBRO_PLAN.map((x) => (
+          <button key={x.id} type="button" aria-pressed={rub.id === x.id} onClick={() => elegir(x)}>{x.txt}<small>{x.det}</small></button>
+        ))}
+      </div>
+      {esp && <p className="ayuda">{rub.txt} necesita su paquete del rubro ({rub.incluye}), por eso arranca en el plan <b>Crecer</b>. El paquete ya está incluido en el precio.</p>}
+      <p className="paso-tit">2. Elegí el período</p>
       <div className="segmento" role="group" aria-label="Período de pago">
         {PERIODOS.map((x) => (
           <button key={x.id} type="button" aria-pressed={per.id === x.id} onClick={() => setPer(x)}>
@@ -73,26 +90,27 @@ export function Planes() {
           </button>
         ))}
       </div>
-      <p className="paso-tit">2. ¿Cuál se parece a tu negocio?</p>
-      <div className="chips chips-neg" role="group" aria-label="Tipo de negocio">
-        {ELECCION.map((x) => (
-          <button key={x.id} type="button" aria-pressed={elec === x.id} onClick={() => setElec(x.id)}>{x.txt}<small>{x.det}</small></button>
+      <p className="paso-tit">3. ¿Qué tamaño tiene?</p>
+      <div className="chips chips-neg" role="group" aria-label="Tamaño del negocio">
+        {opciones.map((x) => (
+          <button key={x.id} type="button" aria-pressed={elec === x.id} onClick={() => setElec(x.id)}>{esp && x.id === 'crecer' ? 'Un local' : x.txt}<small>{x.det}</small></button>
         ))}
       </div>
       {elec === 'nose' && <p className="ayuda">Empezá con <b>Pro</b>: es el que más eligen. En el mes gratis vemos juntos qué módulos usás y te dejamos el plan justo.</p>}
-      <p className="paso-tit">3. Mirá el precio y empezá gratis</p>
-      <div className="planes">
-        {PLANES.map((p) => {
+      <p className="paso-tit">4. Mirá el precio y empezá gratis</p>
+      <div className={planes.length === 3 ? 'planes tres' : 'planes'}>
+        {planes.map((p) => {
           const elegido = p.id === elec || (elec === 'nose' && p.destacado);
+          const nom = esp && p.id !== 'total' ? `${p.nombre} · ${rub.paquete}` : p.nombre;
           return (
             <article key={p.id} className={elegido ? 'plan elegido' : 'plan'}>
               {elegido ? <span className="cinta">Tu elección</span> : p.destacado && <span className="cinta suave">El más elegido</span>}
-              <h3>{p.nombre}</h3>
-              <p className="extras">{p.extras}</p>
+              <h3>{nom}</h3>
+              <p className="extras">{extras(p)}</p>
               <Precio plan={p} per={per} />
-              <p className="para">{p.para}</p>
+              <p className="para">{para(p)}</p>
               <a className={elegido ? 'btn btn-pri btn-block' : 'btn btn-sec btn-block'}
-                href={wa(`Hola! Quiero probar 1 mes gratis del Sistema Vincular Business. Me interesa el plan ${p.nombre} (${p.extras}), período de pago: ${per.nombre.toLowerCase()}.`)}
+                href={wa(`Hola! Quiero probar 1 mes gratis del Sistema Vincular Business. Rubro: ${rub.txt}. Me interesa el plan ${nom} (${extras(p)}), período de pago: ${per.nombre.toLowerCase()}.`)}
                 target="_blank" rel="noopener noreferrer">Empezar 1 mes gratis</a>
             </article>
           );

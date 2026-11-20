@@ -149,6 +149,7 @@ html[data-tema=oscuro] .base{background:var(--s1);color:var(--tx);border:1px sol
 .periodo{display:flex;justify-content:center;gap:8px;margin-bottom:28px}
 .periodo small{opacity:.8}
 .planes{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.planes.tres{grid-template-columns:repeat(3,1fr);max-width:960px;margin-inline:auto}
 .plan{position:relative;display:flex;flex-direction:column;gap:10px;padding:26px 22px;background:var(--s1);border:1px solid var(--line);border-radius:var(--r)}
 .plan.destacado{border-color:var(--or);box-shadow:0 0 0 1px var(--or) inset,var(--sombra)}
 .cinta{position:absolute;top:-12px;left:22px;background:var(--or);color:#140800;font-size:.75rem;font-weight:800;padding:4px 10px;border-radius:999px}
@@ -225,13 +226,13 @@ html[data-tema=oscuro] .base{background:var(--s1);color:var(--tx);border:1px sol
   .menu-movil{display:block}
   .hero-in,.incluye,.contacto{grid-template-columns:1fr}
   .demos{grid-template-columns:repeat(2,1fr)}
-  .planes,.trabajo{grid-template-columns:repeat(2,1fr)}
+  .planes,.planes.tres,.trabajo{grid-template-columns:repeat(2,1fr)}
   .incluyen ul{grid-template-columns:1fr 1fr}
 }
 @media (max-width:640px){
   body{font-size:16px}
   .ocultar-movil{display:none}
-  .demos,.planes,.trabajo,.paquetes,.antes-despues,.pasos,.incluyen ul,.form .fila{grid-template-columns:1fr}
+  .demos,.planes,.planes.tres,.trabajo,.paquetes,.antes-despues,.pasos,.incluyen ul,.form .fila{grid-template-columns:1fr}
   .pie-in{grid-template-columns:1fr 1fr}
   .pie-in>div{grid-column:1/-1}
   .franja{justify-content:flex-start}

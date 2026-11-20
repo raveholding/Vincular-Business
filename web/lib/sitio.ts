@@ -122,6 +122,17 @@ export const ELECCION = [
   { id: 'nose', txt: 'No sé todavía', det: 'Te ayudamos a elegir' },
 ];
 
+// «¿De qué rubro es tu negocio?» (paso 1 de Planes). Los rubros especializados necesitan su paquete
+// (cuenta como 1 módulo extra), así que arrancan en Crecer: Base no se ofrece y los planes lo dicen.
+export type RubroPlan = { id: string; txt: string; det: string; paquete?: string; incluye?: string };
+export const RUBRO_PLAN: RubroPlan[] = [
+  { id: 'comercio', txt: 'Comercio', det: 'Almacén, kiosco, despensa, tienda' },
+  { id: 'mayorista', txt: 'Mayorista o distribuidora', det: 'Venta por mayor, preventa y reparto' },
+  { id: 'gastronomia', txt: 'Gastronomía', det: 'Restaurante, bar, pizzería, cafetería', paquete: 'Gastronomía', incluye: 'mesas, comandas a cocina y barra, y stock por receta' },
+  { id: 'taller', txt: 'Taller', det: 'Mecánica, service, electrónica', paquete: 'Taller integral', incluye: 'órdenes de trabajo, presupuestos por WhatsApp e historial por patente o equipo' },
+  { id: 'bienestar', txt: 'Gimnasio, salud y belleza', det: 'Gimnasio, barbería, peluquería, estética, consultorio', paquete: 'Turnos y socios', incluye: 'agenda online con recordatorios, cuotas y socios con aviso de vencimiento' },
+];
+
 // ---------- Portal del cliente (SistemaIntegralSVB) ----------
 // Recomendá y ganá
 export const RECOMIENDA = { cada: 3, descuento: 10 }; // cada 3 negocios activos: 10 % en el próximo pago
@@ -143,14 +154,14 @@ export const INCLUYE_TODOS = [
 export type Rubro = { id: string; nombre: string; hoy: string[]; con: string[]; desde?: string };
 export const RUBROS: Rubro[] = [
   { id: 'comercios', nombre: 'Comercios', hoy: ['Precios desactualizados en la góndola', 'Fiados anotados en un cuaderno', 'No sabés cuánto ganaste en el día'],
-    con: ['Precios y etiquetas al día en un paso', 'Cuenta corriente con aviso por WhatsApp', 'Resumen de ventas y ganancia al cerrar la caja'], desde: 'crecer' },
+    con: ['Precios y etiquetas al día en un paso', 'Cuenta corriente con aviso por WhatsApp', 'Resumen de ventas y ganancia al cerrar la caja'] },
   { id: 'mayoristas', nombre: 'Mayoristas y distribuidoras', hoy: ['Pedidos por WhatsApp que se pierden', 'Remitos a mano y errores al armar', 'Deudas de clientes difíciles de seguir'],
     con: ['Preventa con el celular y pedidos ordenados', 'Armado, remito y factura en el mismo circuito', 'Saldos y cobranzas al día por cliente'] },
   { id: 'gastronomia', nombre: 'Gastronomía', hoy: ['Comandas en papel que se traspapelan', 'Mesas que no cierran con la caja', 'Insumos que se terminan sin aviso'],
-    con: ['Comandas directo a cocina y barra', 'Cada mesa cobrada y en la caja del turno', 'Stock por receta con aviso de faltantes'] },
+    con: ['Comandas directo a cocina y barra', 'Cada mesa cobrada y en la caja del turno', 'Stock por receta con aviso de faltantes'], desde: 'crecer' },
   { id: 'talleres', nombre: 'Talleres integrales', hoy: ['Presupuestos que nadie aprueba por escrito', 'No sabés qué se le hizo a cada vehículo', 'Repuestos sin control'],
     con: ['Presupuesto aprobado por WhatsApp', 'Historial completo por patente', 'Repuestos descontados de cada orden'], desde: 'crecer' },
-  { id: 'servicios', nombre: 'Gimnasios, salud y estética', hoy: ['Cuotas vencidas sin cobrar', 'Turnos que se pisan', 'Clientes que no vuelven'],
+  { id: 'servicios', nombre: 'Gimnasios, salud y belleza', hoy: ['Cuotas vencidas sin cobrar', 'Turnos que se pisan', 'Clientes que no vuelven'],
     con: ['Aviso automático de cuota y cobranza', 'Agenda online con recordatorios', 'Club de clientes y promociones'], desde: 'crecer' },
 ];
 
