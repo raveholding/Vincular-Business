@@ -16,7 +16,7 @@ export const CONTACTO = {
 };
 
 export const wa = (msg: string) => `https://wa.me/${CONTACTO.whatsapp}?text=${encodeURIComponent(msg)}`;
-export const WA_PRUEBA = wa('Hola! Quiero probar 1 mes gratis del Sistema Vincular Business.');
+export const WA_PRUEBA = wa('Hola! Quiero probar 14 días gratis del Sistema Vincular Business.');
 
 // ---------- Demos (solo las nuevas) ----------
 export type Demo = {
@@ -60,10 +60,10 @@ export const DEMOS: Demo[] = [
 
 // ---------- Para vender más (portada) ----------
 export const CRECER = [
-  { i: 'receipt', t: 'Vendé más en el mostrador', d: 'Cobrás rápido con lector y balanza, armás combos y precios por cantidad, y las alertas de stock bajo te avisan antes de quedarte sin lo que más se vende.' },
-  { i: 'globe', t: 'Vendé por la web', d: 'Tu tienda online usa el mismo inventario que el local: lo que vendés en el mostrador se descuenta en la web y al revés. Te llegan los pedidos, con retiro o envío a domicilio.' },
-  { i: 'heart', t: 'Fidelizá a tus clientes', d: 'Club de clientes con puntos, cupones y gift cards: tus clientes vuelven más seguido y gastan más en cada compra.' },
-  { i: 'users', t: 'Atraé clientes nuevos', d: 'Tu tienda con QR para la vidriera y las redes, cupones de bienvenida y promociones para compartir por WhatsApp: te encuentran, te prueban y vuelven.' },
+  { i: 'receipt', t: 'Vendé más en el mostrador', d: 'Cobro rápido con lector y balanza, combos y alertas de stock.' },
+  { i: 'globe', t: 'Vendé por la web', d: 'Tu tienda online con el mismo stock del local, con retiro o envío.' },
+  { i: 'heart', t: 'Fidelizá a tus clientes', d: 'Club con puntos, cupones y gift cards para que vuelvan.' },
+  { i: 'users', t: 'Atraé clientes nuevos', d: 'QR, cupones de bienvenida y promos por WhatsApp.' },
 ];
 
 // ---------- Adicionales (se cotizan en la reunión; no tienen precio publicado) ----------
@@ -178,7 +178,7 @@ export const CLIENTES = [
 
 // ---------- Preguntas ----------
 export const PREGUNTAS = [
-  { p: '¿Necesito tarjeta para el mes gratis?', r: 'No. Nos escribís por WhatsApp, dejamos tu sistema listo con tus productos y lo usás un mes completo sin pagar nada ni dejar datos de pago.' },
+  { p: '¿Necesito tarjeta para los 14 días gratis?', r: 'No. Nos escribís por WhatsApp, dejamos tu sistema listo con tus productos y lo usás 14 días sin pagar nada ni dejar datos de pago.' },
   { p: '¿Qué pasa cuando termina el mes?', r: 'Elegís tu plan y el período (mensual, trimestral, semestral, anual o por 2 años) y lo pagás por transferencia. No hay cobros ni renovaciones automáticas: seguís solo si activás un plan, y tus datos siempre son tuyos.' },
   { p: '¿Dónde veo mis pagos y pido soporte?', r: 'En el portal del cliente: ves tu contrato, tus pagos y el estado de tu servicio, y hablás directo con soporte. Tus datos además se respaldan en nuestra nube.' },
   { p: '¿Tienen descuento por recomendar?', r: 'Sí. Cada 3 negocios que nos recomiendes y activen su plan, tenés 10 % de descuento en tu próximo pago. Tu código de recomendación está en el portal del cliente.' },

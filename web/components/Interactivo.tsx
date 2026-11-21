@@ -96,22 +96,22 @@ export function Planes() {
           <button key={x.id} type="button" aria-pressed={elec === x.id} onClick={() => setElec(x.id)}>{esp && x.id === 'crecer' ? 'Un local' : x.txt}<small>{x.det}</small></button>
         ))}
       </div>
-      {elec === 'nose' && <p className="ayuda">Empezá con <b>Pro</b>: es el que más eligen. En el mes gratis vemos juntos qué módulos usás y te dejamos el plan justo.</p>}
+      {elec === 'nose' && <p className="ayuda">Empezá con <b>Pro</b>: es el que más eligen. En los 14 días gratis vemos juntos qué módulos usás y te dejamos el plan justo.</p>}
       <p className="paso-tit">4. Mirá el precio y empezá gratis</p>
       <div className={planes.length === 3 ? 'planes tres' : 'planes'}>
         {planes.map((p) => {
           const elegido = p.id === elec || (elec === 'nose' && p.destacado);
           const nom = esp && p.id !== 'total' ? `${p.nombre} · ${rub.paquete}` : p.nombre;
           return (
-            <article key={p.id} className={elegido ? 'plan elegido' : 'plan'}>
-              {elegido ? <span className="cinta">Tu elección</span> : p.destacado && <span className="cinta suave">El más elegido</span>}
+            <article key={p.id} className={['plan', elegido && 'elegido', p.destacado && 'destacado'].filter(Boolean).join(' ')}>
+              {p.destacado ? <span className="cinta">{elegido ? 'Tu elección · el más elegido' : 'El más elegido'}</span> : elegido && <span className="cinta suave">Tu elección</span>}
               <h3>{nom}</h3>
               <p className="extras">{extras(p)}</p>
               <Precio plan={p} per={per} />
               <p className="para">{para(p)}</p>
               <a className={elegido ? 'btn btn-pri btn-block' : 'btn btn-sec btn-block'}
-                href={wa(`Hola! Quiero probar 1 mes gratis del Sistema Vincular Business. Rubro: ${rub.txt}. Me interesa el plan ${nom} (${extras(p)}), período de pago: ${per.nombre.toLowerCase()}.`)}
-                target="_blank" rel="noopener noreferrer">Empezar 1 mes gratis</a>
+                href={wa(`Hola! Quiero probar 14 días gratis del Sistema Vincular Business. Rubro: ${rub.txt}. Me interesa el plan ${nom} (${extras(p)}), período de pago: ${per.nombre.toLowerCase()}.`)}
+                target="_blank" rel="noopener noreferrer">Empezar 14 días gratis</a>
             </article>
           );
         })}
@@ -155,7 +155,7 @@ export function Rubros() {
 }
 
 // ---------- Formulario de contacto (arma el mensaje y abre WhatsApp) ----------
-const NECESIDADES = ['Probar 1 mes gratis', 'Ver una demo guiada', 'Pasar de otro sistema', 'Algo a medida'];
+const NECESIDADES = ['Probar 14 días gratis', 'Ver una demo guiada', 'Pasar de otro sistema', 'Algo a medida'];
 export function Formulario() {
   const [nombre, setNombre] = useState('');
   const [negocio, setNegocio] = useState('');

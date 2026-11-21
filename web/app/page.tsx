@@ -1,6 +1,6 @@
 import { DemoVisor } from '@/components/DemoVisor';
 import { Icono, Logo } from '@/components/Icono';
-import { Tema, MenuMovil, Planes, Rubros, Formulario } from '@/components/Interactivo';
+import { Tema, MenuMovil, Planes, Rubros } from '@/components/Interactivo';
 import { Chat } from '@/components/Chat';
 import { BotonPrueba, Prueba } from '@/components/Prueba';
 import {
@@ -13,7 +13,6 @@ const NAV = [
   { href: '#planes', txt: 'Planes' },
   { href: '#nosotros', txt: 'Cómo trabajamos' },
   { href: '#preguntas', txt: 'Preguntas' },
-  { href: '#contacto', txt: 'Contacto' },
 ];
 
 function Encabezado({ n, etq, children, sub }: { n: string; etq: string; children: React.ReactNode; sub?: string }) {
@@ -50,14 +49,14 @@ export default function Inicio() {
         <section id="inicio" className="hero">
           <div className="wrap hero-in">
             <div>
-              <p className="pastilla">1 mes gratis · sin tarjeta</p>
-              <h1>Vendé más, <em>en el local y en tu tienda online.</em></h1>
-              <p className="lead">Tu tienda web vende con el mismo stock del mostrador, el Club de clientes hace que vuelvan y tus promociones atraen clientes nuevos. Y de paso ordenás caja, stock y factura electrónica ARCA, todo en un solo sistema.</p>
+              <p className="pastilla">14 días gratis · sin tarjeta</p>
+              <h1>Tu solución integral para el <em>crecimiento empresarial.</em></h1>
+              <p className="lead">Atraé clientes, cerrá ventas y hacé que vuelvan. Tienda online, Club de clientes, WhatsApp, caja, stock y factura ARCA en un solo sistema.</p>
               <div className="ctas">
-                <BotonPrueba className="btn btn-pri"><Icono n="msg" />Probá 1 mes gratis</BotonPrueba>
-                <a className="btn btn-sec" href="#demos"><Icono n="play" />Entrar a las demos</a>
+                <BotonPrueba className="btn btn-pri"><Icono n="msg" />Probalo gratis 14 días</BotonPrueba>
+                <a className="btn btn-sec" href="#demos"><Icono n="play" />Ver las demos</a>
               </div>
-              <p className="micro">Te lo dejamos listo con tus productos. Sin cobros automáticos.</p>
+              <p className="micro">Sin tarjeta. Te lo dejamos listo con tus productos.</p>
             </div>
             <div className="panel-demo" aria-label="Ejemplo del resumen del día (datos de ejemplo)">
               <div className="pd-top"><span>Resumen de hoy</span><span className="pd-ok">● Sincronizado</span></div>
@@ -100,7 +99,7 @@ export default function Inicio() {
         {/* ---------- 01 Demos ---------- */}
         <section id="demos" className="sec">
           <div className="wrap">
-            <Encabezado n="01" etq="Demos" sub="Entrá a la demo que se parezca a tu negocio y recorrela con datos de ejemplo, sin correo, sin tarjeta y sin instalar nada.">
+            <Encabezado n="01" etq="Demos" sub="Elegí la de tu rubro y recorrela con datos de ejemplo. Sin registrarte.">
               Probalo vos mismo, <em>sin registrarte</em>
             </Encabezado>
             <div className="demos">
@@ -119,14 +118,14 @@ export default function Inicio() {
                 </article>
               ))}
             </div>
-            <p className="aclara">Debajo de cada demo está cómo entrar. Las demos usan datos de ejemplo que quedan en tu navegador; no emiten facturas reales ni se conectan con bancos, ARCA ni equipos.</p>
+            <p className="aclara">Datos de ejemplo: no emiten facturas reales ni se conectan con bancos ni ARCA.</p>
           </div>
         </section>
 
         {/* ---------- 02 Qué incluye ---------- */}
         <section id="incluye" className="sec alt">
           <div className="wrap">
-            <Encabezado n="02" etq="Qué incluye" sub="Todos los planes traen el sistema base completo. Después sumás los módulos extra que tu negocio necesita.">
+            <Encabezado n="02" etq="Qué incluye" sub="El sistema base en todos los planes, y los módulos que tu negocio necesita.">
               Todo el control de tu negocio, <em>por módulos</em>
             </Encabezado>
             <div className="incluye">
@@ -174,11 +173,11 @@ export default function Inicio() {
         {/* ---------- 06 Planes ---------- */}
         <section id="planes" className="sec">
           <div className="wrap">
-            <Encabezado n="05" etq="Planes y precios" sub="Desde $ 50.000 al mes pagando el año, y menos todavía pagando 2 años. El plan sube según cuántos módulos extra sumás, y cambiás de plan cuando quieras.">
+            <Encabezado n="05" etq="Planes y precios" sub="Elegí tu rubro y mirá el precio al instante. Cambiás de plan cuando quieras.">
               Empezá gratis. <em>Pagá cuando funcione.</em>
             </Encabezado>
             <ul className="sellos">
-              <li><Icono n="check" />1 mes gratis, sin tarjeta</li>
+              <li><Icono n="check" />14 días gratis, sin tarjeta</li>
               <li><Icono n="check" />Pagás en pesos, con factura</li>
               <li><Icono n="check" />Sin cobro ni renovación automáticos</li>
             </ul>
@@ -210,14 +209,14 @@ export default function Inicio() {
               </div>
               <a className="btn btn-sec" href={wa('Hola! Quiero recomendar un negocio al Sistema Vincular Business. Mi negocio es: ')} target="_blank" rel="noopener noreferrer">Recomendar un negocio</a>
             </div>
-            <p className="nota-caja">Al terminar el mes gratis elegís tu plan y pagás en pesos por transferencia, con factura. Tus datos siempre son tuyos: si decidís no seguir, te los entregamos en Excel. ¿Necesitás algo a medida? <a href={wa('Hola! Quiero una cotización a medida del Sistema Vincular Business.')} target="_blank" rel="noopener noreferrer">Pedí una cotización</a>.</p>
+            <p className="nota-caja">Tus datos siempre son tuyos: si no seguís, te los entregamos en Excel. ¿Algo a medida? <a href={wa('Hola! Quiero una cotización a medida del Sistema Vincular Business.')} target="_blank" rel="noopener noreferrer">Pedí una cotización</a>.</p>
           </div>
         </section>
 
         {/* ---------- 09 Cómo trabajamos ---------- */}
         <section id="nosotros" className="sec alt">
           <div className="wrap">
-            <Encabezado n="06" etq="Cómo trabajamos" sub="Somos de Salta. Hablás directo con quienes desarrollan el sistema. Ofrecemos soporte y capacitación para vos y tu equipo.">
+            <Encabezado n="06" etq="Cómo trabajamos" sub="Somos de Salta y hablás directo con quienes desarrollan el sistema.">
               De la primera charla <em>a tu negocio funcionando</em>
             </Encabezado>
             <div className="trabajo">
@@ -260,19 +259,17 @@ export default function Inicio() {
           </div>
         </section>
 
-        {/* ---------- 11 Contacto ---------- */}
-        <section id="contacto" className="sec alt">
-          <div className="wrap contacto">
-            <div>
-              <Encabezado n="08" etq="Contacto">Contanos de tu negocio. <em>Te lo dejamos andando.</em></Encabezado>
-              <ul className="canales">
-                <li><a href={WA_PRUEBA} target="_blank" rel="noopener noreferrer"><Icono n="msg" />{CONTACTO.whatsappVisible}</a></li>
-                <li><a href={`mailto:${CONTACTO.email}`}><Icono n="mail" />{CONTACTO.email}</a></li>
-                <li><a href={`https://instagram.com/${CONTACTO.instagram}`} target="_blank" rel="noopener noreferrer"><Icono n="ig" />@{CONTACTO.instagram}</a></li>
-                <li><span><Icono n="pin" />{CONTACTO.ciudad}</span></li>
-              </ul>
+        {/* ---------- Cierre: prueba gratis y WhatsApp (reemplaza el formulario de contacto) ---------- */}
+        <section id="empezar" className="cierre">
+          <div className="wrap cierre-in">
+            <p className="pastilla">14 días gratis · sin tarjeta</p>
+            <h2>Pensado para que <em>vender sea más fácil</em></h2>
+            <p className="cierre-lead">Vincular Business te da todo para atraer clientes, cerrar ventas y que vuelvan a comprar.</p>
+            <ul className="cierre-3"><li>Menos trabajo a mano.</li><li>Mejor seguimiento.</li><li>Más ventas.</li></ul>
+            <div className="ctas">
+              <BotonPrueba className="btn btn-pri"><Icono n="msg" />Probalo gratis 14 días</BotonPrueba>
+              <a className="btn btn-sec" href={WA_PRUEBA} target="_blank" rel="noopener noreferrer"><Icono n="msg" />Escribinos por WhatsApp · {CONTACTO.whatsappVisible}</a>
             </div>
-            <Formulario />
           </div>
         </section>
       </main>
@@ -281,7 +278,8 @@ export default function Inicio() {
         <div className="wrap pie-in">
           <div>
             <Logo />
-            <p className="micro">Sistema de gestión para comercios y servicios de Argentina.</p>
+            <p className="micro">Tu solución integral para el crecimiento empresarial.</p>
+            <p className="micro"><a href={WA_PRUEBA} target="_blank" rel="noopener noreferrer">WhatsApp {CONTACTO.whatsappVisible}</a> · <a href={`mailto:${CONTACTO.email}`}>{CONTACTO.email}</a> · <a href={`https://instagram.com/${CONTACTO.instagram}`} target="_blank" rel="noopener noreferrer">@{CONTACTO.instagram}</a></p>
           </div>
           <nav aria-label="Sitio"><h4>Sitio</h4>{NAV.map((e) => <a key={e.href} href={e.href}>{e.txt}</a>)}</nav>
           <nav aria-label="Clientes"><h4>Clientes</h4>

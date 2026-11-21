@@ -3,11 +3,11 @@ import { SITIO } from '@/lib/sitio';
 import './globals.css';
 
 const descripcion =
-  'El sistema para que tu comercio venda más: tienda online conectada al stock, Club de clientes con puntos y promociones, caja, stock y factura electrónica ARCA. Funciona sin internet. Probalo 1 mes gratis, sin tarjeta.';
+  'El sistema para que tu comercio venda más: tienda online conectada al stock, Club de clientes con puntos y promociones, caja, stock y factura electrónica ARCA. Funciona sin internet. Probalo 14 días gratis, sin tarjeta.';
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITIO),
-  title: { default: 'Vincular Business · Sistema de gestión para tu negocio · 1 mes gratis', template: '%s · Vincular Business' },
+  title: { default: 'Vincular Business · Sistema de gestión para tu negocio · 14 días gratis', template: '%s · Vincular Business' },
   description: descripcion,
   alternates: { canonical: '/' },
   robots: { index: true, follow: true },
@@ -37,7 +37,7 @@ const ld = {
   operatingSystem: 'Web, Windows, Android, iOS',
   description: descripcion,
   url: SITIO,
-  offers: { '@type': 'Offer', price: '0', priceCurrency: 'ARS', description: '1 mes gratis, sin tarjeta' },
+  offers: { '@type': 'Offer', price: '0', priceCurrency: 'ARS', description: '14 días gratis, sin tarjeta' },
   publisher: { '@type': 'Organization', name: 'Vincular Business', url: SITIO, address: { '@type': 'PostalAddress', addressLocality: 'Salta', addressCountry: 'AR' } },
 };
 
