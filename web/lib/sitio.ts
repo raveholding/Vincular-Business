@@ -23,11 +23,12 @@ export type Demo = {
   id: string; nombre: string; modelo: string; ejemplos: string; puntos: string[];
   repo: string; estado: 'lista' | 'pronto';
   url?: string; acceso?: string;
+  oculta?: boolean; // no se muestra en la web (queda cargada para volver a mostrarla)
 };
 const PAGES = 'https://raveholding.github.io';
 export const demoUrl = (d: Demo) => d.url ?? `${PAGES}/${d.repo}/#acceso`;
 
-export const DEMOS: Demo[] = [
+const TODAS_DEMOS: Demo[] = [
   { id: 'mostrador', nombre: 'Comercios de mostrador', modelo: 'Vendés al consumidor final, en el mostrador o con autoservicio',
     ejemplos: 'Almacén, kiosco, autoservicio, verdulería, bazar, ferretería, indumentaria',
     puntos: ['Venta rápida con lector y balanza', 'Caja, cierres y libreta de clientes', 'Stock, precios y etiquetas de góndola'],
@@ -43,7 +44,7 @@ export const DEMOS: Demo[] = [
   { id: 'gastronomia', nombre: 'Gastronomía', modelo: 'El cliente se sienta, pide a la mesa o pide por delivery',
     ejemplos: 'Restaurante, pizzería, bar, cafetería, rotisería, heladería',
     puntos: ['Mesas, mozos y comandas a cocina', 'Menú QR y pedidos por WhatsApp', 'Stock por receta y caja'],
-    repo: 'VB-Demo-Gastronomia', estado: 'lista', url: 'https://raveholding.github.io/VB-Demo-Gastronomia/', acceso: 'Abre la carta · equipo: «Acceso del equipo», ADMIN · PIN 1234' },
+    repo: 'VB-Demo-Gastronomia', estado: 'lista', url: 'https://raveholding.github.io/VB-Demo-Gastronomia/', acceso: 'Abre la carta · equipo: «Acceso del equipo», ADMIN · PIN 1234', oculta: true },
   { id: 'taller', nombre: 'Taller mecánico integral', modelo: 'Recibís el vehículo, presupuestás, trabajás y entregás',
     ejemplos: 'Mecánica, lubricentro, gomería, alarmas, polarizados, audio, chapa y pintura',
     puntos: ['Turnos y órdenes de trabajo por patente', 'Presupuesto aprobado por WhatsApp', 'Repuestos, instalaciones y garantías por vehículo'],
@@ -57,6 +58,8 @@ export const DEMOS: Demo[] = [
     puntos: ['Turnos online con recordatorio por WhatsApp', 'Agenda y comisiones por profesional', 'Packs de sesiones y club de clientes'],
     repo: 'VB-Demo-Salud.Estetica', estado: 'lista', acceso: 'Usuario Administrador · PIN 1111' },
 ];
+// Gastronomía oculta por ahora (pedido del 22/11/2026): para volver a mostrarla, sacar «oculta: true».
+export const DEMOS = TODAS_DEMOS.filter((d) => !d.oculta);
 
 // ---------- Para vender más (portada) ----------
 export const CRECER = [
