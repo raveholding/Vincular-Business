@@ -53,10 +53,14 @@ const TODAS_DEMOS: Demo[] = [
     ejemplos: 'Gimnasio, box y CrossFit, personal trainer, pilates y yoga, danza, artes marciales, club deportivo',
     puntos: ['Cuotas, vencimientos y cobranza', 'Clases, cupos y caja', 'Ingreso con llavero NFC (Combo NFC)'],
     repo: 'VB-Demo-Gim.Club', estado: 'lista', acceso: 'Usuario ADMIN · PIN 1234' },
-  { id: 'salud-estetica', nombre: 'Salud, estética y barberías', modelo: 'Trabajás con turnos y profesionales',
-    ejemplos: 'Barbería, peluquería, centro de estética, spa, uñas, tatuajes, consultorio',
-    puntos: ['Turnos online con recordatorio por WhatsApp', 'Agenda y comisiones por profesional', 'Packs de sesiones y club de clientes'],
+  { id: 'salud-estetica', nombre: 'Spa, estética, barberías y tatuajes', modelo: 'Trabajás con turnos y profesionales',
+    ejemplos: 'Spa, barbería, peluquería, uñas y pestañas, tatuajes y piercing',
+    puntos: ['Turnos online, señas y recordatorio por WhatsApp', 'Fichas, consentimiento firmado y paquetes de sesiones', 'Insumos por servicio y comisión por profesional'],
     repo: 'VB-Demo-Salud.Estetica', estado: 'lista', acceso: 'Usuario Administrador · PIN 1111' },
+  { id: 'centro-salud', nombre: 'Consultorios y clínicas', modelo: 'Atendés pacientes con turnos, historia clínica y obras sociales',
+    ejemplos: 'Consultorio médico, odontológico, clínica multiespecialidad, kinesiología, nutrición',
+    puntos: ['Sala de espera en vivo y turnos online', 'Historia clínica y odontograma', 'Obras sociales, copagos y liquidación de profesionales'],
+    repo: 'VB-CentrodeSalud', estado: 'lista', acceso: 'Usuario Administrador · PIN 1111' },
 ];
 // Gastronomía oculta por ahora (pedido del 22/11/2026): para volver a mostrarla, sacar «oculta: true».
 export const DEMOS = TODAS_DEMOS.filter((d) => !d.oculta);
@@ -95,7 +99,7 @@ export const PAQUETES: Paquete[] = [
   { id: 'logistica', nombre: 'Logística avanzada', icono: 'truck', detalle: 'Reparto y hoja de ruta, preventa con GPS, pedidos y remitos, depósitos y transferencias.' },
   { id: 'digital', nombre: 'Canal digital', icono: 'globe', detalle: 'Menú y tienda online, pedidos por WhatsApp, Tiendanube, PedidosYa y API.' },
   { id: 'inteligente', nombre: 'Centro inteligente', icono: 'spark', detalle: 'Asistentes con IA, análisis del negocio, finanzas y contabilidad de gestión.' },
-  { id: 'rubro', nombre: 'Paquete de tu rubro', icono: 'grid', detalle: 'Gastronomía (mesas y comandas), turnos (salud, estética y barberías), taller integral (órdenes de trabajo) o socios (gimnasios, academias y box).' },
+  { id: 'rubro', nombre: 'Paquete de tu rubro', icono: 'grid', detalle: 'Gastronomía (mesas y comandas), turnos (estética, barberías y tatuajes), salud (consultorios y clínicas), taller integral (órdenes de trabajo) o socios (gimnasios, academias y box).' },
 ];
 
 // ---------- Planes: suben por cantidad de módulos extra ----------
@@ -133,7 +137,8 @@ export const RUBRO_PLAN: RubroPlan[] = [
   { id: 'mayorista', txt: 'Mayorista o distribuidora', det: 'Venta por mayor, preventa y reparto' },
   { id: 'gastronomia', txt: 'Gastronomía', det: 'Restaurante, bar, pizzería, cafetería', paquete: 'Gastronomía', incluye: 'mesas, comandas a cocina y barra, y stock por receta' },
   { id: 'taller', txt: 'Taller', det: 'Mecánica, service, electrónica', paquete: 'Taller integral', incluye: 'órdenes de trabajo, presupuestos por WhatsApp e historial por patente o equipo' },
-  { id: 'bienestar', txt: 'Gimnasio, salud y belleza', det: 'Gimnasio, barbería, peluquería, estética, consultorio', paquete: 'Turnos y socios', incluye: 'agenda online con recordatorios, cuotas y socios con aviso de vencimiento' },
+  { id: 'bienestar', txt: 'Gimnasio, estética y belleza', det: 'Gimnasio, spa, barbería, peluquería, uñas, tatuajes', paquete: 'Turnos y socios', incluye: 'agenda online con recordatorios, cuotas y socios con aviso de vencimiento' },
+  { id: 'salud', txt: 'Consultorios y clínicas', det: 'Médico, odontológico, clínica', paquete: 'Salud', incluye: 'historia clínica, sala de espera, odontograma y obras sociales con copago' },
 ];
 
 // ---------- Portal del cliente (SistemaIntegralSVB) ----------
@@ -164,8 +169,10 @@ export const RUBROS: Rubro[] = [
     con: ['Comandas directo a cocina y barra', 'Cada mesa cobrada y en la caja del turno', 'Stock por receta con aviso de faltantes'], desde: 'crecer' },
   { id: 'talleres', nombre: 'Talleres integrales', hoy: ['Presupuestos que nadie aprueba por escrito', 'No sabés qué se le hizo a cada vehículo', 'Repuestos sin control'],
     con: ['Presupuesto aprobado por WhatsApp', 'Historial completo por patente', 'Repuestos descontados de cada orden'], desde: 'crecer' },
-  { id: 'servicios', nombre: 'Gimnasios, salud y belleza', hoy: ['Cuotas vencidas sin cobrar', 'Turnos que se pisan', 'Clientes que no vuelven'],
+  { id: 'servicios', nombre: 'Gimnasios, estética y belleza', hoy: ['Cuotas vencidas sin cobrar', 'Turnos que se pisan', 'Clientes que no vuelven'],
     con: ['Aviso automático de cuota y cobranza', 'Agenda online con recordatorios', 'Club de clientes y promociones'], desde: 'crecer' },
+  { id: 'salud', nombre: 'Consultorios y clínicas', hoy: ['Historias clínicas en papel', 'Obras sociales que debitan sin aviso', 'Sala de espera desordenada'],
+    con: ['Historia clínica y odontograma en un toque', 'Copago al cobrar y control de débitos', 'Sala de espera en vivo y recordatorios'], desde: 'crecer' },
 ];
 
 // ---------- Clientes ----------
