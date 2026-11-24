@@ -24,6 +24,8 @@ export type Demo = {
   repo: string; estado: 'lista' | 'pronto';
   url?: string; acceso?: string;
   oculta?: boolean; // no se muestra en la web (queda cargada para volver a mostrarla)
+  destacado?: string; // lo que más llama la atención de esa demo (franja arriba de la tarjeta)
+  extra?: { txt: string; url: string }; // segundo enlace (por ejemplo, la app del socio)
 };
 const PAGES = 'https://raveholding.github.io';
 export const demoUrl = (d: Demo) => d.url ?? `${PAGES}/${d.repo}/#acceso`;
@@ -32,15 +34,15 @@ const TODAS_DEMOS: Demo[] = [
   { id: 'mostrador', nombre: 'Comercios de mostrador', modelo: 'Vendés al consumidor final, en el mostrador o con autoservicio',
     ejemplos: 'Almacén, kiosco, autoservicio, verdulería, bazar, ferretería, indumentaria',
     puntos: ['Venta rápida con lector y balanza', 'Caja, cierres y libreta de clientes', 'Stock, precios y etiquetas de góndola'],
-    repo: 'VB-Demo-mostrador', estado: 'lista', acceso: 'Usuario ADMIN · PIN 1234' },
+    repo: 'VB-Demo-mostrador', estado: 'lista', acceso: 'Usuario ADMIN · PIN 1234', destacado: 'Factura ARCA, balanza y lector en la misma caja' },
   { id: 'mayorista', nombre: 'Mayoristas', modelo: 'Vendés por mayor a comercios y también al público, desde el mismo mostrador',
     ejemplos: 'Mayorista de bebidas, almacén mayorista, golosinería, licorería y limpieza por mayor',
     puntos: ['Precio por display, fardo y pallet según la cantidad', 'Consumidor final o comercio con CUIT, crédito y plazo', 'Caja, cierres, stock y cuenta corriente de cada cliente'],
-    repo: 'VB-Demo-Mayorista', estado: 'lista', acceso: 'Usuario ADMIN · PIN 1234' },
+    repo: 'VB-Demo-Mayorista', estado: 'lista', acceso: 'Usuario ADMIN · PIN 1234', destacado: 'Precio por cantidad automático y cuenta corriente' },
   { id: 'distribuidora', nombre: 'Distribuidores', modelo: 'Tomás pedidos, los armás en el depósito y los repartís',
     ejemplos: 'Distribuidoras de bebidas, alimentos, limpieza, golosinas o materiales',
     puntos: ['Preventa con el celular y hoja de ruta', 'Pedidos, armado y remitos', 'Stock por depósito y cobranza'],
-    repo: 'VB-Demo-Distribuidora', estado: 'lista', acceso: 'Usuario ADMIN · PIN 1234' },
+    repo: 'VB-Demo-Distribuidora', estado: 'lista', acceso: 'Usuario ADMIN · PIN 1234', destacado: 'Preventistas con celular y reposición sugerida' },
   { id: 'gastronomia', nombre: 'Gastronomía', modelo: 'El cliente se sienta, pide a la mesa o pide por delivery',
     ejemplos: 'Restaurante, pizzería, bar, cafetería, rotisería, heladería',
     puntos: ['Mesas, mozos y comandas a cocina', 'Menú QR y pedidos por WhatsApp', 'Stock por receta y caja'],
@@ -48,19 +50,20 @@ const TODAS_DEMOS: Demo[] = [
   { id: 'taller', nombre: 'Taller mecánico integral', modelo: 'Recibís el vehículo, presupuestás, trabajás y entregás',
     ejemplos: 'Mecánica, lubricentro, gomería, alarmas, polarizados, audio, chapa y pintura',
     puntos: ['Turnos y órdenes de trabajo por patente', 'Presupuesto aprobado por WhatsApp', 'Repuestos, instalaciones y garantías por vehículo'],
-    repo: 'VB-Demo-Taller', estado: 'lista', url: 'https://raveholding.github.io/VB-Demo-Taller/', acceso: 'Elegí un perfil para entrar' },
+    repo: 'VB-Demo-Taller', estado: 'lista', url: 'https://raveholding.github.io/VB-Demo-Taller/', acceso: 'Elegí un perfil para entrar', destacado: 'Presupuesto aprobado por WhatsApp e historial por patente' },
   { id: 'gimclub', nombre: 'Gimnasios, BOX, Academias', modelo: 'Socios o alumnos con cuota que entran y salen todos los días',
     ejemplos: 'Gimnasio, box y CrossFit, personal trainer, pilates y yoga, danza, artes marciales, club deportivo',
-    puntos: ['Cuotas, vencimientos y cobranza', 'Clases, cupos y caja', 'Ingreso con llavero NFC (Combo NFC)'],
-    repo: 'VB-Demo-Gim.Club', estado: 'lista', acceso: 'Usuario ADMIN · PIN 1234' },
+    puntos: ['App para cada socio: QR de ingreso, cuota y rutina con videos', 'Asistente de rutina y de alimentación con viandas del día', 'Cuotas, clases, academias con tutores e ingreso con llavero NFC'],
+    repo: 'VB-Demo-Gim.Club', estado: 'lista', acceso: 'Usuario ADMIN · PIN 1234', destacado: 'Nuevo: app del socio con asistente de rutina y alimentación',
+    extra: { txt: 'Ver la app del socio', url: 'https://raveholding.github.io/VB-Demo-Gim.Club/socio.html' } },
   { id: 'salud-estetica', nombre: 'Spa, estética, barberías y tatuajes', modelo: 'Trabajás con turnos y profesionales',
     ejemplos: 'Spa, barbería, peluquería, uñas y pestañas, tatuajes y piercing',
     puntos: ['Turnos online, señas y recordatorio por WhatsApp', 'Fichas, consentimiento firmado y paquetes de sesiones', 'Insumos por servicio y comisión por profesional'],
-    repo: 'VB-Demo-Salud.Estetica', estado: 'lista', acceso: 'Usuario Administrador · PIN 1111' },
+    repo: 'VB-Demo-Salud.Estetica', estado: 'lista', acceso: 'Usuario Administrador · PIN 1111', destacado: 'Firma en pantalla, señas y ficha según tu rubro' },
   { id: 'centro-salud', nombre: 'Consultorios y clínicas', modelo: 'Atendés pacientes con turnos, historia clínica y obras sociales',
     ejemplos: 'Consultorio médico, odontológico, clínica multiespecialidad, kinesiología, nutrición',
     puntos: ['Sala de espera en vivo y turnos online', 'Historia clínica y odontograma', 'Obras sociales, copagos y liquidación de profesionales'],
-    repo: 'VB-CentrodeSalud', estado: 'lista', acceso: 'Usuario Administrador · PIN 1111' },
+    repo: 'VB-CentrodeSalud', estado: 'lista', acceso: 'Usuario Administrador · PIN 1111', destacado: 'Nuevo: historia clínica, odontograma y copagos' },
 ];
 // Gastronomía oculta por ahora (pedido del 22/11/2026): para volver a mostrarla, sacar «oculta: true».
 export const DEMOS = TODAS_DEMOS.filter((d) => !d.oculta);

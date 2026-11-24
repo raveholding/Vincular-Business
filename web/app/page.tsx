@@ -104,7 +104,8 @@ export default function Inicio() {
             </Encabezado>
             <div className="demos">
               {DEMOS.map((d) => (
-                <article key={d.id} className="demo">
+                <article key={d.id} className={d.destacado ? 'demo demo-dest' : 'demo'}>
+                  {d.destacado && <p className="demo-badge">{d.destacado}</p>}
                   <div className="demo-top">
                     <h3>{d.nombre}</h3>
                     {d.estado === 'pronto' && <span className="etiqueta">Muy pronto</span>}
@@ -113,7 +114,7 @@ export default function Inicio() {
                   <p className="ejemplos">{d.ejemplos}</p>
                   <ul>{d.puntos.map((p) => <li key={p}><Icono n="check" />{p}</li>)}</ul>
                   {d.estado === 'lista'
-                    ? <><DemoVisor nombre={d.nombre} url={demoUrl(d)} acceso={d.acceso} />{d.acceso && <p className="demo-acceso">{d.acceso}</p>}</>
+                    ? <><DemoVisor nombre={d.nombre} url={demoUrl(d)} acceso={d.acceso} />{d.acceso && <p className="demo-acceso">{d.acceso}</p>}{d.extra && <a className="btn btn-sec btn-block" href={d.extra.url} target="_blank" rel="noopener noreferrer">{d.extra.txt}<Icono n="arrow" /></a>}</>
                     : <a className="btn btn-sec btn-block" href={wa(`Hola! Quiero ver la demo de ${d.nombre} del Sistema Vincular Business.`)} target="_blank" rel="noopener noreferrer">Pedir demo guiada<Icono n="arrow" /></a>}
                 </article>
               ))}

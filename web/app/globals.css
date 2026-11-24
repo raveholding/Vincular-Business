@@ -104,6 +104,8 @@ img{max-width:100%;height:auto}
 .demos{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
 .demo{display:flex;flex-direction:column;gap:12px;padding:24px;background:var(--s1);border:1px solid var(--line);border-radius:var(--r);transition:border-color .15s,box-shadow .15s}
 .demo:hover{border-color:var(--line2);box-shadow:var(--sombra)}
+.demo-dest{border-color:var(--or);box-shadow:0 0 0 1px var(--or-suave)}
+.demo-badge{align-self:flex-start;margin:0;padding:5px 12px;border-radius:999px;background:var(--or);color:#140800;font-size:.82rem;font-weight:700;line-height:1.3}
 .demo-top{display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
 .demo-top h3{line-height:1.25}
 .etiqueta{font-size:.74rem;font-weight:700;padding:4px 10px;border-radius:999px;background:var(--or-suave);color:var(--or-tx);white-space:nowrap}
