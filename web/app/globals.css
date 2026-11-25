@@ -37,6 +37,7 @@ img{max-width:100%;height:auto}
 .saltar{position:absolute;left:12px;top:-60px;background:var(--or);color:#000;padding:10px 16px;border-radius:8px;font-weight:700;z-index:100}
 .saltar:focus{top:12px}
 .micro{font-size:.86rem;color:var(--dim)}
+.h1-sub{font-size:1.2rem;font-weight:600;color:var(--tx);opacity:.85;margin-top:12px}
 .lead{font-size:1.15rem;color:var(--mut);max-width:56ch;margin-top:20px}
 .h1-chico{font-size:clamp(2rem,4.4vw,3rem);margin-top:6px}
 

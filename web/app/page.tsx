@@ -50,7 +50,8 @@ export default function Inicio() {
           <div className="wrap hero-in">
             <div>
               <p className="pastilla">14 días gratis · sin tarjeta</p>
-              <h1>Tu solución integral para el <em>crecimiento empresarial.</em></h1>
+              <h1>Vendé más, <em>en el local y online.</em></h1>
+              <p className="h1-sub">Tu solución integral para el crecimiento empresarial.</p>
               <p className="lead">Atraé clientes, cerrá ventas y hacé que vuelvan. Tienda online, Club de clientes, WhatsApp, caja, stock y factura ARCA en un solo sistema.</p>
               <div className="ctas">
                 <BotonPrueba className="btn btn-pri"><Icono n="msg" />Probalo gratis 14 días</BotonPrueba>
