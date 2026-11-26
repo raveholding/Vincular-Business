@@ -466,17 +466,3 @@ html[data-tema=oscuro] .cinta-pista li{background:rgba(255,255,255,.08)}
 @media (max-width:1020px){.plan.destacado{transform:none}}
 @media (max-width:640px){.cierre{padding:64px 0}.cierre .ctas{flex-direction:column;width:100%}.cierre .ctas .btn{width:100%;justify-content:center}}
 
-/* Gastronomía: un acceso por tipo de negocio */
-.gastro{margin-top:44px}.gastro-t{font-size:1.45rem;line-height:1.25}.gastro-t em{font-style:normal;color:var(--or-tx)}html[data-tema=oscuro] .gastro-t em{color:var(--or)}
-.gastro-sub{color:var(--mut);margin:8px 0 18px;max-width:60ch}
-.gastro-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
-.gastro-card{position:relative;display:flex;flex-direction:column;gap:8px;padding:20px 18px 18px;background:var(--s1);border:1px solid var(--line);border-radius:var(--r);color:var(--tx);text-decoration:none;overflow:hidden;transition:border-color .15s,box-shadow .15s,transform .15s}
-.gastro-card::before{content:"";position:absolute;left:0;top:0;right:0;height:4px;background:var(--gc)}
-.gastro-card:hover{border-color:var(--gc);box-shadow:var(--sombra);transform:translateY(-2px)}
-.gastro-card:focus-visible{outline:3px solid var(--or);outline-offset:2px}
-.gastro-n{font-size:.8rem;font-weight:800;color:var(--gc);letter-spacing:.06em}
-.gastro-card b{font-size:1.05rem}.gastro-txt{font-size:.9rem;color:var(--mut);flex:1}
-.gastro-ir{display:inline-flex;align-items:center;gap:6px;font-weight:700;font-size:.9rem;color:var(--or-tx)}html[data-tema=oscuro] .gastro-ir{color:var(--or)}
-@media(max-width:1000px){.gastro-grid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:560px){.gastro-grid{grid-template-columns:1fr}}
-@media (prefers-reduced-motion:reduce){.gastro-card{transition:none}.gastro-card:hover{transform:none}}
