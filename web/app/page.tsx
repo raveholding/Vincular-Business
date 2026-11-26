@@ -1,10 +1,11 @@
+import type { CSSProperties } from 'react';
 import { DemoVisor } from '@/components/DemoVisor';
 import { Icono, Logo } from '@/components/Icono';
 import { Tema, MenuMovil, Planes, Rubros } from '@/components/Interactivo';
 import { Chat } from '@/components/Chat';
 import { BotonPrueba, Prueba } from '@/components/Prueba';
 import {
-  CONTACTO, WA_PRUEBA, wa, DEMOS, demoUrl, BASE, PAQUETES, INCLUYE_TODOS, ADICIONALES, CRECER, CLIENTES, PREGUNTAS, PORTAL, SOPORTE, FUNDADORES,
+  CONTACTO, WA_PRUEBA, wa, DEMOS, GASTRO_RUBROS, demoUrl, BASE, PAQUETES, INCLUYE_TODOS, ADICIONALES, CRECER, CLIENTES, PREGUNTAS, PORTAL, SOPORTE, FUNDADORES,
 } from '@/lib/sitio';
 
 const NAV = [
@@ -119,6 +120,20 @@ export default function Inicio() {
                     : <a className="btn btn-sec btn-block" href={wa(`Hola! Quiero ver la demo de ${d.nombre} del Sistema Vincular Business.`)} target="_blank" rel="noopener noreferrer">Pedir demo guiada<Icono n="arrow" /></a>}
                 </article>
               ))}
+            </div>
+            <div id="gastronomia" className="gastro">
+              <h3 className="gastro-t">Sea cual sea tu negocio gastronómico, <em>el sistema se adapta</em></h3>
+              <p className="gastro-sub">Entrá a la demo armada para tu tipo de negocio, con su carta, sus fichas técnicas y sus pantallas.</p>
+              <div className="gastro-grid">
+                {GASTRO_RUBROS.map((g, i) => (
+                  <a key={g.id} className="gastro-card" href={g.url} target="_blank" rel="noopener noreferrer" style={{ '--gc': g.color } as CSSProperties}>
+                    <span className="gastro-n">{String(i + 1).padStart(2, '0')}</span>
+                    <b>{g.nombre}</b>
+                    <span className="gastro-txt">{g.txt}</span>
+                    <span className="gastro-ir">Ver la demo<Icono n="arrow" /></span>
+                  </a>
+                ))}
+              </div>
             </div>
             <p className="aclara">Datos de ejemplo: no emiten facturas reales ni se conectan con bancos ni ARCA.</p>
           </div>

@@ -43,10 +43,10 @@ const TODAS_DEMOS: Demo[] = [
     ejemplos: 'Distribuidoras de bebidas, alimentos, limpieza, golosinas o materiales',
     puntos: ['Preventa con el celular y hoja de ruta', 'Pedidos, armado y remitos', 'Stock por depósito y cobranza'],
     repo: 'VB-Demo-Distribuidora', estado: 'lista', acceso: 'Usuario ADMIN · PIN 1234', destacado: 'Preventistas con celular y reposición sugerida' },
-  { id: 'gastronomia', nombre: 'Gastronomía', modelo: 'El cliente se sienta, pide a la mesa o pide por delivery',
-    ejemplos: 'Restaurante, pizzería, bar, cafetería, rotisería, heladería',
-    puntos: ['Mesas, mozos y comandas a cocina', 'Menú QR y pedidos por WhatsApp', 'Stock por receta y caja'],
-    repo: 'VB-Demo-Gastronomia', estado: 'lista', url: 'https://raveholding.github.io/VB-Demo-Gastronomia/', acceso: 'Abre la carta · equipo: «Acceso del equipo», ADMIN · PIN 1234', oculta: true },
+  { id: 'gastronomia', nombre: 'Gastronomía', modelo: 'El cliente se sienta, pide por QR, retira o pide delivery',
+    ejemplos: 'Restaurante, parrilla, cafetería, bar, pizzería, food truck, cadenas y dark kitchens',
+    puntos: ['Mesas, mozos y comandas a cocina y barra', 'Carta QR, pedidos online, delivery y PedidosYa', 'Fichas técnicas: cada venta descuenta sus insumos'],
+    repo: 'VB-Demo-Gastronomia', estado: 'lista', url: 'https://raveholding.github.io/VB-Demo-Gastronomia/', acceso: 'Abre la carta · equipo: «Acceso del equipo», ADMIN · PIN 1234', destacado: 'Nuevo: 8 tipos de negocio, cada uno con su carta' },
   { id: 'taller', nombre: 'Taller mecánico integral', modelo: 'Recibís el vehículo, presupuestás, trabajás y entregás',
     ejemplos: 'Mecánica, lubricentro, gomería, alarmas, polarizados, audio, chapa y pintura',
     puntos: ['Turnos y órdenes de trabajo por patente', 'Presupuesto aprobado por WhatsApp', 'Repuestos, instalaciones y garantías por vehículo'],
@@ -65,8 +65,20 @@ const TODAS_DEMOS: Demo[] = [
     puntos: ['Sala de espera en vivo y turnos online', 'Historia clínica y odontograma', 'Obras sociales, copagos y liquidación de profesionales'],
     repo: 'VB-CentrodeSalud', estado: 'lista', acceso: 'Usuario Administrador · PIN 1111', destacado: 'Nuevo: historia clínica, odontograma y copagos' },
 ];
-// Gastronomía oculta por ahora (pedido del 22/11/2026): para volver a mostrarla, sacar «oculta: true».
 export const DEMOS = TODAS_DEMOS.filter((d) => !d.oculta);
+
+// ---------- Gastronomía: la misma demo armada para cada tipo de negocio (cada uno abre su carpeta) ----------
+const GASTRO = `${PAGES}/VB-Demo-Gastronomia/`;
+export const GASTRO_RUBROS = [
+  { id: 'restaurante', nombre: 'Restaurantes', color: '#e0912b', txt: 'Mesas, mozos y comandas a cocina. Carta QR y la mesa se cobra en un toque.', url: GASTRO },
+  { id: 'parrilla', nombre: 'Parrillas y bodegones', color: '#e2412b', txt: 'Cortes con ficha técnica, control de carbón e insumos y caja rápida en las horas pico.', url: `${GASTRO}parrilla/` },
+  { id: 'cafeteria', nombre: 'Cafeterías', color: '#c8874a', txt: 'Venta ágil en mostrador, tamaños y receta por taza. Club con café de regalo.', url: `${GASTRO}cafeteria/` },
+  { id: 'bar', nombre: 'Bares y cervecerías', color: '#a78bfa', txt: 'Tragos medidos por ficha, stock por medida y cuentas abiertas por mesa.', url: `${GASTRO}bar/` },
+  { id: 'pizzeria', nombre: 'Pizzerías y delivery', color: '#ff7f00', txt: 'Tienda online y WhatsApp conectados al stock, cadetes propios y PedidosYa.', url: `${GASTRO}pizzeria/` },
+  { id: 'foodtruck', nombre: 'Food trucks y ferias', color: '#f2c12e', txt: 'El cliente pide desde el QR y te sigue funcionando aunque se corte internet.', url: `${GASTRO}foodtruck/` },
+  { id: 'cadena', nombre: 'Cadenas y sucursales', color: '#38bdf8', txt: 'Una caja por sucursal y el consolidado del día. La misma receta en todas.', url: `${GASTRO}cadena/` },
+  { id: 'darkkitchen', nombre: 'Dark kitchens', color: '#34d399', txt: 'Varias marcas desde una sola cocina, sólo delivery y retiro, ventas por marca.', url: `${GASTRO}darkkitchen/` },
+];
 
 // ---------- Para vender más (portada) ----------
 export const CRECER = [
